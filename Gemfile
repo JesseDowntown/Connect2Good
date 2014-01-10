@@ -1,45 +1,67 @@
 source 'https://rubygems.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+# specify ruby version so heroku doesn't
+# nag you during a build
+ruby '2.0.0'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'rails', '~> 4.0'
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
-
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
+gem 'devise'
+gem 'devise-async'
+gem 'haml-rails'
 gem 'jquery-rails'
+gem 'js-routes'
+gem 'faker', require: false
+gem 'fog'
+gem 'machinist', require: false
+gem 'mini_magick'
+gem 'pg'
+gem 'rails_admin',  '~> 0.5.0'
+gem 'rolify'
+gem 'sidekiq'
+gem 'simple_form', '~> 3.0.0.rc'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+group :production, :staging do
+  gem 'rails_12factor'
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :assets do
+  gem 'coffee-rails', '~> 4.0'
+  gem 'font-awesome-rails'
+  gem 'html5shiv-rails'
+  gem 'jquery-ui-rails'
+  gem 'sass-rails',   '~> 4.0'
+  gem 'uglifier', '>= 1.0.3'
+  gem 'zurb-foundation'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'foreman',      require: false
+  gem 'guard-bundler'
+  gem 'guard-cucumber'
+  gem 'guard-rails'
+  gem 'guard-rspec'
+  gem 'guard-sidekiq'
+  gem 'guard-unicorn', git: 'git@github.com:suranyami/guard-unicorn.git'
+  gem 'guard-sidekiq'
+  gem 'hirb'
+  gem 'html2haml'
+  gem 'quiet_assets'
+  gem 'terminal-notifier-guard', require: RUBY_PLATFORM.include?('darwin') && 'terminal-notifier-guard'
+end
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
+group :development, :test do
+  gem 'rspec-rails'
+end
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+group :test do
+  gem 'capybara'
+  gem 'cucumber'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'email_spec'
+  gem 'launchy'
+  gem 'timecop'
+end
