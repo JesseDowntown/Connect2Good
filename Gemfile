@@ -16,6 +16,7 @@ gem 'fog'
 gem 'machinist', require: false
 gem 'mini_magick'
 gem 'pg'
+gem 'pg_search'
 gem 'rails_admin',  '~> 0.5.0'
 gem 'rolify'
 gem 'sidekiq'
