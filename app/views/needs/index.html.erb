@@ -1,0 +1,5 @@
+
+
+<% @needs.each do |need| %>
+	<p><%= need.organization.name %> | <%= link_to need.description, need_path(need) %>
+<% end %>
