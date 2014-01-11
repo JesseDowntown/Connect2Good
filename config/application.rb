@@ -23,7 +23,7 @@ module C2g
 
       g.test_framework :rspec, fixture: true
 
-      g.fixture_replacement :machinist
+      # g.fixture_replacement :machinist
       g.controller_specs false
       g.view_specs false
       g.helper_specs false

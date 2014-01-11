@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 GIT
   remote: https://github.com/suranyami/guard-unicorn.git
   revision: 6a7c3c3359377f114c09df374b7558db41805baa
@@ -5,6 +6,8 @@ GIT
     guard-unicorn (0.0.2)
       guard (>= 0.6.3)
 
+=======
+>>>>>>> 1e42827202b387b3bbab7586800231721fd8ee2e
 GEM
   remote: https://rubygems.org/
   specs:
@@ -167,7 +170,6 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     lumberjack (1.0.4)
-    machinist (2.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -336,7 +338,6 @@ DEPENDENCIES
   guard-rails
   guard-rspec
   guard-sidekiq
-  guard-unicorn!
   haml-rails
   hirb
   html2haml
@@ -345,7 +346,6 @@ DEPENDENCIES
   jquery-ui-rails
   js-routes
   launchy
-  machinist
   mini_magick
   pg
   pg_search

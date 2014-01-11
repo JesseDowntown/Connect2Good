@@ -13,7 +13,7 @@ gem 'jquery-rails'
 gem 'js-routes'
 gem 'faker', require: false
 gem 'fog'
-gem 'machinist', require: false
+# gem 'machinist', require: false
 gem 'mini_magick'
 gem 'pg'
 gem 'pg_search'
@@ -45,7 +45,10 @@ group :development do
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-sidekiq'
+<<<<<<< HEAD
   gem 'guard-unicorn', git: 'https://github.com/suranyami/guard-unicorn.git'
+=======
+>>>>>>> 1e42827202b387b3bbab7586800231721fd8ee2e
   gem 'guard-sidekiq'
   gem 'hirb'
   gem 'html2haml'
