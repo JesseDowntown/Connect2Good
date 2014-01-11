@@ -45,10 +45,7 @@ group :development do
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-sidekiq'
-<<<<<<< HEAD
-  gem 'guard-unicorn', git: 'https://github.com/suranyami/guard-unicorn.git'
-=======
->>>>>>> 1e42827202b387b3bbab7586800231721fd8ee2e
+
   gem 'guard-sidekiq'
   gem 'hirb'
   gem 'html2haml'
