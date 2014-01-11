@@ -170,6 +170,7 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     lumberjack (1.0.4)
+    machinist (2.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -346,6 +347,7 @@ DEPENDENCIES
   jquery-ui-rails
   js-routes
   launchy
+  machinist
   mini_magick
   pg
   pg_search

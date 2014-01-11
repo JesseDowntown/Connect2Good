@@ -29,6 +29,8 @@ module C2g
       g.helper_specs false
     end
 
+    I18n.enforce_available_locales = false
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -41,7 +43,7 @@ module C2g
     # config.autoload_paths += %W(#{config.root}/app/commands)
 
     console do
-      # load './spec/support/blueprints.rb'
+      load './spec/support/blueprints.rb'
       Hirb.enable
     end
 
