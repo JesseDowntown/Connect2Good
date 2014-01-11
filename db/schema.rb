@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20140111035037) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "need_id"
+    t.string   "image"
   end
 
   add_index "offers", ["donor_id"], name: "index_offers_on_donor_id", using: :btree
