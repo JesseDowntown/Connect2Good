@@ -13,7 +13,7 @@ gem 'jquery-rails'
 gem 'js-routes'
 gem 'faker', require: false
 gem 'fog'
-# gem 'machinist', require: false
+gem 'machinist', require: false
 gem 'mini_magick'
 gem 'pg'
 gem 'pg_search'
