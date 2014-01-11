@@ -16,6 +16,12 @@ ActiveRecord::Schema.define(version: 20140111041138) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "needs", force: true do |t|
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "offers", force: true do |t|
     t.string   "status"
     t.integer  "donor_id"
@@ -23,6 +29,7 @@ ActiveRecord::Schema.define(version: 20140111041138) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "need_id"
+    t.string   "image"
   end
 
   add_index "offers", ["donor_id"], name: "index_offers_on_donor_id", using: :btree
