@@ -33,7 +33,7 @@ group :assets do
   gem 'jquery-ui-rails'
   gem 'sass-rails',   '~> 4.0'
   gem 'uglifier', '>= 1.0.3'
-  gem 'zurb-foundation'
+  gem 'foundation-rails'
 end
 
 group :development do

@@ -1,0 +1,27 @@
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">Connect2Good</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="has-form">
+        <%= form_tag needs_path, method: :get do %>
+          <div class="row collapse">
+            <div class="large-8 small-9 columns">
+              <%= text_field_tag :query, params[:query], placeholder: "Search Needs" %>
+            </div>
+            <div class="large-4 small-3 columns">
+              <%= submit_tag "Help!", class: "button expand" %>
+            </div>
+          </div>
+        <% end %>
+      </li>
+    </ul>
+  </section>
+</nav>
+

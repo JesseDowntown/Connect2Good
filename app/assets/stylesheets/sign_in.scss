@@ -1,0 +1,47 @@
+.full-width-row {
+	width: 100%;
+	/*background-color: #333333;*/
+	background: url( asset-path('assets/austin_background.jpg', image)) no-repeat;
+	min-height: 680px; 
+	background-size: cover; 
+	padding: 6em 0em; 
+	
+	h2 {
+		color: #FFCC80;
+		font-size: 4em;
+	}
+
+	#user_email, #user_password, #user_password_confirmation {
+		/*background-color: transparent;*/
+		color: white;
+		border-radius: 5px;
+
+		&:focus {
+			border-color: #FFCC80;
+			border-width: 2px;
+			border-radius: 10px;
+		}
+	}
+
+	.button {
+		background-color: #FFCC80;
+		font-size: 1em;
+		padding: 10px;
+		color: white;
+		border-radius: 7px;
+
+		&:hover {
+			color: black;
+		}
+	}
+	.btn-color {
+		color: #FFCC80;
+		margin: 5px;
+		&:hover{
+			color: #ffffff;
+		}
+	}
+}
+.off-canvas-list li{
+	color: #ffffff;
+}
