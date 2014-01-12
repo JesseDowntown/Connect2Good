@@ -1,0 +1,14 @@
+.full-width-row
+  %div
+    .row
+      %h3 Needs by Organization
+      %table
+        %thead
+          %tr
+            %th Organization
+            %th Need
+        %tbody
+          - @needs.each do |need|
+            %tr
+              %td= need.organization.name 
+              %td= link_to need.description, need_path(need)

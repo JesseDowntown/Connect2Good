@@ -1,0 +1,12 @@
+.full-width-row
+  %div
+    .row
+      %h4
+        Thank you for your offer of: #{@offer.need.description}
+      %p
+        For: #{@offer.organization.name}
+      %p 
+        From: #{@offer.donor.name}
+      %img{src: @offer.image}/
+      %p= link_to "Back to all needs", needs_path
+      %p Thanks again #{@offer.donor.name}!

@@ -1,0 +1,23 @@
+.full-width-row
+  %div
+    .row
+      %h1 Offers List
+      %table
+        %thead
+          %tr
+            %th Item
+            %th Org
+            %th Donor
+            %th Status
+            %th Update
+        %tbody
+          - @offers.each do |offer|
+            %tr
+              %td= link_to offer.need.description, offer_path(offer)
+              %td= offer.organization.name
+              %td= offer.donor.name
+              = form_for offer do |f|
+                %td
+                  = f.select :status, options_for_select(["pending","accepted","rejected"], offer.status)
+                %td
+                  = f.submit value: "Update"

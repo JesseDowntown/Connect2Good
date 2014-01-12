@@ -1,0 +1,18 @@
+%nav.top-bar{"data-topbar" => ""}
+  %ul.title-area
+    %li.name
+      %h1
+        %a{href: "#"} Connect2Good
+    %li.toggle-topbar.menu-icon
+      %a{href: "#"} Menu
+  %section.top-bar-section
+    / Right Nav Section
+    %ul.right
+      %li.has-form
+        = form_tag needs_path, method: :get do
+          .row.collapse
+            .large-8.small-9.columns
+              = text_field_tag :query, params[:query], placeholder: "Search Needs"
+            .large-4.small-3.columns
+              = submit_tag "Help!", class: "button expand"
+
