@@ -8,7 +8,7 @@ Need.blueprint do
 end
 
 Offer.blueprint do
-  description { 'books' }
+  description { %w[books computers chairs].sample }
   image { 'books_image.png' }
   status do
     %w[pending accepted rejected].sample
