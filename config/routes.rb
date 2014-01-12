@@ -8,5 +8,7 @@ C2g::Application.routes.draw do
 
   resources :needs
   resources :offers
-
+  resources :organizations do
+    resources :offers
+  end
 end
