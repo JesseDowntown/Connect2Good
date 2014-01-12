@@ -5,4 +5,3 @@ deployment:
       - git push git@heroku.com:c2g-mks.git $CIRCLE_SHA1:refs/heads/master -f
       - heroku run rake db:migrate --app c2g-mks
       - heroku config:set RAILS_CACHE_ID=$CIRCLE_SHA1 --app c2g-mks
-
