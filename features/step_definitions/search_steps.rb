@@ -1,6 +1,6 @@
 When(/^I search for "(.*?)"$/) do |term|
   fill_in 'query', with: term
-  click_on 'Help!'
+  click_on 'Search'
 end
 
 Then(/^needs related to books are returned$/) do
