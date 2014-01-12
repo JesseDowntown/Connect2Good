@@ -1,6 +1,6 @@
-Feature: Search for needs on C2G home page
+Feature: Search for needs
 
-  Scenario: Search for needs
-    Given I am on the "home" page
+  Scenario: I am a user
+    Given I am on the home page
     When I search for "book"
     Then needs related to books are returned
