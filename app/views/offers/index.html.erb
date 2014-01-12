@@ -1,0 +1,24 @@
+<h1>Offers List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Org</th>
+      <th>Donor</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @offers.each do |offer| %>
+      <tr>
+        <td><%= link_to offer.need.description, offer_path(offer) %></td>
+        <td> | <%= offer.organization.name %></td>
+        <td> | <%= offer.donor.name %></td>
+        <td> | <%= offer.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

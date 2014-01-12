@@ -5,9 +5,9 @@
 		
 			<p><%= @need.description %> </p>
 		
-			<p><%= link_to "Make offer", '#' %></p>
+			<p><%= link_to "Make offer", new_offer_path(need_id: params[:id]) %></p>
 		
 			<p><%= link_to 'Back to all Needs', needs_path %> - <%= link_to 'home', root_path %></p>
 		</div>
 	</div>
-</div
+</div>

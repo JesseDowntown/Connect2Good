@@ -5,6 +5,8 @@ class Offer < ActiveRecord::Base
   
   belongs_to :need
   belongs_to :organization
+
+  @status = "pending"
+
 end
 
-id | status   | donor_id | organizatio... | created_at     | updated_at     | need_id | image          | description

@@ -7,5 +7,6 @@ C2g::Application.routes.draw do
   root 'pages#home'
 
   resources :needs
-  
+  resources :offers
+
 end
