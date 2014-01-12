@@ -7,6 +7,7 @@
       <th>Org</th>
       <th>Donor</th>
       <th>Status</th>
+      <th>Update</th>
     </tr>
   </thead>
 
@@ -16,12 +17,14 @@
         <td><%= link_to offer.need.description, offer_path(offer) %></td>
         <td><%= offer.organization.name %></td>
         <td><%= offer.donor.name %></td>
-        <td>
           <%= form_for offer do |f| %>
+        <td>
             <%= f.select :status, options_for_select(["pending","accepted","rejected"], offer.status) %>
-            <%= f.submit %>
-          <% end %>
         </td>
+        <td>
+            <%= f.submit value: "Update" %>
+        </td>
+          <% end %>
       </tr>
   
     <% end %>
