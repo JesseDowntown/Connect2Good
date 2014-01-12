@@ -1,10 +1,17 @@
 require Rails.root.join('spec', 'support', 'blueprints')
 require 'faker'
 
-NUMBER_OF_OFFERS        = 5
-NUMBER_OF_ORGS          = 10
-NUMBER_OF_NEEDS_PER_ORG = 20
-NUMBER_OF_USERS         = 100
+if ENV['RAILS_ENV'] == 'test'
+  NUMBER_OF_OFFERS        = 1
+  NUMBER_OF_ORGS          = 1
+  NUMBER_OF_NEEDS_PER_ORG = 1
+  NUMBER_OF_USERS         = 1
+else
+  NUMBER_OF_OFFERS        = 5
+  NUMBER_OF_ORGS          = 10
+  NUMBER_OF_NEEDS_PER_ORG = 20
+  NUMBER_OF_USERS         = 100
+end
 
 
 # create users
