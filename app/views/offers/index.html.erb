@@ -18,7 +18,7 @@
         <td><%= offer.donor.name %></td>
         <td>
           <%= form_for offer do |f| %>
-            <%= f.select :status, options_for_select(["pending","accepted","rejected"]) %>
+            <%= f.select :status, options_for_select(["pending","accepted","rejected"], offer.status) %>
             <%= f.submit %>
           <% end %>
         </td>
