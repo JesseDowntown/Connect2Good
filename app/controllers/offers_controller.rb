@@ -1,7 +1,15 @@
 class OffersController < ApplicationController
 
 	def index
-		@offers = Offer.all
+    
+    if params[:organization_id]
+      @organization = Organization.find(params[:organization_id])
+      @offers = @organization.offers
+    else
+		  @offers = Offer.all
+    end
+
+
 	end
 
 	def show
@@ -21,6 +29,15 @@ class OffersController < ApplicationController
       redirect_to @offer, notice: 'Offer was successfully created.'
     else
       render action: 'new'
+    end
+  end
+
+  def update
+    @offer = Offer.find(params[:id])
+    if @offer.update(offer_params)
+      redirect_to @offer, notice: 'Offer was successfully updated.'
+    else
+      render action: 'edit'
     end
   end
 

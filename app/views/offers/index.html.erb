@@ -14,10 +14,16 @@
     <% @offers.each do |offer| %>
       <tr>
         <td><%= link_to offer.need.description, offer_path(offer) %></td>
-        <td> | <%= offer.organization.name %></td>
-        <td> | <%= offer.donor.name %></td>
-        <td> | <%= offer.status %></td>
+        <td><%= offer.organization.name %></td>
+        <td><%= offer.donor.name %></td>
+        <td>
+          <%= form_for offer do |f| %>
+            <%= f.select :status, options_for_select(["pending","accepted","rejected"]) %>
+            <%= f.submit %>
+          <% end %>
+        </td>
       </tr>
+  
     <% end %>
   </tbody>
 </table>
