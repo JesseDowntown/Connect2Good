@@ -4,11 +4,13 @@
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
 
-# ENV['RAILS_ENV'] = 'test'
+ENV['RAILS_ENV'] = 'test'
 
 require 'cucumber/rails'
 # require 'multi_test'
 # require 'sidekiq/testing/inline'
+
+load "#{Rails.root}/db/seeds.rb"
 
 require Rails.root.join('spec', 'support', 'blueprints')
 
