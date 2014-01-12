@@ -1,0 +1,1 @@
+exec heroku $@ --app c2g-mks
