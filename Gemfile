@@ -45,8 +45,6 @@ group :development do
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-sidekiq'
-
-  gem 'guard-sidekiq'
   gem 'hirb'
   gem 'html2haml'
   gem 'quiet_assets'
