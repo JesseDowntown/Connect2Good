@@ -1,5 +1,5 @@
 Given(/^I am on the "(.*?)" page$/) do |page|
-  visit 'http://localhost:3000'
+  page.visit root_path
 end
 
 When(/^I search for "(.*?)"$/) do |term|
