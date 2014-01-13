@@ -1,4 +1,19 @@
+# note existing manifest json
+manifest_json=`ls public/assets/manifest*.json`
+echo $manifest_json
+
+# force assets precompile
 rm -rf public/assets
+
 RAILS_ENV=production foreman run bundle exec rake assets:precompile
+
+# create manifest yml
+# so we can use env vars for devise secret key
+# by making heroku happy with a manifest yml
 json2yml.rb
-git_commit_after_assets_precompile.rb
+
+git rm $manifest_json
+git add .
+git commit -m 'asset precompile'
+
+#git_commit_after_assets_precompile.rb
