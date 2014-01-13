@@ -12,7 +12,7 @@ RAILS_ENV=production foreman run bundle exec rake assets:precompile
 # by making heroku happy with a manifest yml
 json2yml.rb
 
-git rm $manifest_json
+#git rm $manifest_json
 
 #git add .
 #git commit -m 'asset precompile'
