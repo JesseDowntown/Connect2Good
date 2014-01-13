@@ -1,3 +1,4 @@
+rm -rf public/assets
 RAILS_ENV=production foreman run bundle exec rake assets:precompile
 json2yml.rb
 git_commit_after_assets_precompile.rb
