@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-
-`precompile_assets`
-
-puts `git status`
