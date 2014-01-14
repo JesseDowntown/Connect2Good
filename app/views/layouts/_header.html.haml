@@ -12,7 +12,7 @@
         = form_tag needs_path, method: :get do
           .row.collapse
             .large-8.small-9.columns
-              = text_field_tag :query, params[:query], placeholder: "Search Needs"
+              = text_field_tag :query, params[:query], placeholder: "Search Needs", class: "search"
             .large-4.small-3.columns
               = submit_tag "Search", class: "button expand"
       %li.has-dropdown
