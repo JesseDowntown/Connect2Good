@@ -1,50 +1,125 @@
+.button, .expand {
+		background-color: #fdd68b;
+		border-color: #f7d189;
+		font-size: 12px;
+		padding: 2px 5px;
+		color: #000000;
+		
+		&:hover{
+			background-color: #fdd68b;
+		}
+}
+
+.top-bar {
+	background-color: #88a4b3;
+	.top-bar-section{
+		background-color: #88a4b3;
+		.right{
+			background-color: #88a4b3;
+			.has-form{
+				background-color: #88a4b3;
+			}
+			.toggle-topbar{
+				background-color: #88a4b3;
+				a{
+					background-color: #88a4b3;
+				}
+			}
+			.has-dropdown{
+				background-color: #88a4b3;
+				a{
+					background-color: #88a4b3;
+				}
+				.dropdown{
+					background-color: #88a4b3;
+					li{
+						background-color: #88a4b3;				
+					}
+				}
+			}
+		}
+	}
+	a {
+		background-color: #88a4b3;
+	
+		&:hover {
+			background-color: #88a4b3;
+		}
+	}
+}
+
+.home-footer{
+	text-align: center;
+	background-color: #3a5868;
+	padding: 1em 0em;
+	position: fixed; 
+	bottom: 0px;
+	width: 100%;
+	color: #ffffff;
+
+	a {
+		color: #ffffff;
+		font-weight: bold;
+		padding: 1em 1.75em;
+		margin-top: 12px;
+
+		&:hover {
+			background-color: #3a5868;
+			color: #fff;
+		}
+	}
+}
+
 .full-width-row {
 	width: 100%;
 	/*background-color: #333333;*/
-	background: url( asset-path('assets/austin_background.jpg', image)) no-repeat;
-	min-height: 680px; 
+	//background: url( asset-path('assets/austin_background.jpg', image)) no-repeat;
+	// min-height: 680px; 
 	background-size: cover; 
-	padding: 6em 0em; 
-	
-	h2 {
-		color: #FFCC80;
-		font-size: 4em;
+	padding: 10em 0em; 
+
+	h1 {
+		font-color: #3a5868;
 	}
 	
 	h3 {
+		color: #3a5868;
 		font-size: 2.5em;
+		font-family: Helvetica, sans-serif;
 	}
 
 	h4 {
 		font-size: 2em;
 	}
 
-	#user_email, #user_password, #user_password_confirmation {
+	.center{
+		text-align: center;
+		position: relative;
+		vertical-align: middle;
+	}
+
+	#user_email, #user_password, #user_password_confirmation, .search {
 		/*background-color: transparent;*/
-		color: white;
+		color: #3a5868;
 		border-radius: 5px;
+		border-width: 2px;
+		border-color: #e8e8e8;
+		text-align: center;
 
 		&:focus {
-			border-color: #FFCC80;
-			border-width: 2px;
+			border-color: #fdd68b;
 			border-radius: 10px;
 		}
 	}
 
 	.button {
-		background-color: #FFCC80;
-		font-size: 1em;
-		padding: 10px;
-		color: white;
-		border-radius: 7px;
-
-		&:hover {
-			color: black;
-		}
-	}
-	.btn-color {
-		color: #FFCC80;
-		margin: 5px;
+		background-color: #fdd68b;
+		border-color: #f7d189;
+		font-size: 12px;
+		padding: 2px 5px;
+		color: #000000;
+		border-radius: 5px;
+		
 		&:hover{
 			color: #ffffff;
 		}
