@@ -1,8 +1,10 @@
-= form_for @offer do |f|
+= form_for @offer, url: create_offer_path() do |f|
   - if signed_in?
     - donor_id = current_user.id
   - else
     - donor_id = ""
+  = f.label :email
+  = f.text_field :email
   = f.label :description
   = f.text_field :description
   = f.label :image

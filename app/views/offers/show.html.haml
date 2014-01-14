@@ -2,11 +2,15 @@
   %div
     .row
       %h4
-        Thank you for your offer of: #{@offer.need.description}
+        Thank you for your offer of: 
       %p
-        For: #{@offer.organization.name}
-      %p 
-        From: #{@offer.donor.name}
+        #{@offer.description}
+      %h4
+        To: #{@offer.organization.name}
+
       %img{src: @offer.image}/
+      %br
+      %br
+      %p #{@offer.organization.name} will receive an email with your donation offer details and will be contacting you via email. Please allow a few days for them to respond.
+      %p Thanks again!
       %p= link_to "Back to all needs", needs_path
-      %p Thanks again #{@offer.donor.name}!
