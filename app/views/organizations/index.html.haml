@@ -1,5 +1,14 @@
-
-- @organizations.each do |organization|
-  %p 
-    = organization.name 
-    = link_to organization.description, organization_path(organization)
+.view-page
+  %div
+    .row
+      %h3 Current Organizations
+      %table
+        %thead
+          %tr
+            %th Organization
+            %th Description
+        %tbody
+          - @organizations.each do |organization|
+            %tr
+              %td= link_to organization.name, organization_path(organization) 
+              %td= organization.description
