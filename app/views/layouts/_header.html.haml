@@ -15,13 +15,11 @@
               = text_field_tag :query, params[:query], placeholder: "Search Needs", class: "search"
             .large-4.small-3.columns
               = submit_tag "Search", class: "button expand"
-      %li.has-dropdown
-        - if current_user
-          %a{href: "#"} Settings
-          %ul.dropdown
-            %li= link_to "Sign out", destroy_user_session_path, :method => :delete
-        - else
-          = link_to "Try it", "#"
-          %ul.dropdown
-            %li= link_to "Sign_in", new_user_session_path
-            %li= link_to "Sign up", new_user_registration_path
+      - if current_user
+        %ul.user
+          %li= link_to "Account", "#" 
+          %li= link_to "Sign out", destroy_user_session_path, :method => :delete
+      - else
+        %ul.user
+          %li= link_to "Sign in", new_user_session_path
+          %li= link_to "Join", new_user_registration_path

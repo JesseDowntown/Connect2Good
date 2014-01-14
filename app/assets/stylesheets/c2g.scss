@@ -10,6 +10,7 @@
 		}
 }
 
+
 .top-bar, .expanded{
 	background-color: #88a4b3;
 	.title-area{
@@ -26,6 +27,12 @@
 			.has-form{
 				background-color: #88a4b3;
 			}
+			.user{
+				background-color: #88a4b3;
+				a{
+					background-color: #88a4b3;				
+				}
+			}
 			.toggle-topbar .menu-icon{
 				background-color: #88a4b3;
 				color: #ffffff;
@@ -33,18 +40,6 @@
 					background-color: #88a4b3;
 					&:active{
 						color: #ffffff;
-					}
-				}
-			}
-			.has-dropdown{
-				background-color: #88a4b3;
-				a{
-					background-color: #88a4b3;
-				}
-				.dropdown{
-					background-color: #88a4b3;
-					li{
-						background-color: #88a4b3;				
 					}
 				}
 			}
