@@ -1,0 +1,5 @@
+
+- @organizations.each do |organization|
+  %p 
+    = organization.name 
+    = link_to organization.description, organization_path(organization)
