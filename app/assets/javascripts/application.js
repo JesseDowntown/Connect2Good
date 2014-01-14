@@ -11,9 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.ui.all
 //= require jquery_ujs
 //= require foundation
 
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+$('#query').autocomplete({
+  source: "/search_suggestions"
+});

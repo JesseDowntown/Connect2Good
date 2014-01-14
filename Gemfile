@@ -9,6 +9,7 @@ gem 'rails', '~> 4.0'
 gem 'devise'
 gem 'devise-async'
 gem 'haml-rails'
+gem 'jquery-ui-rails'
 gem 'jquery-rails'
 gem 'js-routes'
 gem 'faker', require: false
