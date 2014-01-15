@@ -31,7 +31,6 @@ class OffersController < ApplicationController
     end
 
     if @offer.save
-      Notifier.offer_received(@offer).deliver
       redirect_to @offer, notice: 'Offer was successfully created.'
     else
       render action: 'new'
