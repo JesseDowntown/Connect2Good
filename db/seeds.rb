@@ -29,6 +29,7 @@ Organization.make!(NUMBER_OF_ORGS).each do |organization|
   end
   # pick a random user to be the owner
   organization.owner = User.all.sample
+  organization.email = "connect2good.mailer@gmail.com"
   organization.save!
 end
 puts
