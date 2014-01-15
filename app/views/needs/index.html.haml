@@ -1,4 +1,4 @@
-.full-width-row
+.view-page
   %div
     .row
       %h3 Needs by Organization
@@ -10,5 +10,5 @@
         %tbody
           - @needs.each do |need|
             %tr
-              %td= need.organization.name 
+              %td= link_to need.organization.name, organization_path(need.organization) 
               %td= link_to need.description, need_path(need)

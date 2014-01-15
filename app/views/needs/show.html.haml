@@ -1,10 +1,7 @@
-.full-width-row
-	%div
-		.row
-			%h4 
-				#{@need.organization.name} needs
-			%p= @need.description
-			%p= link_to "Make offer", new_offer_path(params[:id])
-			%p
-				= link_to 'Back to all Needs', needs_path
-				\- #{link_to 'home', root_path}
+.view-page
+  %div
+    .row
+      %h3= "#{@need.organization.name} needs"
+      %p= @need.description
+      %p= link_to "Make offer", new_offer_path(need_id: params[:id])
+      %p= link_to "Back to all Needs", needs_path
