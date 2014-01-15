@@ -2,15 +2,14 @@
   %div
     .row
       %h3
-        Thank you for your offer of: #{@offer.need.description}
-      %p
-        #{@offer.description}
-      %h4
-        To: #{@offer.organization.name}
-
-      %img{src: @offer.image}/
+        Thank you for your offer of: #{@offer.description}
+      %img{src: @offer.image}
       %br
       %br
-      %p #{@offer.organization.name} will receive an email with your donation offer details and will be contacting you via email. Please allow a few days for them to respond.
-      %p Thanks again!
-      %p= link_to "Back to all needs", needs_path
+      %h3 
+        Recepient Organization: #{@offer.organization.name}
+      %p 
+        #{@offer.organization.name} has received an email with your donation offer details, and will be contacting you via email. Please allow a few days for them to respond.
+      %p 
+        Thanks again on behalf of the entire Connect2Good team!
+      %p= link_to "View All Needed Items", needs_path
