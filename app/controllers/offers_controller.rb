@@ -1,6 +1,7 @@
 class OffersController < ApplicationController
-  before_filter :fetch_need,  only: [:create]
+  before_filter :fetch_need,  only: [:create, :new]
   before_filter :fetch_offer, only: [:show, :update]
+  before_filter :fetch_organization, only: [:create]
 
 	def index
     if params[:organization_id]
@@ -15,7 +16,7 @@ class OffersController < ApplicationController
 	end
 
 	def new
-		@offer 	= Offer.new
+    @offer = Offer.new
  	end
 
  	def create
@@ -23,8 +24,14 @@ class OffersController < ApplicationController
     @offer.need = @need
     @offer.organization = @organization
     @offer.status = 'pending'
+    if user_signed_in?
+      @offer.donor = current_user
+    else
+      @offer.donor_id = nil
+    end
 
     if @offer.save
+      Notifier.offer_received(@offer).deliver
       redirect_to @offer, notice: 'Offer was successfully created.'
     else
       render action: 'new'
@@ -44,12 +51,17 @@ private
     @need = Need.find(params[:need_id])
   end
 
+  def fetch_organization
+    @organization = Organization.find(@need.organization)
+  end
+
   def fetch_offer
     @offer = Offer.find(params[:id])
   end
 
   def offer_params
   	params.require(:offer).permit(
+      :email,
       :image,
       # :donor_id,
       # :need_id,

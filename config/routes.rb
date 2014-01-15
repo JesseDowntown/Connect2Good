@@ -8,9 +8,13 @@ C2g::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'needs#index'
 
+  get 'needs/:need_id/offers', to: 'offers#new', as: 'new_offer'
+  post 'needs/:need_id/offers', to: 'offers#create', as: 'create_offer'
+
   resources :needs
-  resources :offers
+  resources :offers, except: [:create]
+
   resources :organizations do
-    resources :offers
+    resources :offers, except: [:show, :create]
   end
 end

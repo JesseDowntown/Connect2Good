@@ -1,7 +1,7 @@
-.full-width-row
+.view-page
   %div
     .row
-      %h1 Offers List
+      %h3 Offers List
       %table
         %thead
           %tr
@@ -15,7 +15,7 @@
             %tr
               %td= link_to offer.need.description, offer_path(offer)
               %td= offer.organization.name
-              %td= offer.donor.name
+              %td= offer.email
               = form_for offer do |f|
                 %td
                   = f.select :status, options_for_select(["pending","accepted","rejected"], offer.status)

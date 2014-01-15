@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20140114204955) do
     t.integer  "need_id"
     t.string   "image"
     t.string   "description"
+    t.string   "email"
   end
 
   add_index "offers", ["donor_id"], name: "index_offers_on_donor_id", using: :btree
