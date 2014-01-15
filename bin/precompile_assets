@@ -2,7 +2,7 @@
 manifest_json=`ls public/assets/manifest*.json`
 
 # force assets precompile
-git rm public/assets
+git rm -r public/assets
 rm -rf public/assets
 
 RAILS_ENV=production foreman run bundle exec rake assets:precompile
