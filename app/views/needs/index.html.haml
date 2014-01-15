@@ -12,5 +12,5 @@
             %tr
               %td= need.organization.name 
               %td= link_to need.description, need_path(need)      
-      = will_paginate @needs, previous_label: h("<"), next_label: h(">")
+      = will_paginate @needs, renderer: FoundationPagination::Rails, outer_window: 0, inner_window: 1
 
