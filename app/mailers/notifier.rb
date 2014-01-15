@@ -6,9 +6,11 @@ class Notifier < ActionMailer::Base
   #
   #   en.notifier.offer_received.subject
   #
-  def offer_received
-    @greeting = "Hi"
+def offer_received(offer)
+  @offer = offer
 
-    mail to: "#{@organization.email}"
-  end
+  # Change the 'to:' section to your partner's name and email
+  mail( to: "jsonnyg.email@gmail.com",
+        subject: "Connect2Good Offer Received")
+end
 end
