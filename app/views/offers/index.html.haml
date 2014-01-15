@@ -1,5 +1,8 @@
 .view-page
-  %div
+  .large-1.small-1.columns
+    %p
+      \
+  .large-10.small-10.columns
     .row
       %h3 Offers List
       %table
@@ -20,4 +23,7 @@
                 %td
                   = f.select :status, options_for_select(["pending","accepted","rejected"], offer.status)
                 %td
-                  = f.submit value: "Update"
+                  = f.submit value: "Update", class: "button"
+  .large-1.small-1.columns
+    %p
+      \

@@ -10,8 +10,20 @@
 		}
 }
 
+.snippet{
+	height: 80px;
+}
+
+.org_panel{
+	height: 120px;
+}
 .view-page { 
 	padding: 3em 0em; 
+
+	.row{
+		margin: 0px;
+		width: 100%;
+	}
 
 	h1 {
 		font-color: #3a5868;
@@ -51,7 +63,7 @@
 		position: relative;
 		vertical-align: middle;
 	}
-	
+
 .home-footer{
 	text-align: center;
 	background-color: #3a5868;
