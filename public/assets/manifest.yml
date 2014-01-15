@@ -360,9 +360,14 @@ files:
     mtime: '2013-09-09T12:07:13-05:00'
     size: 12799
     digest: 59a9312abee351a8315f6f95b1799b7f
+  application-8e91b538b12f686d906c3a80abdacbb8.css:
+    logical_path: application.css
+    mtime: '2014-01-14T23:44:03-06:00'
+    size: 144444
+    digest: 8e91b538b12f686d906c3a80abdacbb8
 assets:
   application.js: application-58d9a09984234adda30fe7fbd4044db5.js
-  application.css: application-a0a22316388b16c6c6a31592152cac10.css
+  application.css: application-8e91b538b12f686d906c3a80abdacbb8.css
   html5shiv-printshiv.js: html5shiv-printshiv-cc35128bbf3446d3141b12c81183eef9.js
   html5shiv.js: html5shiv-e18672b94fab6abd2257fe6f6911e8a8.js
   rails_admin/aristo/images/bg_fallback.png: rails_admin/aristo/images/bg_fallback-97e13c0196bfb2c0a3319ba03aec8860.png

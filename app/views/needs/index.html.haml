@@ -1,4 +1,4 @@
-.full-width-row
+.view-page
   %div
     .row
       %h3 Needs by Organization
@@ -13,3 +13,4 @@
               %td= need.organization.name 
               %td= link_to need.description, need_path(need)      
       = will_paginate @needs, previous_label: h("<"), next_label: h(">")
+
