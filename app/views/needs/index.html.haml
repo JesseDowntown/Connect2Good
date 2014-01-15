@@ -1,15 +1,16 @@
 .view-page
-  %h3 Needs by Organization
-  .row
-    .large-4.columns
-    .large-8.columns
-      .row
-        - @needs.each do |need|
-          .large-4.small-6.columns
-            .panel
-              %h5= need.organization.name
-              %h6 Type: {need.type} 
-              %p= link_to need.description.truncate(30), need_path(need)
-              %h7= link_to 'Make Offer'
-      = will_paginate @needs, previous_label: h("<"), next_label: h(">")      
+  .center  
+    %h3 Needs by Organization
+    .row
+      .large-4.columns
+      .large-8.columns
+        .row
+          - @needs.each do |need|
+            .large-4.small-6.columns
+              .panel
+                %h5= need.organization.name
+                %h6 Type: {need.type} 
+                %p= link_to need.description.truncate(30), need_path(need)
+                %h7= link_to 'Make Offer'
+        = will_paginate @needs, previous_label: h("<"), next_label: h(">")      
 
