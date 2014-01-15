@@ -1,0 +1,14 @@
+.view-page
+  %div
+    .row
+      %h3 Current Organizations
+      %table
+        %thead
+          %tr
+            %th Organization
+            %th Description
+        %tbody
+          - @organizations.each do |organization|
+            %tr
+              %td= link_to organization.name, organization_path(organization) 
+              %td= organization.description

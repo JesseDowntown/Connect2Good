@@ -1,0 +1,8 @@
+.view-page
+  %div
+    .row
+      %h3= @organization.name
+      %p= @organization.description
+      %p= link_to "View this #{@organization.name}'s needs", organizations_path
+      %p= link_to "View all organizations", organizations_path
+      / need to add additional routes for this link
