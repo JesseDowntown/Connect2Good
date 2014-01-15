@@ -1,12 +1,25 @@
 = form_for @offer, url: create_offer_path() do |f|
   - if signed_in?
     - donor_id = current_user.id
+    .large-4.small-6.columns
+      - if current_user.name.present?
+        %h5= current_user.name
+      %h5= current_user.email
+      %h7
+        if this is not you please #{link_to "sign out", destroy_session_path(:user), method: :delete}
+      %p
+      = f.label :description
+      = f.text_field :description
+      = f.label :image
+      = f.file_field :image
+      = f.submit
   - else
-    - donor_id = ""
-  = f.label :email
-  = f.text_field :email
-  = f.label :description
-  = f.text_field :description
-  = f.label :image
-  = f.file_field :image
-  = f.submit
+    .large-4.small-6.columns
+      - donor_id = ""
+      = f.label :email
+      = f.text_field :email
+      = f.label :description
+      = f.text_field :description
+      = f.label :image
+      = f.file_field :image
+      = f.submit
