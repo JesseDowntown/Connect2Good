@@ -10,7 +10,7 @@ def offer_received(offer)
   @offer = offer
 
   # Change the 'to:' section to your partner's name and email
-  mail( to: "jsonnyg.email@gmail.com",
-        subject: "Connect2Good Offer Received")
+  mail( to: "connect2good.mailer@gmail.com",
+        subject: "Connect2Good Offer!")
 end
 end
