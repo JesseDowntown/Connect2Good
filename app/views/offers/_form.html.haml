@@ -2,13 +2,13 @@
   - if signed_in?
     - donor_id = current_user.id    
     .large-4.large-centered.medium-6.medium-centered.small-9.columns.small-centered
-      %h4 Tell us a bit about what you have:
       - if current_user.name.present?
         %h5= current_user.name
       %h5= current_user.email
       %h7
         if this is not you please #{link_to "sign out", destroy_session_path(:user), method: :delete}
       %p
+      %h4 Tell us a bit about what you have:
       = f.label :description
       = f.text_field :description
       = f.label :image
