@@ -10,7 +10,7 @@ class Notifier < ActionMailer::Base
 
     @offer = offer
 
-    mail( to: "connect2good.mailer@gmail.com",
+    mail( to: "#{@offer.organization.email}",
           subject: "Connect2Good Offer!")
   end
 
