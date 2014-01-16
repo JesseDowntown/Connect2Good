@@ -6,7 +6,7 @@ class OrganizationsController < ApplicationController
 
   def show
     @organization = Organization.find(params[:id])
-    @needs = @organization.needs.page(params[:page]).per_page(12)
+    @needs = @organization.needs.page(params[:page]).per_page(20)
   end
 
 end

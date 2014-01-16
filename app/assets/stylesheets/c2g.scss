@@ -9,14 +9,44 @@
 			background-color: #fdd68b;
 		}
 }
+.panel {
+	border-color: #888888;
+	border-width: 1px;
+	border-style: solid;
+	background-color: lighten(#88a4b3, 5%);
+	padding: 15px 15px;
+} 
+.org-panel {
+	border-color: #888888;
+	border-width: 1px;
+	border-style: solid;
+	// background-color: lighten(#88a4b3, 15%); 
+	padding: 15px 15px;
+
+	@media (max-width: 800px) {
+		height: 80px;
+		padding: 10px 5px;
+		vertical-align: center;
+	}
+} 
+
+.upper-panel{
+	border-color: #888888;
+	border-width: 1px;
+	border-style: solid;
+	padding: 15px 15px;
+	min-height: 100px;
+
+
+	@media (max-width: 800px) {
+	height: 180px;
+	}
+}
 
 .snippet{
 	height: 80px;
 }
 
-.org_panel{
-	height: 120px;
-}
 .view-page { 
 	padding: 3em 0em; 
 
@@ -39,6 +69,10 @@
 		color: #3a5868;
 		font-size: 2em;
 		font-family: Helvetica, sans-serif;
+	}
+
+	h6 {
+		font-weight: bold;
 	}
 
 }
@@ -64,12 +98,11 @@
 		vertical-align: middle;
 	}
 
+
 .home-footer{
 	text-align: center;
 	background-color: #3a5868;
 	padding: 1em 0em;
-	position: fixed; 
-	bottom: 0px;
 	width: 100%;
 	color: #ffffff;
 
@@ -84,6 +117,12 @@
 			color: #fff;
 		}
 	}
+
+	@media (min-height: 400px) {
+	position: fixed; 
+	bottom: 0px;
+	}
+
 }
 
 .full-width-row {
