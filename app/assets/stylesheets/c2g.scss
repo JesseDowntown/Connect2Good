@@ -13,8 +13,12 @@
 	border-color: #888888;
 	border-width: 1px;
 	border-style: solid;
-	background-color: lighten(#88a4b3, 5%);
+	background-color: lighten(#88a4b3, 20%);
 	padding: 15px 15px;
+
+	&:hover {
+		background-color: lighten(#88a4b3, 5%);
+	}
 } 
 .org-panel {
 	border-color: #888888;
@@ -37,9 +41,12 @@
 	padding: 15px 15px;
 	min-height: 100px;
 
+	&:hover {
+		background-color: lighten(#88a4b3, 15%);
+	}
 
 	@media (max-width: 800px) {
-	height: 180px;
+		height: 180px;
 	}
 }
 
