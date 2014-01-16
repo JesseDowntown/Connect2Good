@@ -1,8 +1,23 @@
 .view-page
   %div
     .row
-      %h3= @organization.name
-      %p= @organization.description
-      %p= link_to "View this #{@organization.name}'s needs", organizations_path
-      %p= link_to "View all organizations", organizations_path
-      / need to add additional routes for this link
+      .large-4.columns
+        .center
+          %h3= @organization.name
+          %p= @organization.description
+          %p organizations Contact info. You know what this is.
+          %img{src: "http://placekitten.com/300/300"}/
+          / need to add additional routes for this link
+      .large-8.columns
+        .row
+          .center
+            %h3 Needs
+          - @organization.needs.each do |need|
+            .large-4.small-6.columns
+              .panel
+                %h5= link_to need.organization.name, organization_path(need.organization.id)
+                %h6 Type: {need.type} 
+                %span.snippet= link_to need.description.truncate(30), need_path(need)
+                %div
+                %h7= link_to 'Make Offer'
+        = will_paginate @needs, previous_label: h("<"), next_label: h(">")
