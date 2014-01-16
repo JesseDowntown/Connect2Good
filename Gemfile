@@ -6,6 +6,7 @@ ruby '2.0.0'
 
 gem 'rails', '~> 4.0'
 
+gem 'carrierwave'
 gem 'devise'
 gem 'devise-async'
 gem 'haml-rails'
