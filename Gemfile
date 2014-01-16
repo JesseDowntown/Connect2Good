@@ -6,6 +6,7 @@ ruby '2.0.0'
 
 gem 'rails', '~> 4.0'
 
+gem 'carrierwave'
 gem 'devise'
 gem 'devise-async'
 gem 'haml-rails'
@@ -22,7 +23,7 @@ gem 'rails_admin',  '~> 0.5.0'
 gem 'rolify'
 gem 'sidekiq'
 gem 'simple_form', '~> 3.0.0.rc'
-gem 'will_paginate'
+gem 'will_paginate-foundation', '~> 5.3.3'
 group :production, :staging do
   gem 'rails_12factor'
 end
