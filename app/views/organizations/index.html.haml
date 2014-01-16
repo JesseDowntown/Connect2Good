@@ -1,14 +1,12 @@
 .view-page
   %div
-    .row
+    .center
       %h3 Current Organizations
-      %table
-        %thead
-          %tr
-            %th Organization
-            %th Description
-        %tbody
+      .row
+        .center
           - @organizations.each do |organization|
-            %tr
-              %td= link_to organization.name, organization_path(organization) 
-              %td= organization.description
+            .large-3.medium-4.small-6.columns
+              .panel
+                .org_panel
+                  %h4= link_to organization.name, organization_path(organization)
+                  %h6= organization.description

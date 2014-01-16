@@ -1,14 +1,10 @@
 .view-page
-  %div
+  .center  
+    %h3 Needs by Organization
     .row
-      %h3 Needs by Organization
-      %table
-        %thead
-          %tr
-            %th Organization
-            %th Need
-        %tbody
-          - @needs.each do |need|
+      .large-12.columns
+        .row
+          - @needs.each do |need|    
             %tr
               %td= need.organization.name 
               %td= link_to need.description, need_path(need)      

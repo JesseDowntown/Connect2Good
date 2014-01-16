@@ -10,8 +10,20 @@
 		}
 }
 
+.snippet{
+	height: 80px;
+}
+
+.org_panel{
+	height: 120px;
+}
 .view-page { 
 	padding: 3em 0em; 
+
+	.row{
+		margin: 0px;
+		width: 100%;
+	}
 
 	h1 {
 		font-color: #3a5868;
@@ -36,43 +48,21 @@
 	.title-area{
 		background-color: #88a4b3;
 		color: #ffffff;
-		.name{
-			background-color: #88a4b3;
-		}
-	}
-	.top-bar-section{
-		background-color: #88a4b3;
-		.right{
-			background-color: #88a4b3;
-			.has-form{
-				background-color: #88a4b3;
-			}
-			.user{
-				background-color: #88a4b3;
-				a{
-					background-color: #88a4b3;				
-				}
-			}
-			.toggle-topbar .menu-icon{
-				background-color: #88a4b3;
-				color: #ffffff;
-				a{
-					background-color: #88a4b3;
-					&:active{
-						color: #ffffff;
-					}
-				}
-			}
-		}
 	}
 	a {
 		background-color: #88a4b3;
-	
-		&:hover {
-			background-color: #88a4b3;
+		&:hover, &:active {
+			background-color: darken(#88a4b3, 5%);
+			color: #fff;
 		}
 	}
 }
+
+.center{
+		text-align: center;
+		position: relative;
+		vertical-align: middle;
+	}
 
 .home-footer{
 	text-align: center;
