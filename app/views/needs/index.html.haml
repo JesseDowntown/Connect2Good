@@ -12,5 +12,5 @@
                 %div.snippet
                   %p= link_to need.description.truncate(60), need_path(need)
                 %h7= link_to 'Make Offer', new_offer_path(need_id: need.id)
-        = will_paginate @needs, previous_label: h("<"), next_label: h(">")      
+        = will_paginate @needs, renderer: FoundationPagination::Rails, outer_window: 0, inner_window: 1  
 

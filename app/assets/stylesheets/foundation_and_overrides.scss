@@ -874,9 +874,9 @@ $custom-select-disabled-color: #888;
 
 // We use these for the pagination anchor links
 
-// $pagination-link-pad: em-calc(1 7 1);
-// $pagination-link-font-color: #999;
-// $pagination-link-active-bg: darken(#fff, 10%);
+$pagination-link-pad: em-calc(1 7 1);
+$pagination-link-font-color: $c2gBlue;
+$pagination-link-active-bg: darken(#fff, 10%);
 
 // We use these for disabled anchor links
 
@@ -886,11 +886,11 @@ $custom-select-disabled-color: #888;
 
 // We use these for currently selected anchor links
 
-// $pagination-link-current-background: $primary-color;
-// $pagination-link-current-font-color: #fff;
-// $pagination-link-current-font-weight: bold;
-// $pagination-link-current-cursor: default;
-// $pagination-link-current-active-bg: $primary-color;
+$pagination-link-current-background: $c2gBlue;
+$pagination-link-current-font-color: #fff;
+$pagination-link-current-font-weight: bold;
+$pagination-link-current-cursor: default;
+$pagination-link-current-active-bg: $c2gBlue;
 
 //
 // Panel Variables
