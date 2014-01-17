@@ -25,6 +25,7 @@ puts "each with #{NUMBER_OF_NEEDS_PER_ORG} needs"
 Organization.make!(NUMBER_OF_ORGS).each do |organization|
   Need.make(NUMBER_OF_NEEDS_PER_ORG).each do |need|
     need.organization = organization
+    need.category = "furniture"
     need.save!
   end
   # pick a random user to be the owner

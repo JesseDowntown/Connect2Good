@@ -8,36 +8,20 @@
         %img{src: "http://placekitten.com/300/150"}/
         / need to add additional routes for this link
         %h6 total needs: #{@organization.needs.length}
-        %h6 total offers: #{@organization.offers.length}
-        %h6 total offers pending: ?
+        %h6  #{ link_to "total offers: #{@organization.offers.length}", organization_offers_path(params[:id])}
+        - x = 0
+        - @organization.offers.each do |offer|
+          - offer.status == "pending" ? x += 1 : x
+        %h6 total offers pending: #{x}
         = form_for [@organization, @need], remote: true do |f|     
           %h4 List a new need:
-          = f.select :category, options_for_select(["electronics","furniture","clothing"], @need.category)
+          = f.select :category, options_for_select(["electronics","furniture","clothing","other"], @need.category)
           = f.label :description
           = f.text_field :description
           = f.submit
           %p
-        = params[:id]
-      .large-8.columns
-        %h3.center#needs Needs
-        %table
-          %thead
-            %tr
-              %th Need Description
-              %th Category
-              %th
-              %th
-          %tbody
-            - @organization.needs.each do |need|
-              %tr
-                %td
-                  = link_to need.description, need_path(need) 
-                %td
-                  - if need.category.present?
-                    = need.category 
-                  - else
-                    No category listed
-                %td
-                  = link_to 'Edit', need_path(need.id), method: :edit
-                %td
-                  = link_to 'Delete', need_path(need.id), method: :delete
+      .large-8.columns  
+        %h3.center Needs
+        #needs
+          - @organization.needs.each do |need|
+            = render partial: 'need', object: need 

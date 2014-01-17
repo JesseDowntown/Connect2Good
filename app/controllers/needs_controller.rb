@@ -13,18 +13,16 @@ class NeedsController < ApplicationController
 	end
 
 	def create
-		need = Need.new(needs_params)
-		need.organization_id = params[:organization_id]
-		# respond_to do |format|
+		@need = Need.new(needs_params)
+		@need.organization_id = params[:organization_id]
+    @need.save
+		respond_to do |format|
       # if need.save
-      # 	format.html { redirect_to organization_path(params[:organization_id]) }
-      #   format.js
+        format.js { render :layout => false }
       # else
-      #   format.js { render :partial => 'error' }
+        # format.js 
       # end
-    # end
-    need.save
-  	redirect_to organization_path(params[:organization_id])
+    end
 	end
 
 	def new
