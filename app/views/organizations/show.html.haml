@@ -4,7 +4,7 @@
   .view-page
     %div
       .row
-        .large-4.columns
+        .large-4.columns.orgfix
           .center
             %h3= @organization.name
             %p= @organization.description
@@ -12,11 +12,11 @@
             %img{src: "http://placekitten.com/300/300"}/
             / need to add additional routes for this link
         .large-8.columns
-          .row
+          .row.orgneeds
             .center
               %h3 Needs
             - @organization.needs.each do |need|
-              .large-4.small-6.columns
+              .large-4.small-6.columns.left
                 .card
                   = link_to need_path(need) do
                     .upper-panel
