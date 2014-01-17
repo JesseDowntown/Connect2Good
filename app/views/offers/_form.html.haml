@@ -14,12 +14,14 @@
     = f.file_field :image
     = f.submit
   - else
-    %h4 Tell us a bit about what you have:
+    %h4 Tell us a bit about your offered donation:
     - donor_id = ""
-    = f.label :email
-    = f.text_field :email
+    = f.label :name, "Name: please leave blank if you would prefer to remain anonymous."
+    = f.text_field :name, :placeholder => "optional"
+    = f.label :email, "Email: the organization will use this email to contact you."
+    = f.text_field :email, :placeholder => "example@gmail.com"
     = f.label :description
-    = f.text_field :description
+    = f.text_field :description, :placeholder => "what it is, how old it is, what condition it is in..."
     = f.label :image
     = f.file_field :image
     = f.submit
