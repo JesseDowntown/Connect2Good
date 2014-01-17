@@ -1,10 +1,13 @@
-.large-.small-6.columns
-  %div
-    %br
-      = link_to need.description.truncate(30), need_path(need) 
-      - if need.category.present?
-        Need Type: #{need.category} 
-      - else
-        Need Type: {need.type}
 
-      = link_to 'Delete', need_path(need.id), method: :delete
+%tr#needs
+  %td
+    = link_to need.description, need_path(need) 
+  %td
+    - if need.category.present?
+      = need.category 
+    - else
+      No category listed
+  %td
+    = link_to 'Edit', need_path(need.id), method: :edit
+  %td
+    = link_to 'Delete', need_path(need.id), method: :delete

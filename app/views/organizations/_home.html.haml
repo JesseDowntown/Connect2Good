@@ -20,8 +20,16 @@
           = f.text_field :description
           = f.submit
           %p
+        = params[:id]
       .large-8.columns  
         %h3.center Needs
-        #needs
-          - @organization.needs.each do |need|
-            = render partial: 'need', object: need 
+        %table
+          %thead
+            %tr
+              %th Need Description
+              %th Category
+              %th
+              %th
+          %tbody
+            - @organization.needs.each do |need|
+              = render partial: 'need', object: need 
