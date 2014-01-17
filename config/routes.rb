@@ -12,7 +12,7 @@ C2g::Application.routes.draw do
   get 'needs/:need_id/offers', to: 'offers#new', as: 'new_offer'
   post 'needs/:need_id/offers', to: 'offers#create', as: 'create_offer'
 
-  resources :needs, except: [:create]
+  resources :needs
   resources :offers, except: [:create]
 
   resources :organizations do
