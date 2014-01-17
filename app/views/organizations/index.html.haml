@@ -1,12 +1,16 @@
 .view-page
   %div
-    .center
+    .center.orgfix
       %h3 Current Organizations
       .row
         .center
           - @organizations.each do |organization|
-            .large-3.medium-4.small-6.columns
-              .panel
-                .org_panel
-                  %h4= link_to organization.name, organization_path(organization)
-                  %h6= organization.description
+            .large-3.medium-4.small-6.columns.left
+              .card
+                = link_to organization_path(organization.id) do
+                  .org-main-panel
+                    %span
+                      %h4.middle= organization.name
+                  .org-def-panel
+                    .center
+                      %h5= organization.description.truncate(30)

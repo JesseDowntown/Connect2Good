@@ -17,7 +17,19 @@ pre {
   padding: 10px;
   font-size: 11px;
 }
+.search {
+    /*background-color: transparent;*/
+    color: #3a5868;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #e8e8e8;
+    text-align: center;
 
+    &:focus {
+      border-color: #fdd68b;
+      border-radius: 10px;
+    }
+  }
 a {
   color: #000;
   &:visited {

@@ -11,10 +11,10 @@
           = f.input :reset_password_token, :as => :hidden
           = f.full_error :reset_password_token
           .form-inputs
-            = f.input :password, :label => "New password", :required => true, :autofocus => true
-            = f.input :password_confirmation, :label => "Confirm your new password", :required => true
+            = f.input :password, :label => "New password", :required => true, :autofocus => true, class: "search"
+            = f.input :password_confirmation, :label => "Confirm your new password", :required => true, class: "search"
           .form-actions
-            = f.button :submit, "Change my password"
+            = f.button :submit, "Change my password", class: "button"
         = render "devise/shared/links"
   .large-3.small-1.columns
     %p

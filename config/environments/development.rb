@@ -31,11 +31,12 @@ C2g::Application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address              => "smtp.gmail.com",
+    :address              => "smtp.mandrillapp.com",
     :port                 => 587,
-    :user_name            => ENV["EMAIL_ACCOUNT"],
-    :password             => ENV["EMAIL_PASSWORD"],
-    :authentication       => "plain",
+    :user_name            => ENV["SMTP_USERNAME"],
+    :password             => ENV["SMTP_PASSWORD"],
+    :domain               => 'localhost:3000',
+    :authentication       => "login",
     :enable_starttls_auto => true
   }
 end
