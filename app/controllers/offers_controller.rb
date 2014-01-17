@@ -17,6 +17,7 @@ class OffersController < ApplicationController
 
 	def new
     @offer = Offer.new
+    @need = Need.find(params[:need_id])
  	end
 
  	def create
