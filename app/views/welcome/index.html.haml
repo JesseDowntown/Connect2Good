@@ -56,6 +56,12 @@
               %a{:href => "#"} Personal Info
             %li
               %a{:href => "#"} Donations
+            %li  
+              %label Org Profile
+            %li
+              %a{:href => "#"} Needs
+            %li
+              %a{:href => "#"} Offers
         %section.full-width-row
           .center
             %h3 Connect 2 Good 
@@ -66,13 +72,13 @@
               .center    
                 = submit_tag "Search Needs", class: "button"
             = javascript_include_tag "application"
+          .home-footer
+            %a{href: "#"} 
+              about
+            = link_to "Join", new_user_registration_path
+            %a{href: "#"}
+              contact
+            %div &nbsp;
+            %a{href: "#"}
+              privacy policy
         %a.exit-off-canvas
-      .home-footer
-        %a{href: "#"} 
-          about
-        = link_to "Join", new_user_registration_path
-        %a{href: "#"}
-          contact
-        %div &nbsp;
-        %a{href: "#"}
-          privacy policy

@@ -1,27 +1,27 @@
-.view-page
-  %div
-    .row
-      .large-4.columns
-        .center
-          %h3= @organization.name
-          %p= @organization.description
-          %p organizations Contact info. You know what this is.
-          %img{src: "http://placekitten.com/300/300"}/
-          / need to add additional routes for this link
-      .large-8.columns
-        .row.org
+- if current_user == @organization.owner
+  = render "home"
+- else
+  .view-page
+    %div
+      .row
+        .large-4.columns
           .center
-            %h3 Needs
-          - @organization.needs.each do |need|
-            .large-4.small-6.columns
-              .card
-                = link_to need_path(need) do
-                  .upper-panel
-                    .center  
-                      %h5= need.description.truncate(30) 
-                      %h7 Need Type: {need.type} 
-                = link_to new_offer_path(need_id: need.id) do
-                  .panel
-                    .center
-                      %h6 Make Offer
-        = will_paginate @needs, renderer: FoundationPagination::Rails, outer_window: 0, inner_window: 1  
+            %h3= @organization.name
+            %p= @organization.description
+            %p organizations Contact info. You know what this is.
+            %img{src: "http://placekitten.com/300/300"}/
+            / need to add additional routes for this link
+        .large-8.columns
+          .row
+            .center
+              %h3 Needs
+            - @organization.needs.each do |need|
+              .large-4.small-6.columns
+                .upper-panel
+                  .center  
+                    %h5= link_to need.description.truncate(30), need_path(need)
+                    %h7 Need Type: {need.type} 
+                .panel
+                  .center
+                    %h6= link_to 'Make Offer', new_offer_path(need_id: need.id)
+          = will_paginate @needs, renderer: FoundationPagination::Rails, outer_window: 0, inner_window: 1  

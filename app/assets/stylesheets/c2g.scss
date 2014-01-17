@@ -1,3 +1,14 @@
+body,html{
+    height:100%;
+    width:100%;
+}
+.page{
+    height:100%;   
+}
+.off-canvas-wrap,.inner-wrap{
+    height:100%;   
+}
+
 .button, .expand {
 	background-color: #fdd68b;
 	border-color: #f7d189;
@@ -190,6 +201,10 @@
 
 		&:hover {
 			background-color: #3a5868;
+			color: #fff;
+		}
+
+		&:visited {
 			color: #fff;
 		}
 	}
