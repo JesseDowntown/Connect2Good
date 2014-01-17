@@ -7,40 +7,72 @@
     = javascript_include_tag "vendor/custom.modernizr"
     = csrf_meta_tags
   %body
-    %nav.top-bar{"data-topbar" => ""}
-      %ul.title-area
-        %li.name
-          %h1
-            =link_to "Connect2Good", root_path
-        %li.toggle-topbar.menu-icon
-          %a{href: "#"} Menu
-      %section.top-bar-section
-        / Right Nav Section
-        .right
-          - if current_user
-            %ul.user
-              %li= link_to "Account", "#" 
-              %li= link_to "Sign out", destroy_user_session_path, :method => :delete
-          - else
-            %ul.user
-              %li= link_to "Sign in", new_user_session_path
-              %li= link_to "Join", new_user_registration_path
-    .full-width-row
-      .center
-        %h3 Connect 2 Good 
-      .small-10.medium-6.large-4.small-centered.columns
-        = form_tag needs_path, method: :get do
+    .off-canvas-wrap
+      .inner-wrap
+        %nav.top-bar{"data-topbar" => ""}
+          %section.left-small
+            %a.left-off-canvas-toggle.menu-icon
+              %span
+          / %ul.title-area
+          /   %li.name
+          /     %h1
+          /       =link_to "Connect2Good", root_path
+          /   %li.toggle-topbar.menu-icon
+          /     %a{href: "#"} Menu
+          %section.top-bar-section
+            / Right Nav Section
+            .right
+              - if current_user
+                %ul.user
+                  %li= link_to "Account", "#" 
+                  %li= link_to "Sign out", destroy_user_session_path, :method => :delete
+              - else
+                %ul.user
+                  %li= link_to "Sign in", new_user_session_path
+                  %li= link_to "Join", new_user_registration_path
+        %aside.left-off-canvas-menu
+          %ul.off-canvas-list
+            %li
+              .oc-head Connect 2 Good
+            %li
+              %label Organizations
+            %li
+              %a{href: "#{organizations_path}"} View All
+            %li
+              %label Needs
+            %li
+              %a{href: "#{needs_path}"} View All
+            %li
+              %a{:href => "#"} Technology
+            %li
+              %a{:href => "#"} Furniture
+            %li
+              %a{:href => "#"} Tools &amp; Construction
+            %li
+              %a{:href => "#"} Volunteer Hours
+            %li
+              %label User Profile
+            %li
+              %a{:href => "#"} Personal Info
+            %li
+              %a{:href => "#"} Donations
+        %section.full-width-row
           .center
-            = text_field_tag :query, params[:query], placeholder: "What would you like to donate?", class: "search"
-          .center    
-            = submit_tag "Search Needs", class: "button"
-        = javascript_include_tag "application"
-    .home-footer
-      %a{href: "#"} 
-        about
-      = link_to "Join", new_user_registration_path
-      %a{href: "#"}
-        contact
-      %div &nbsp;
-      %a{href: "#"}
-        privacy policy
+            %h3 Connect 2 Good 
+          .small-10.medium-6.large-4.small-centered.columns
+            = form_tag needs_path, method: :get do
+              .center
+                = text_field_tag :query, params[:query], placeholder: "What would you like to donate?", class: "search"
+              .center    
+                = submit_tag "Search Needs", class: "button"
+            = javascript_include_tag "application"
+        %a.exit-off-canvas
+      .home-footer
+        %a{href: "#"} 
+          about
+        = link_to "Join", new_user_registration_path
+        %a{href: "#"}
+          contact
+        %div &nbsp;
+        %a{href: "#"}
+          privacy policy
