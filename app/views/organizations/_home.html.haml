@@ -7,8 +7,8 @@
         %p organizations Contact info. You know what this is.
         %img{src: "http://placekitten.com/300/150"}/
         / need to add additional routes for this link
-        %h6 total needs: #{@organization.needs.length}
-        %h6  #{ link_to "total offers: #{@organization.offers.length}", organization_offers_path(params[:id])}
+        %h6 #{ link_to "total needs: #{@organization.needs.length}", organization_needs_path(params[:id]), id: 'need_index', remote: true }
+        %h6 #{ link_to "total offers: #{@organization.offers.length}", organization_offers_path(params[:id]), id: 'offer_index', remote: true }
         - x = 0
         - @organization.offers.each do |offer|
           - offer.status == "pending" ? x += 1 : x
@@ -20,10 +20,10 @@
           = f.text_field :description
           = f.submit
           %p
-        = params[:id]
-      .large-8.columns  
-        %h3.center Needs
-        %table
+      .large-8.columns#offers 
+      .large-8.columns#needsList 
+        %h3 Needs
+        %table.center
           %thead
             %tr
               %th Need Description
@@ -31,5 +31,5 @@
               %th
               %th
           %tbody
-            - @organization.needs.each do |need|
+            - @organization.needs.reverse.each do |need|
               = render partial: 'need', object: need 

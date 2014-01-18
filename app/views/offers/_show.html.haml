@@ -1,0 +1,31 @@
+.large-8.columns#needsList 
+  .view-page
+    .large-1.small-1.columns
+      %p
+        \
+    .large-12.small-12.columns
+      .row
+        %h3.center Offers List
+        %table
+          %thead
+            %tr
+              %th Item
+              %th Org
+              %th Donor
+              %th Status
+              %th Update
+          %tbody
+            - @offers.each do |offer|
+              %tr
+                - if offer.need
+                  %td= link_to offer.need.description, offer_path(offer)
+                %td= offer.organization.name
+                %td= offer.email
+                = form_for offer do |f|
+                  %td
+                    = f.select :status, options_for_select(["pending","accepted","rejected"], offer.status)
+                  %td
+                    = f.submit value: "Update", class: "button"
+    .large-1.small-1.columns
+      %p
+        \

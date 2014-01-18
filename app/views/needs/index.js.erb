@@ -1,0 +1,5 @@
+(function () {
+  $('#needsList').hide();
+  var needHtml = "<%= j render(partial: 'index', locals: { organization: @organization }) %>";
+  $('#offers').prepend(needHtml);
+})();

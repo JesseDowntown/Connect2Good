@@ -10,6 +10,11 @@ class OffersController < ApplicationController
     else
 		  @offers = Offer.all
     end
+
+    respond_to do |format|
+        format.js { render :layout => false }
+        format.html
+    end
 	end
 
 	def show
@@ -40,7 +45,8 @@ class OffersController < ApplicationController
 
   def update
     if @offer.update(offer_params)
-      redirect_to @offer, notice: 'Offer was successfully updated.'
+      redirect_to :back
+      
     else
       render action: 'edit'
     end
