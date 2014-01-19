@@ -14,15 +14,17 @@
     = f.file_field :image
     = f.submit
   - else
-    %h4 Tell us a bit about what you have:
+    %h4= "Fill out this form and we will notify #{@need.organization.name} of your desire to donate!"
     - donor_id = ""
+    = f.label :name
+    = f.text_field :name, :placeholder => "leave blank if you prefer to remain anonymous"
     = f.label :email
-    = f.text_field :email
+    = f.text_field :email, :placeholder => "#{@need.organization.name} will use this email to contact you"
     = f.label :description
-    = f.text_field :description
+    = f.text_field :description, :placeholder => "what it is, how old it is, what condition it is in..."
     = f.label :image
     = f.file_field :image
-    = f.submit
+    = f.submit "Submit"
     %p
     %h8
       have an account? #{link_to "sign in", user_session_path}
