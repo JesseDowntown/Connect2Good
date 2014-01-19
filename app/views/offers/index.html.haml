@@ -22,7 +22,7 @@
               %td= offer.email
               = form_for offer do |f|
                 %td
-                  = f.select :status, options_for_select(["pending","accepted","rejected"], offer.status)
+                  = f.select :status, options_for_select(["pending","accepted","denied"], offer.status)
                 %td
                   = f.submit value: "Update", class: "button"
   .large-1.small-1.columns

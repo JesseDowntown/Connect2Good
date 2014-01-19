@@ -7,7 +7,7 @@ if ENV['RAILS_ENV'] == 'test'
   NUMBER_OF_NEEDS_PER_ORG = 1
   NUMBER_OF_USERS         = 1
 else
-  NUMBER_OF_OFFERS        = 5
+  NUMBER_OF_OFFERS        = 30
   NUMBER_OF_ORGS          = 10
   NUMBER_OF_NEEDS_PER_ORG = 20
   NUMBER_OF_USERS         = 100
@@ -39,7 +39,10 @@ puts
 puts "Creating #{NUMBER_OF_OFFERS} offers"
 Offer.make!(NUMBER_OF_OFFERS).each do |offer|
   # pick a random user to be the donor
-  offer.donor = User.all.sample
+  @donor = User.all.sample
+  offer.donor = @donor
+  # get the random donor's email
+  offer.email = @donor.email
   # make offer to a random org
   offer.organization = Organization.all.sample
   # pick a random need from that org

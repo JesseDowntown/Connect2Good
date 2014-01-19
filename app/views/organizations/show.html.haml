@@ -22,7 +22,7 @@
                     .upper-panel
                       .center  
                         %h5= need.description.truncate(30)
-                        %h7 Need Type: {need.type} 
+                        %h7 Need Type: #{need.category} 
                   = link_to new_offer_path(need_id: need.id) do
                     .panel
                       .center

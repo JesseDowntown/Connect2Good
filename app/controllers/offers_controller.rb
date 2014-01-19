@@ -6,7 +6,7 @@ class OffersController < ApplicationController
 	def index
     if params[:organization_id]
       @organization = Organization.find(params[:organization_id])
-      @offers = @organization.offers
+      @offers = @organization.offers.sort_by {|x, y, z| x.status }.reverse 
     else
 		  @offers = Offer.all
     end

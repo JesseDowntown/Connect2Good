@@ -1,5 +1,5 @@
 (function () {
   $('#need_description').val('');
-  var needHtml = "<%= j render(partial: 'organizations/need', locals: { need: @need }) %>";
+  var needHtml = "<%= j render(partial: 'needs/need', locals: { need: @need }) %>";
   $('#needs').prepend(needHtml);
 })();

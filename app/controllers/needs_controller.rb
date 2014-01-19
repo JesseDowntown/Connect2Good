@@ -7,7 +7,7 @@ class NeedsController < ApplicationController
 			@needs = Need.all.page(params[:page]).per_page(12)
 		end
 		respond_to do |format|
-		    format.js { render :layout => false }
+		    format.js { redirect_to :back}
 				format.html
 		end	
 	end
@@ -46,7 +46,10 @@ class NeedsController < ApplicationController
 	def destroy
 		@need = Need.find(params[:id])
 		@need.destroy
-		redirect_to :back
+		respond_to do |format|
+		    format.js { render nothing: true} 
+				format.html { redirect_to :back }
+		end	
 	end
 
 	private

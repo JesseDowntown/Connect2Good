@@ -21,3 +21,7 @@ $(function(){ $(document).foundation(); });
 $('#query').autocomplete({
   source: "/search_suggestions"
 });
+$('a[data-remote],input[data-remote]').live('click', function(e) {
+  $(this).callRemote();
+  e.preventDefault();
+});

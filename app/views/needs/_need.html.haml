@@ -1,6 +1,6 @@
-%tr
+%tr#needs
   %td
-    = simple_format link_to word_wrap(need.description ), need_path(need)  
+    = link_to need.description, need_path(need) 
   %td
     - if need.category.present?
       = need.category 

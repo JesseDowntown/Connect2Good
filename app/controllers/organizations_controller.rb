@@ -7,7 +7,23 @@ class OrganizationsController < ApplicationController
   def show
     @organization = Organization.find(params[:id])
     @needs = @organization.needs.page(params[:page])
-    @need = Need.new   
+    @need = Need.new 
+    @pending = 0
+    @offers = @organization.offers
+    @offers.each do |offer|
+      offer.status == "pending" ? @pending += 1 : @pending
+    end  
+    @denied = 0
+    @offers = @organization.offers
+    @offers.each do |offer|
+      offer.status == "denied" ? @denied += 1 : @denied
+    end  
+
+    @accepted = 0
+    @offers = @organization.offers
+    @offers.each do |offer|
+      offer.status == "accepted" ? @accepted += 1 : @accepted
+    end  
   end
 
 end
