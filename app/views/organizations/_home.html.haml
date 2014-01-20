@@ -14,12 +14,13 @@
           %h6 total offers denied: #{@denied}
           %h6 total offers accepted: #{@accepted}
         = form_for [@organization, @need], remote: true do |f|     
-          %h4 List a new need:
-          = f.select :category, options_for_select(["electronics","furniture","clothing","other"], @need.category)
-          = f.label :description
-          = f.text_area :description
-          = f.submit
-          %p
+          %div#need_form
+            %h4 List a new need:
+            = f.select :category, options_for_select(["electronics","furniture","clothing","other"], @need.category)
+            = f.label :description
+            = f.text_area :description
+            = f.submit
+            %p
       .large-8.columns#offers 
       .large-8.columns#needsList 
         %h3 Needs

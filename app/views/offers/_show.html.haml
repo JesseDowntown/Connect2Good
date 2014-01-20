@@ -13,7 +13,7 @@
         - @offers.each do |offer|
           %tr
             - if offer.need
-              %td= link_to offer.need.description.truncate(50), offer_path(offer)
+              %td= link_to offer.need.description.truncate(50), need_path(offer.need)
             - else
               %td This need has been deleted 
             %td= link_to offer.description.truncate(50), offer_path(offer)

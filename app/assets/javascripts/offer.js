@@ -1,3 +1,5 @@
-$("#pending").click(function () {
-  $('calculate').render;
+$(function() {
+$('.edit_form input[type=select]').click(function() {
+  alert('clicked');
+})
 })
