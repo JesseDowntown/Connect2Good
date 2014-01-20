@@ -10,4 +10,10 @@ class OrganizationsController < ApplicationController
     @need = Need.new
   end
 
+  def destroy
+    @organization = Organization.find(params[:id])
+    @organization.destroy
+    redirect_to root_path
+  end
+
 end
