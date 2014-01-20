@@ -29,6 +29,7 @@ Organization.make!(NUMBER_OF_ORGS).each do |organization|
     need.save!
   end
   # pick a random user to be the owner
+  
   organization.owner = User.all.sample
   organization.email = "connect2good.mailer@gmail.com"
   organization.save!
@@ -42,7 +43,7 @@ Offer.make!(NUMBER_OF_OFFERS).each do |offer|
   @donor = User.all.sample
   offer.donor = @donor
   # get the random donor's email
-  offer.email = @donor.email
+  offer.email = "connect2good.mailer@gmail.com"
   # make offer to a random org
   offer.organization = Organization.all.sample
   # pick a random need from that org

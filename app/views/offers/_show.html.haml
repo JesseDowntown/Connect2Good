@@ -1,6 +1,7 @@
 .large-8.columns#needsList 
   .row
     %h3 Offers 
+    %p *This list is for your own record only. You need to contact the donor through email to accept the donation.
     %table
       %thead
         %tr
@@ -22,7 +23,7 @@
               %td
                 = f.select :status, options_for_select(["pending","accepted","denied"], offer.status)
               %td
-                = f.submit value: "Update", class: "button", id: "pending"
+                = f.submit value: "Update", class: "button submit-offer"
 .large-1.small-1.columns
   %p
     \

@@ -23,7 +23,11 @@ class OrganizationsController < ApplicationController
     @offers = @organization.offers
     @offers.each do |offer|
       offer.status == "accepted" ? @accepted += 1 : @accepted
-    end  
+    end
+    respond_to do |format|
+      format.html { render action: 'show' }
+      format.json { render @offers, status: :updated }
+    end
   end
 
 end
