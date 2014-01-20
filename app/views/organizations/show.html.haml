@@ -1,4 +1,4 @@
-- if current_user == @organization.owner
+- if (current_user == @organization.owner) || (current_user.try(:admin?))
   = render "home"
 - else
   .view-page
