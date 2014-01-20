@@ -25,6 +25,10 @@ class OffersController < ApplicationController
     @offer.need = @need
     @offer.organization = @organization
     @offer.status = 'pending'
+    if @offer.name.blank?
+      @offer.name = 'anonymous'
+    end
+
     if user_signed_in?
       @offer.donor = current_user
     else
@@ -64,11 +68,9 @@ private
   	params.require(:offer).permit(
       :email,
       :image,
-      # :donor_id,
-      # :need_id,
-      # :organization_id,
       :status,
-      :description
+      :description,
+      :name
     )
   end
 end
