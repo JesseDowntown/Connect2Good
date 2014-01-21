@@ -17,6 +17,7 @@
 
 //= require_tree .
 
+
 $(function(){ $(document).foundation(); });
 $('#query').autocomplete({
   source: "/search_suggestions"

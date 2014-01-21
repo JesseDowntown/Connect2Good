@@ -10,6 +10,7 @@
         = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
           = f.error_notification
           .form-inputs
+            = f.input :name, :required => false, class: "search"
             = f.input :email, :required => true, :autofocus => true, class: "search" 
             = f.input :password, :required => true, class: "search"
             = f.input :password_confirmation, :required => true, class: "search"

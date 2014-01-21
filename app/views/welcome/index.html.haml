@@ -4,7 +4,6 @@
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
     %title= content_for?(:title) ? yield(:title) : "Connect2Good"
     = stylesheet_link_tag    "application"
-    = javascript_include_tag "vendor/custom.modernizr"
     = csrf_meta_tags
   %body
     .off-canvas-wrap
@@ -24,7 +23,7 @@
             .right
               - if current_user
                 %ul.user
-                  %li= link_to "Account", "#" 
+                  %li= link_to "Account", user_path(current_user) 
                   %li= link_to "Sign out", destroy_user_session_path, :method => :delete
               - else
                 %ul.user
@@ -43,9 +42,9 @@
             %li
               %a{href: "#{needs_path}"} View All
             %li
-              %a{:href => "#"} Technology
+              %a{:href => "/needs?utf8=✓&query=electronics&commit=Search+Needs"} Electronics & Technology
             %li
-              %a{:href => "#"} Furniture
+              %a{:href => "/needs?utf8=✓&query=furniture&commit=Search"} Furniture
             %li
               %a{:href => "#"} Tools &amp; Construction
             %li
@@ -53,9 +52,9 @@
             %li
               %label User Profile
             %li
-              %a{:href => "#"} Personal Info
+              %a{:href => edit_user_registration_path} Personal Info
             %li
-              %a{:href => "#"} Donations
+              %a{:href => user_path(current_user)} Donations
             %li  
               %label Org Profile
             %li
