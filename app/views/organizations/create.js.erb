@@ -1,0 +1,9 @@
+(function() {  
+
+    $('.org-create .new_organization').slideToggle();
+    $('.org-create .button').show();
+
+    var needHtml = "<%= j render(partial: 'show', locals: { organization: @organization }) %>";
+    $('#numbers').html(needHtml);
+
+})();
