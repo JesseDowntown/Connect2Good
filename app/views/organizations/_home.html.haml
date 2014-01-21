@@ -8,7 +8,7 @@
         %p organizations Contact info. You know what this is.
         .org-edit
           = render 'form'
-          = link_to 'Edit Info', organization_path, :class => 'button'
+          .button Edit Info
         / need to add additional routes for this link
         %span
           %span#numbers
@@ -51,6 +51,3 @@
           %tbody#needs
             - @organization.needs.reverse.each do |need|
               = render partial: 'need', object: need 
-      .large-1.columns
-        - if current_user.admin?
-          = link_to 'Delete Organization', organization_path, :confirm => "Are you sure?", :class => 'button', method: :delete
