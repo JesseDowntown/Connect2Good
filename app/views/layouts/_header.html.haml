@@ -5,9 +5,6 @@
         =link_to "Connect2Good", root_path
     %li.toggle-topbar
       %a{href: "#"} Menu
-  - if current_user.admin?
-    %ul.title-area
-      %h4 ADMINISTRATOR
   %section.top-bar-section
     / Right Nav Section
     %ul.right
@@ -26,3 +23,7 @@
         %li.user
           %li= link_to "Sign in", new_user_session_path
           %li= link_to "Join", new_user_registration_path
+    / Left Nav Section
+    - if current_user.try(:admin?)
+      %ul.left.admin
+        %li= link_to "ADMINISTRATOR", admin_path
