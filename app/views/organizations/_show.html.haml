@@ -1,4 +1,8 @@
 %h6 #{ link_to "total needs: #{@organization.needs.length}", organization_path(params[:id]) }
+%span.large3.columns
+  %h6 
+    total needs active: 
+    %span.pending-num= @active
 %h6 #{ link_to "total offers: #{@organization.offers.length}", organization_offers_path(params[:id]), id: 'offer_index', remote: true }
 .row
   %span.large3.columns

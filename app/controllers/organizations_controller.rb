@@ -23,6 +23,12 @@ class OrganizationsController < ApplicationController
     @offers.each do |offer|
       offer.status == "accepted" ? @accepted += 1 : @accepted
     end
+
+    @active = 0
+    @needs.each do |need|
+      need.status == true ? @active += 1 : @active
+    end
+
     respond_to do |format|
       format.html { render action: 'show' }
       format.js { render layout: false }
