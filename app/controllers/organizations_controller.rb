@@ -16,4 +16,13 @@ class OrganizationsController < ApplicationController
     redirect_to root_path
   end
 
+  def update
+    @organization = Organization.find(params[:id])
+    @organization.update(organization_params)
+  end
+
+  private
+  def organization_params
+    params.require(:organization).permit(:description, :owner_id, :image)
+  end
 end

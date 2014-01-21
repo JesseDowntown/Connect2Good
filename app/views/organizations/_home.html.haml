@@ -4,8 +4,11 @@
       .large-4.columns
         %h3= @organization.name
         %img{src: "http://placekitten.com/300/150"}/
-        %p= @organization.description
+        %p#description= @organization.description
         %p organizations Contact info. You know what this is.
+        .org-edit
+          = render 'form'
+          = link_to 'Edit Info', organization_path, :class => 'button'
         / need to add additional routes for this link
         %h6 total needs: #{@organization.needs.length}
         %h6  #{ link_to "total offers: #{@organization.offers.length}", organization_offers_path(params[:id])}
@@ -20,7 +23,6 @@
           = f.text_field :description
           = f.submit 'Add Need'
           %p
-        = params[:id]
       .large-7.columns  
         %h3.center Needs
         %table
