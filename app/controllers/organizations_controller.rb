@@ -14,7 +14,6 @@ class OrganizationsController < ApplicationController
       offer.status == "pending" ? @pending += 1 : @pending
     end  
     @denied = 0
-    @offers = @organization.offers
     @offers.each do |offer|
       offer.status == "denied" ? @denied += 1 : @denied
     end  
@@ -26,7 +25,7 @@ class OrganizationsController < ApplicationController
     end
     respond_to do |format|
       format.html { render action: 'show' }
-      format.json { render @offers, status: :updated }
+      format.js { render layout: false }
     end
   end
 

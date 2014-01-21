@@ -1,3 +1,4 @@
-$('.delete_need').bind('ajax:success', function() {  
-    $(this).closest('.delete_need').fadeOut();  
-}); 
+$('.checkable').on('change', 
+function() {
+    $(this).parents('form:first').submit();
+});

@@ -1,9 +1,9 @@
-$(document).ready(function () {
-    $('#offer_status').change(function(e){
-      e.preventDefault();
-      this.form.submit();
-    });
-})
+// $(document).ready(function () {
+//     $('#offer_status').change(function(e){
+//       e.preventDefault();
+//       this.form.submit();
+//     });
+// })
 // {
 //   type: "update",
 //   idElement: "#hafasdf"
