@@ -35,19 +35,18 @@ class OrganizationsController < ApplicationController
     end
   end
 
-  def destroy
-    @organization = Organization.find(params[:id])
-    @organization.destroy
-    redirect_to root_path
-  end
-
   def update
     @organization = Organization.find(params[:id])
     @organization.update(organization_params)
   end
 
+  def create
+    @organization = Organization.new(organization_params)
+    @organization.save
+  end
+
   private
   def organization_params
-    params.require(:organization).permit(:description, :owner_id, :image)
+    params.require(:organization).permit(:description, :owner_id, :image, :name)
   end
 end
