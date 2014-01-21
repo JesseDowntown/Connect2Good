@@ -7,7 +7,6 @@
         Active #{f.check_box :status, class: 'checkable', remote: true}
       - else
         Inactive #{f.check_box :status, class: 'checkable', remote: true}
-      
   %td
     - if need.category.present?
       = need.category 
@@ -18,4 +17,3 @@
     = link_to 'Edit', need_path(need.id), method: :edit
   %td
     = link_to 'Delete', need, confirm: 'Are your sure?', method: :delete, remote: true
-  

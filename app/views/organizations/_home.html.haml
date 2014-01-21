@@ -10,31 +10,47 @@
           = render 'form'
           = link_to 'Edit Info', organization_path, :class => 'button'
         / need to add additional routes for this link
-        %h6 total needs: #{@organization.needs.length}
-        %h6  #{ link_to "total offers: #{@organization.offers.length}", organization_offers_path(params[:id])}
-        - x = 0
-        - @organization.offers.each do |offer|
-          - offer.status == "pending" ? x += 1 : x
-        %h6 total offers pending: #{x}
+        %span
+          %span#numbers
+            %h6#need_count #{ link_to "total needs: #{@organization.needs.length}", organization_path(params[:id]) }
+            %span.large3.columns
+              %h6 
+                total needs active: 
+                %span.pending-num= @active
+            %h6 #{ link_to "total offers: #{@organization.offers.length}", organization_offers_path(params[:id]), id: 'offer_index', remote: true }
+            .row
+              %span.large3.columns
+                %h6 
+                  total offers pending: 
+                  %span.pending-num= @pending
+                %h6 
+                  total offers denied: 
+                  %span.denied-num= @denied
+                %h6 
+                  total offers accepted:
+                  %span.accepted-num= @accepted
         = form_for [@organization, @need], remote: true do |f|     
-          %h4 List a new need:
-          = f.select :category, options_for_select(["electronics","furniture","clothing","other"], @need.category)
-          = f.label :description
-          = f.text_field :description
-          = f.submit 'Add Need'
-          %p
-      .large-7.columns  
-        %h3.center Needs
-        %table
+          %div#need_form
+            %h4 List a new need:
+            = f.select :category, options_for_select(["electronics","furniture","clothing","other"], @need.category)
+            = f.label :description
+            = f.text_area :description
+            = f.submit
+            %p
+      .large-8.columns#offers 
+      .large-8.columns#needsList 
+        %h3 Needs
+        %table.center
           %thead
             %tr
               %th Need Description
+              %th Status
               %th Category
-              %th
-              %th
-          %tbody
-            - @organization.needs.each do |need|
-              = render partial: 'need', object: need
+              %th Edit
+              %th Delete
+          %tbody#needs
+            - @organization.needs.reverse.each do |need|
+              = render partial: 'need', object: need 
       .large-1.columns
         - if current_user.admin?
           = link_to 'Delete Organization', organization_path, :confirm => "Are you sure?", :class => 'button', method: :delete

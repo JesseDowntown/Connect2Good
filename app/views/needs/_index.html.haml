@@ -1,0 +1,12 @@
+.large-8.columns#needsList
+  %h3.center Needs
+  %table
+    %thead
+      %tr
+        %th Need Description
+        %th Category
+        %th
+        %th
+    %tbody
+      - @organization.needs.each do |need|
+        = render partial: 'need', object: need 
