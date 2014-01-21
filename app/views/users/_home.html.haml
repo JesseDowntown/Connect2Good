@@ -1,0 +1,36 @@
+.view-page
+  %div
+    .row.large-12.columns
+      .large-5.columns
+        %h3= "Welcome, #{@user.name}."
+        %p= "email: #{@user.email}"
+        %a{"data-reveal-id" => "myModal", href: "#"} Edit Info
+        #myModal.reveal-modal{"data-reveal" => ""}
+          .row
+            %h2 Change your password
+            = simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
+              = f.error_notification
+              = f.input :reset_password_token, :as => :hidden
+              = f.full_error :reset_password_token
+              .form-inputs
+                = f.input :password, :label => "New password", :required => true, :autofocus => true, class: "search"
+                = f.input :password_confirmation, :label => "Confirm your new password", :required => true, class: "search"
+              .form-actions
+                = f.button :submit, "Change my password", class: "button"
+      .large-7.columns
+        %h3 All offers
+        %table
+          %thead
+            %tr
+              %th Offer
+              %th Organization
+              %th
+          %tbody
+            - @offers.each do |offer|
+              %tr
+                %td
+                  = link_to offer.description, offer_path(offer) 
+                %td
+                  = link_to offer.organization.name, organization_path(offer)
+                %td
+                  = link_to 'Hide from view'

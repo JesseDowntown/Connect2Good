@@ -12,6 +12,9 @@ class NeedsController < ApplicationController
 		@need = Need.find(params[:id])
 	end
 
+	def need
+		@need = Need.find(params[:id])
+	end
 	def create
 		need = Need.new(needs_params)
 		need.organization_id = params[:organization_id]

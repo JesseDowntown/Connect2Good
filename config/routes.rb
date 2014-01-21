@@ -6,6 +6,8 @@ C2g::Application.routes.draw do
     get "/users/password/forgot", to: "devise/passwords#new", as: "new_user_password"
   end
   devise_for :users
+
+  resources :users, except: [:index, :edit, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
