@@ -1,0 +1,6 @@
+%td#activity_status
+  = form_for need do |f|
+    - if need.status == true
+      Active #{f.check_box :status, remote: true}
+    - else
+      Inactive #{f.check_box :status, remote: true}

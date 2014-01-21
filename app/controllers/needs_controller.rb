@@ -2,10 +2,14 @@ class NeedsController < ApplicationController
 
 	def index
 		if params[:query].present?
-			@needs = Need.text_search(params[:query]).page(params[:page]).per_page(12)
+			@needs = Need.where(status: true).text_search(params[:query]).page(params[:page]).per_page(12)
 		else
-			@needs = Need.all.page(params[:page]).per_page(12)
+			@needs = Need.where(status: true).page(params[:page]).per_page(12)
 		end
+		respond_to do |format|
+		    format.js { redirect_to :back}
+				format.html
+		end	
 	end
 
 	def show
@@ -16,18 +20,17 @@ class NeedsController < ApplicationController
 		@need = Need.find(params[:id])
 	end
 	def create
-		need = Need.new(needs_params)
-		need.organization_id = params[:organization_id]
-		# respond_to do |format|
+		@need = Need.new(needs_params)
+		@need.organization_id = params[:organization_id]
+    @need.save
+    @organization = @need.organization
+		respond_to do |format|
       # if need.save
-      # 	format.html { redirect_to organization_path(params[:organization_id]) }
-      #   format.js
+        format.js { render :layout => false }
       # else
-      #   format.js { render :partial => 'error' }
+        # format.js 
       # end
-    # end
-    need.save
-  	redirect_to organization_path(params[:organization_id])
+    end
 	end
 
 	def new
@@ -40,19 +43,27 @@ class NeedsController < ApplicationController
 
 	def update
 		@need = Need.find(params[:id])
-		@need.update(need_params)
-		redirect_to root_path
+		@need.update(needs_params)
+		respond_to do |format|
+        format.js { render :layout => false }
+        format.html { redirect_to :back }
+		end
+
 	end
 
 	def destroy
 		@need = Need.find(params[:id])
+		@organization = @need.organization
 		@need.destroy
-		redirect_to organization_path(1)
+		respond_to do |format|
+		    format.js { render layout: false} 
+				format.html { redirect_to :back }
+		end	
 	end
 
 	private
 	def needs_params
-		params.require(:need).permit(:description, :organization_id, :category)
+		params.require(:need).permit(:description, :organization_id, :category, :status)
 	end
 
 end

@@ -16,12 +16,13 @@
         %tbody
           - @offers.each do |offer|
             %tr
-              %td= link_to offer.need.description, offer_path(offer)
+              - if offer.need
+                %td= link_to offer.need.description, offer_path(offer)
               %td= offer.organization.name
               %td= offer.email
               = form_for offer do |f|
                 %td
-                  = f.select :status, options_for_select(["pending","accepted","rejected"], offer.status)
+                  = f.select :status, options_for_select(["pending","accepted","denied"], offer.status)
                 %td
                   = f.submit value: "Update", class: "button"
   .large-1.small-1.columns

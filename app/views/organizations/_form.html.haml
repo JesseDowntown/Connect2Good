@@ -1,0 +1,21 @@
+- if current_user.try(:admin?)
+  = form_for @organization, remote: true do |f|
+    = f.label "organization's representative"
+    = f.number_field :owner_id, :placeholder => "user's id #"
+    / prefer that :owner_id field be a search field where admin could search through existing users and select one as the organization's owner
+    / = f.search_field :owner_id
+    = f.label :name
+    = f.text_field :name
+    = f.label :description
+    = f.text_area :description
+    = f.label :image
+    = f.file_field :image
+    = f.submit
+
+- else
+  = form_for @organization, remote: true do |f|
+    = f.label :description
+    = f.text_area :description
+    = f.label :image
+    = f.file_field :image
+    = f.submit

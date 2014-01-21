@@ -1,0 +1,6 @@
+(function() {  
+  $('.org-edit .edit_organization').slideToggle();
+  $('.org-edit .button').show();
+
+  $("#description").text("<%= @organization.description %>");
+})();

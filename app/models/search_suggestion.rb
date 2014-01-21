@@ -7,6 +7,8 @@ class SearchSuggestion < ActiveRecord::Base
 
   def self.index_needs
     Need.find_each do |need|
+      index_term(need.category)
+      index_term(need.organization.name)
       need.description.split.each { |t| index_term(t) }
     end
   end

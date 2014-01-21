@@ -16,7 +16,11 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    session[:previous_url] || root_path
+    if current_user.try(:admin?)
+      admin_path
+    else
+      session[:previous_url] || root_path
+    end
   end
 
   def after_edit_path_for(resource)
@@ -32,7 +36,6 @@ class ApplicationController < ActionController::Base
 
   def configure_devise_permitted_parameters
     registration_params = [:name, :email, :password, :password_confirmation]
-
     if params[:action] == 'update'
       devise_parameter_sanitizer.for(:account_update) { 
         |u| u.permit(registration_params << :current_password)

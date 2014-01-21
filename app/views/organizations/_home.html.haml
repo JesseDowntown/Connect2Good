@@ -3,41 +3,51 @@
     .row.large-12.columns
       .large-4.columns
         %h3= @organization.name
-        %p= @organization.description
-        %p organizations Contact info. You know what this is.
         %img{src: "http://placekitten.com/300/150"}/
+        %p#description= @organization.description
+        %p organizations Contact info. You know what this is.
+        .org-edit
+          = render 'form'
+          .button Edit Info
         / need to add additional routes for this link
-        %h6 total needs: #{@organization.needs.length}
-        %h6 total offers: #{@organization.offers.length}
-        %h6 total offers pending: ?
+        %span
+          %span#numbers
+            %h6#need_count #{ link_to "total needs: #{@organization.needs.length}", organization_path(params[:id]) }
+            %span.large3.columns
+              %h6 
+                total needs active: 
+                %span.pending-num= @active
+            %h6 #{ link_to "total offers: #{@organization.offers.length}", organization_offers_path(params[:id]), id: 'offer_index', remote: true }
+            .row
+              %span.large3.columns
+                %h6 
+                  total offers pending: 
+                  %span.pending-num= @pending
+                %h6 
+                  total offers denied: 
+                  %span.denied-num= @denied
+                %h6 
+                  total offers accepted:
+                  %span.accepted-num= @accepted
         = form_for [@organization, @need], remote: true do |f|     
-          %h4 List a new need:
-          = f.select :category, options_for_select(["electronics","furniture","clothing"], @need.category)
-          = f.label :description
-          = f.text_field :description
-          = f.submit
-          %p
-        = params[:id]
-      .large-8.columns
-        %h3.center#needs Needs
-        %table
+          %div#need_form
+            %h4 List a new need:
+            = f.select :category, options_for_select(["electronics","furniture","clothing","other"], @need.category)
+            = f.label :description
+            = f.text_area :description
+            = f.submit
+            %p
+      .large-8.columns#offers 
+      .large-8.columns#needsList 
+        %h3 Needs
+        %table.center
           %thead
             %tr
               %th Need Description
+              %th Status
               %th Category
-              %th
-              %th
-          %tbody
-            - @organization.needs.each do |need|
-              %tr
-                %td
-                  = link_to need.description, need_path(need) 
-                %td
-                  - if need.category.present?
-                    = need.category 
-                  - else
-                    No category listed
-                %td
-                  = link_to 'Edit', need_path(need.id), method: :edit
-                %td
-                  = link_to 'Delete', need_path(need.id), method: :delete
+              %th Edit
+              %th Delete
+          %tbody#needs
+            - @organization.needs.reverse.each do |need|
+              = render partial: 'need', object: need 

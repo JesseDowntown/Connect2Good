@@ -6,9 +6,14 @@ class OffersController < ApplicationController
 	def index
     if params[:organization_id]
       @organization = Organization.find(params[:organization_id])
-      @offers = @organization.offers
+      @offers = @organization.offers.sort_by {|x, y, z| x.status }.reverse 
     else
 		  @offers = Offer.all
+    end
+
+    respond_to do |format|
+        format.js { render :layout => false }
+        format.html
     end
 	end
 
@@ -17,6 +22,7 @@ class OffersController < ApplicationController
 
 	def new
     @offer = Offer.new
+    @need = Need.find(params[:need_id])
  	end
 
  	def create
@@ -24,6 +30,10 @@ class OffersController < ApplicationController
     @offer.need = @need
     @offer.organization = @organization
     @offer.status = 'pending'
+    if @offer.name.blank?
+      @offer.name = 'anonymous'
+    end
+
     if user_signed_in?
       @offer.donor = current_user
     else
@@ -32,6 +42,7 @@ class OffersController < ApplicationController
 
     if @offer.save
       Notifier.offer_sent(@offer).deliver
+      Notifier.offer_received(@offer).deliver
       redirect_to @offer, notice: 'Offer was successfully created.'
     else
       render action: 'new'
@@ -40,7 +51,8 @@ class OffersController < ApplicationController
 
   def update
     if @offer.update(offer_params)
-      redirect_to @offer, notice: 'Offer was successfully updated.'
+      redirect_to :back
+      
     else
       render action: 'edit'
     end
@@ -63,11 +75,9 @@ private
   	params.require(:offer).permit(
       :email,
       :image,
-      # :donor_id,
-      # :need_id,
-      # :organization_id,
       :status,
-      :description
+      :description,
+      :name
     )
   end
 end

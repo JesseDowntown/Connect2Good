@@ -1,0 +1,7 @@
+(function () {
+  $('#need_description').val('');
+  var needHtml = "<%= j render(partial: 'needs/need', locals: { need: @need }) %>";
+  $('#needs').prepend(needHtml);
+  var need_countHtml = "<%= j render(partial: 'needs/destroy', locals: { organization: @organization }) %>";
+  $('#need_count').html(need_countHtml);
+})();
