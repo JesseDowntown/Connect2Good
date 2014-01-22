@@ -44,10 +44,14 @@
           %thead
             %tr
               %th Need Description
-              %th Status
-              %th Category
+              %th 
+                = link_to "Status",       sort: "status"
+              %th 
+                = link_to "Category",     sort: "category"
+              %th 
+                = link_to "Date Created", sort: "created_at"
               %th Edit
               %th Delete
           %tbody#needs
-            - @organization.needs.reverse.each do |need|
+            - @organization.needs.order(params[:sort]).reverse.each do |need|
               = render partial: 'need', object: need 
