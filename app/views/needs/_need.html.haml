@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-.row
-  %h3= "#{@need.organization.name} needs"
-  %p= @need.description
-  %p= link_to "Make offer", new_offer_path(need_id: params[:id])
-  %a.close-reveal-modal ×
-=======
+
 %tr{class: "delete_need_#{need.id}"}
   %td
     = simple_format link_to word_wrap(need.description ), need_path(need)  
@@ -24,4 +18,3 @@
     = link_to 'Edit', need_path(need.id), method: :edit
   %td
     = link_to 'Delete', need, confirm: 'Are your sure?', method: :delete, remote: true
->>>>>>> 0a30ff3e8d8e585da779f84626b46b7cc69fc2e5
