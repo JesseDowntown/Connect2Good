@@ -7,6 +7,7 @@ ruby '2.0.0'
 gem 'rails', '~> 4.0'
 
 gem 'carrierwave'
+gem 'chart-js-rails'
 gem 'devise'
 gem 'devise-async'
 gem 'haml-rails'
