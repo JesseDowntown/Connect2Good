@@ -10,25 +10,30 @@
           = render 'form'
           .button Edit Info
         / need to add additional routes for this link
-        %span
-          %span#numbers
+        .row.large-12.columns#numbers
+          .medium-6.columns
             %h6#need_count #{ link_to "total needs: #{@organization.needs.length}", organization_path(params[:id]) }
             %span.large3.columns
-              %h6 
+              %h7 
                 total needs active: 
                 %span.pending-num= @active
             %h6 #{ link_to "total offers: #{@organization.offers.length}", organization_offers_path(params[:id]), id: 'offer_index', remote: true }
             .row
               %span.large3.columns
-                %h6 
+                %h7 
                   total offers pending: 
                   %span.pending-num= @pending
-                %h6 
+                  %br/
+                %h7 
                   total offers denied: 
                   %span.denied-num= @denied
-                %h6 
+                  %br/
+                %h7 
                   total offers accepted:
                   %span.accepted-num= @accepted
+          .medium-6.columns.left
+            %canvas#myChart{height: "200", width: "200"}
+
         = form_for [@organization, @need], remote: true do |f|     
           %div#need_form
             %h4 List a new need:
@@ -55,3 +60,6 @@
           %tbody#needs
             - @organization.needs.order(params[:sort]).reverse.each do |need|
               = render partial: 'need', object: need 
+%script#js{type: "text/javascript"}
+  var data = [{value: #{@accepted}, color:"#F7464A"},{ value : #{@pending}, color : "#E2EAE9" },{value: #{@denied}, color: "#000"}]
+
