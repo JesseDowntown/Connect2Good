@@ -10,12 +10,18 @@
                 .org-panel
                   .center
                     %h6= need.organization.name
-              = link_to need_path(need) do
+              = link_to need_path(need),"data-reveal-id" => "needsModal" do
                 .upper-panel
                   .center  
                     %h5= need.description.truncate(30)
-                    %h7 Need Type: #{need.category} 
-              = link_to new_offer_path(need_id: need.id) do
+                    %h7= need.category
+              #needsModal.reveal-modal.small{"data-reveal" => ""}
+                .row
+                  %h3= "#{need.organization.name} needs"
+                  %p= need.description
+                  %p= link_to "Make offer", new_offer_path(need)
+                  %a.close-reveal-modal ×
+              = link_to new_offer_path(need) do
                 .panel
                   .center
                     %h6 Make Offer

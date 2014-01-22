@@ -17,7 +17,7 @@
               = submit_tag "Search", class: "button expand"
       - if current_user
         %li.user
-          %li= link_to "Account", "#" 
+          %li= link_to "Account", user_path(current_user)
           %li= link_to "Sign out", destroy_user_session_path, :method => :delete
       - else
         %li.user

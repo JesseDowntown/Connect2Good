@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+  source 'https://rubygems.org'
 
 # specify ruby version so heroku doesn't
 # nag you during a build

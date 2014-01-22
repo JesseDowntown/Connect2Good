@@ -14,8 +14,15 @@ class NeedsController < ApplicationController
 
 	def show
 		@need = Need.find(params[:id])
+    respond_to do |format|
+      format.js { render :layout => false }
+      format.html { redirect_to :back }
+    end
 	end
 
+	def need
+		@need = Need.find(params[:id])
+	end
 	def create
 		@need = Need.new(needs_params)
 		@need.organization_id = params[:organization_id]
@@ -36,6 +43,10 @@ class NeedsController < ApplicationController
 
 	def edit
 		@need = Need.find(params[:id])
+    respond_to do |format|
+      format.js { render :layout => false }
+      format.html { redirect_to :back }
+    end  
 	end
 
 	def update

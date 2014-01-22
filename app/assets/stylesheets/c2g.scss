@@ -14,7 +14,17 @@ body,html{
 		position:fixed;
 	}
 }
-	
+
+.reveal-modal{
+	a{
+		&:hover{
+			background-color: #fff;
+			color: #88a4b3;
+			font-weight: bold;
+		}
+	}
+}
+
 .button, .expand, input[type=submit] {
 	background-color: #fdd68b;
 	border-color: #f7d189;
