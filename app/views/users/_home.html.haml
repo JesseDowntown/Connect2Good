@@ -4,9 +4,14 @@
       .large-5.columns
         %h3= "Welcome, #{@user.name}"
         %p= "email: #{@user.email}"
-        
         %a{"data-reveal-id" => "myModal", href: "#"} 
           %h5 Edit Your Information
+        / %p= @org.organization.id
+        - if @org
+          - @org.each do |org|
+            %h6= link_to "View your #{org.name} Dashboard", organization_path(org.id) 
+            
+
         #myModal.reveal-modal.medium{"data-reveal" => ""}
           .row
             %h4= "Edit Your Information, #{@user.name}"
