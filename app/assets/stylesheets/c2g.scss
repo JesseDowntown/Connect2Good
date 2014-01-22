@@ -54,16 +54,6 @@ body,html{
 	border-left: 1px solid #888;
 }
 
-.org-def-panel {
-	border-color: #888888;
-	border-width: 1px;
-	border-style: solid;
-	padding: 15px 15px;
-	margin-bottom: 15px;
-
-	// @media (max-width: )
-}
-
 .panel {
 	border-color: #888888;
 	border-width: 1px;
@@ -94,6 +84,18 @@ body,html{
 	@media (max-width: 800px) {
 		height: 80px;
 		padding: 10px 5px;
+	}
+}
+
+.org-def-panel {
+	border-color: #888888;
+	border-width: 1px;
+	border-style: solid;
+	padding: 15px 15px;
+	margin-bottom: 15px;
+
+	@media (min-width: 800px) {
+		height: 100px;
 	}
 }
 
@@ -195,6 +197,14 @@ span.middle{
 		font-family: Helvetica, sans-serif;
 	}
 
+	h5 {
+		color: #3a5868;
+		font-family: Helvetica, sans-serif;
+		&:hover{
+			font-weight: bold;
+		}	
+	}
+
 	h6 {
 		font-weight: bold;
 	}
@@ -247,8 +257,9 @@ span.middle{
 			color: #fff;
 		}	
 	}
-	.label {
-		border-bottom: 1px dotted darken(#88a4b3, 5%);
+	.cat {
+		border-bottom: 3px dotted darken(#88a4b3, 5%);
+		color: #fdd68b;
 	}
 	.oc-head {
 		padding: 10px;
