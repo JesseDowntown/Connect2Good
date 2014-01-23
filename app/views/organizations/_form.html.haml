@@ -4,7 +4,7 @@
     = f.number_field :owner_id, :placeholder => "user's id #"
     / prefer that :owner_id field be a search field where admin could search through existing users and select one as the organization's owner
     / = f.search_field :owner_id
-    = f.label :name
+    = f.label :name, "Organization Name"
     = f.text_field :name
     = f.label :description
     = f.text_area :description
