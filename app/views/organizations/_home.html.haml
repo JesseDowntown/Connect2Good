@@ -5,7 +5,7 @@
         %h3= @organization.name
         %img{src: "http://placekitten.com/300/150"}/
         %p#description= @organization.description
-        %p organizations Contact info. You know what this is.
+        %p#email= @organization.email
         .org-edit
           = render 'form'
           .button Edit Info
