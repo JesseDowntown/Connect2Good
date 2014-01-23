@@ -9,7 +9,12 @@ end
 
 Offer.blueprint do
   description { %w[books computers chairs].sample }
-  image { 'books_image.png' }
+  image do
+    Rack::Test::UploadedFile.new(
+      Rails.root.join('spec', 'support', 'turkish-van-cat-07.jpg'),
+      'image/jpg'
+    )
+  end
   status do
     %w[pending accepted rejected].sample
   end
