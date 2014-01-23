@@ -14,7 +14,7 @@ class NeedsController < ApplicationController
 
 	def show
 		@need = Need.find(params[:id])
-		render layout: false
+		render :layout => false
 	end
 
 	def need
