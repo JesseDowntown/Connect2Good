@@ -34,11 +34,11 @@
             %li
               .oc-head Connect 2 Good
             %li
-              %label Organizations
+              %label.cat Organizations
             %li
               %a{href: "#{organizations_path}"} View All
             %li
-              %label Needs
+              %label.cat Needs
             %li
               %a{href: "#{needs_path}"} View All
             %li
@@ -50,13 +50,11 @@
             %li
               %a{:href => "#"} Volunteer Hours
             %li
-              %label User Profile
+              %label.cat User Account
             %li
-              %a{:href => edit_user_registration_path} Personal Info
-            %li
-              %a{:href => user_path(current_user)} Donations
+              %a{:href => user_path(current_user)} User Profile
             %li  
-              %label Org Profile
+              %label.cat Org Profile
             %li
               %a{:href => "#"} Needs
             %li

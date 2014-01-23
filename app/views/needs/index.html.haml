@@ -4,26 +4,22 @@
     .row
       .large-12.columns
         - @needs.each do |need|
-          .large-3.medium-4.small-6.columns
+          .large-3.medium-4.small-6.columns.left
             .card
               = link_to organization_path(need.organization.id) do
                 .org-panel
                   .center
                     %h6= need.organization.name
-              = link_to need_path(need),"data-reveal-id" => "needsModal" do
+              %a{"data-reveal-ajax" => "true", "data-reveal-id" => "needsModal", href: need_path(need)}
                 .upper-panel
                   .center  
                     %h5= need.description.truncate(30)
                     %h7= need.category
               #needsModal.reveal-modal.small{"data-reveal" => ""}
-                .row
-                  %h3= "#{need.organization.name} needs"
-                  %p= need.description
-                  %p= link_to "Make offer", new_offer_path(need)
-                  %a.close-reveal-modal ×
               = link_to new_offer_path(need) do
                 .panel
                   .center
                     %h6 Make Offer
         = will_paginate @needs, renderer: FoundationPagination::Rails, outer_window: 0, inner_window: 1  
+
 

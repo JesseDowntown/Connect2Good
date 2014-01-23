@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 	def show
   	@user = User.find(params[:id])
   	@offers = Offer.where(donor_id: @user)
+    @org = Organization.where(owner_id: current_user.id)
 	end
 
   def edit
