@@ -7,9 +7,9 @@
 %p= "The donor looks forward to hearing from you via email. Their email address is: #{@offer.email}"
 %br
 %p For more information:
-= link_to "View Your Need Posting", need_url(@offer.need)
+= link_to "FAQ", root_url
 \| 
-= link_to "View All of Your Organization's Offers", organization_offers_url(@offer.organization)
+= link_to "Your Organization's Needs", organization_url(@offer.organization)
 %br
 %p Thank you,
 %p The Connect2Good Team
