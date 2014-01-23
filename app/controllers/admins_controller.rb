@@ -7,10 +7,15 @@ class AdminsController < ActionController::Base
     @organization = Organization.new
     @offers = Offer.all
 
+  #chart data variables
+    #organization active/inactive
     @active = 0
+    #offer status
     @pending = 0
     @accepted = 0
     @denied = 0
+    #offer created date
+  #calculate chart data
     @organizations.each do |organization|
       organization.status == true ? @active += 1 : @active
       organization.offers.each do |offer|
@@ -23,7 +28,11 @@ class AdminsController < ActionController::Base
         end
       end
     end
-
+    #line chart data
+    @three_weeks_ago = Offer.where("created_at between ? and ?", 28.days.ago, 21.days.ago).count
+    @two_weeks_ago = Offer.where("created_at between ? and ?", 21.days.ago, 14.days.ago).count
+    @one_week_ago = Offer.where("created_at between ? and ?", 14.days.ago, 7.days.ago).count
+    @this_week = Offer.where("created_at between ? and ?", 7.days.ago, DateTime.now).count
 
   end
 

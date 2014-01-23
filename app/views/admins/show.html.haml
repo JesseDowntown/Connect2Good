@@ -43,7 +43,9 @@
                   %h6 
                     total offers accepted:
                     %span.accepted-num= @accepted
-                %canvas#myChart{height: "400", width: "400"}
+                %canvas#offerStatusChart{height: "400", width: "400"}
+                %h6= "total offers made: #{@offers.count}"
+                %canvas#offerTimeChart{height: "400", width: "500"}
             / = form_for [@organization, @need], remote: true do |f|     
             /   %div#need_form
             /     %h4 List a new need:
@@ -79,4 +81,6 @@
                       = link_to 'Edit', organization_path(organization.id), method: :edit
     = javascript_include_tag "application"
     :javascript
-      var data = [{value: #{@accepted}, color:"#F7464A"},{ value: #{@denied}, color:"#E2EAE9" },{ value: #{@pending}, color:"#000" }]
+      var doughnutData = [{value: #{@accepted}, color:"#F7464A"},{ value: #{@denied}, color:"#000" },{ value: #{@pending}, color:"#F38630" }]
+      
+      var lineData = {labels: ["-3 week","-2 week","-1 week","this week"], datasets: [{fillColor: "#F7464A", strokeColor: "#000)", pointColor: "#E2EAE9", pointStrokeColor: "#fff", data: [#{@three_weeks_ago},#{@two_weeks_ago},#{@one_week_ago},#{@this_week}]}]}
