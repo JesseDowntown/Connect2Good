@@ -1,0 +1,4 @@
+(function () {
+  var edit_needHtml = "<%= j render(partial: 'needs/edit', locals: { need: @need }) %>";
+  $('.delete_need_<%= @need.id %>').html(edit_needHtml);
+})();

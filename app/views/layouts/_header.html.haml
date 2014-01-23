@@ -3,7 +3,7 @@
     %li.name
       %h1
         =link_to "Connect2Good", root_path
-    %li.toggle-topbar.menu-icon
+    %li.toggle-topbar
       %a{href: "#"} Menu
   %section.top-bar-section
     / Right Nav Section
@@ -12,14 +12,18 @@
         = form_tag needs_path, method: :get do
           .row.collapse
             .large-8.small-9.columns
-              = text_field_tag :query, params[:query], placeholder: "Search Needs", class: "search"
+              = text_field_tag :query, params[:query], placeholder: "Search Needs", class: "header-search"
             .large-4.small-3.columns
               = submit_tag "Search", class: "button expand"
       - if current_user
-        %ul.user
-          %li= link_to "Account", "#" 
+        %li.user
+          %li= link_to "Account", user_path(current_user)
           %li= link_to "Sign out", destroy_user_session_path, :method => :delete
       - else
-        %ul.user
+        %li.user
           %li= link_to "Sign in", new_user_session_path
           %li= link_to "Join", new_user_registration_path
+    / Left Nav Section
+    - if current_user.try(:admin?)
+      %ul.left.admin
+        %li= link_to "ADMINISTRATOR", admin_path

@@ -6,11 +6,26 @@ class Notifier < ActionMailer::Base
   #
   #   en.notifier.offer_received.subject
   #
-def offer_received(offer)
-  @offer = offer
 
-  # Change the 'to:' section to your partner's name and email
-  mail( to: "jsonnyg.email@gmail.com",
-        subject: "Connect2Good Offer Received")
-end
+  def offer_received(offer)
+
+    @offer = offer
+
+    if offer.name != "anonymous"
+      @text = "named " + @offer.name
+    else
+      @text = "who wishes to remain anonymous"
+    end
+
+    mail( to: "test@test.com",
+          subject: "Connect2Good Offer!")
+  end
+
+  def offer_sent(offer)
+
+    @offer = offer
+
+    mail( to: "connect2good.mailer@gmail.com",
+          subject: "Connect2Good Offer!")
+  end
 end

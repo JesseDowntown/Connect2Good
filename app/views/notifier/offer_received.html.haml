@@ -1,12 +1,15 @@
 
-= "Hi, Sonny! I am sending this from the c2g rails console! Unfortunately it will not send from within the app (should be sent whenever an offer is created), but I cannot figure out why it is not working. If you have time, will you review the code on github? Its under the mailer branch. Thanks! ~Jesse"
-
-%p= "Hello #{@offer.organization.name},"
-%p "You have received an offer that matches one of your needs:"
-%p= "#{@offer.need.description}"
-%p For more information, click the link below:
+%p= "Hello representative for #{@offer.organization.name},"
+%p=  "A Connect2Good donor, #{@text}, would like to fill one of your organization's needs!"
+%p The donor has provided these details regarding the offered item:
+%p= "#{@offer.description}"
+=image_tag "#{@offer.image}"
+%p= "The donor looks forward to hearing from you via email. Their email address is: #{@offer.email}"
+%br
+%p For more information:
 = link_to "View Your Need Posting", need_url(@offer.need)
-= link_to "View Your Offers", organization_offers_url(@offer.organization)
+\| 
+= link_to "View All of Your Organization's Offers", organization_offers_url(@offer.organization)
 %br
 %p Thank you,
 %p The Connect2Good Team

@@ -11,16 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140114204955) do
+ActiveRecord::Schema.define(version: 20140121165152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "needs", force: true do |t|
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "organization_id"
+    t.string   "category"
+    t.boolean  "status",          default: true
   end
 
   create_table "offers", force: true do |t|
@@ -33,6 +35,7 @@ ActiveRecord::Schema.define(version: 20140114204955) do
     t.string   "image"
     t.string   "description"
     t.string   "email"
+    t.string   "name"
   end
 
   add_index "offers", ["donor_id"], name: "index_offers_on_donor_id", using: :btree
@@ -45,6 +48,8 @@ ActiveRecord::Schema.define(version: 20140114204955) do
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
+    t.boolean  "status",      default: true
   end
 
   add_index "organizations", ["owner_id"], name: "index_organizations_on_owner_id", using: :btree
@@ -61,15 +66,16 @@ ActiveRecord::Schema.define(version: 20140114204955) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.boolean  "admin",                  default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -1,0 +1,5 @@
+(function () {
+  var need_countHtml = "<%= j render(partial: 'destroy', locals: { organization: @organization}) %>";
+  $('#need_count').html(need_countHtml);
+  $(".delete_need_<%= @need.id %>").fadeOut(); 
+})();

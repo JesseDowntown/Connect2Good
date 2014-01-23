@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+  source 'https://rubygems.org'
 
 # specify ruby version so heroku doesn't
 # nag you during a build
@@ -10,7 +10,7 @@ gem 'carrierwave'
 gem 'devise'
 gem 'devise-async'
 gem 'haml-rails'
-gem 'jquery-ui-rails'
+gem 'hirb'
 gem 'jquery-rails'
 gem 'js-routes'
 gem 'faker', require: false
@@ -24,6 +24,8 @@ gem 'rolify'
 gem 'sidekiq'
 gem 'simple_form', '~> 3.0.0.rc'
 gem 'will_paginate-foundation', '~> 5.3.3'
+gem 'mandrill-api'
+
 group :production, :staging do
   gem 'rails_12factor'
 end
@@ -47,7 +49,6 @@ group :development do
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-sidekiq'
-  gem 'hirb'
   gem 'html2haml'
   gem 'quiet_assets'
   gem 'terminal-notifier-guard', require: RUBY_PLATFORM.include?('darwin') && 'terminal-notifier-guard'

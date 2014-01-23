@@ -15,9 +15,9 @@
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
     %title= content_for?(:title) ? yield(:title) : "Connect2Good"
     = stylesheet_link_tag    "application"
-    = javascript_include_tag "vendor/custom.modernizr"
     = csrf_meta_tags
   %body
     = render "layouts/header"
     = yield
     = javascript_include_tag "application"
+    %a.exit-off-canvas

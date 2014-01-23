@@ -16,14 +16,15 @@
           %a{href: "#"} Menu
       %section.top-bar-section
         / Right Nav Section
-        - if current_user
-          %ul.user
-            %li= link_to "Account", "#" 
-            %li= link_to "Sign out", destroy_user_session_path, :method => :delete
-        - else
-          %ul.user
-            %li= link_to "Sign in", new_user_session_path
-            %li= link_to "Join", new_user_registration_path
+        .right
+          - if current_user
+            %ul.user
+              %li= link_to "Account", "#" 
+              %li= link_to "Sign out", destroy_user_session_path, :method => :delete
+          - else
+            %ul.user
+              %li= link_to "Sign in", new_user_session_path
+              %li= link_to "Join", new_user_registration_path
     .full-width-row
       .center
         %h3 Connect 2 Good 
