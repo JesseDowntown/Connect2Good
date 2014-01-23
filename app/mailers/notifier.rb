@@ -18,7 +18,7 @@ class Notifier < ActionMailer::Base
     end
 
     mail( to: "connect2good.mailer@gmail.com",
-          subject: "Connect2Good Offer!")
+          subject: "Connect2Good Donation Offer")
   end
 
   def offer_sent(offer)
