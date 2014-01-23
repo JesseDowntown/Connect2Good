@@ -17,7 +17,9 @@
     = stylesheet_link_tag    "application"
     = csrf_meta_tags
   %body
-    = render "layouts/header"
-    = yield
+    .off-canvas-wrap
+      .inner-wrap
+        = render "layouts/header"
+        %section= yield
+      %a.exit-off-canvas
     = javascript_include_tag "application"
-    %a.exit-off-canvas
