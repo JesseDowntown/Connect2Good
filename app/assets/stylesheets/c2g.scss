@@ -251,6 +251,10 @@ span.middle{
 	.label {
 		border-bottom: 1px dotted darken(#88a4b3, 5%);
 	}
+	.cat {
+        border-bottom: 3px dotted darken(#88a4b3, 5%);
+        color: #fdd68b;
+        }
 	.oc-head {
 		padding: 10px;
 		font-weight: bold;
@@ -361,6 +365,7 @@ span.middle{
 }
 .off-canvas-list li{
 	color: #ffffff;
+
 }
 
 ul.left.admin li a{
