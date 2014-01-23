@@ -29811,6 +29811,64 @@ $.widget( "ui.tooltip", {
 
 
 
+$(document).ready(function(){
+  
+  $('.org-create .button').on('click', function(e) {
+    $('.org-create .new_organization').slideToggle();
+    $('.org-create .button').hide();
+    e.preventDefault();
+  })
+
+})
+;
+$('.checkable').on('change', 
+function() {
+    $(this).parents('form:first').submit();
+});
+// $(document).ready(function () {
+//     $('#offer_status').change(function(e){
+//       e.preventDefault();
+//       this.form.submit();
+//     });
+// })
+// {
+//   type: "update",
+//   idElement: "#hafasdf"
+//   data: {
+//     stuff: "stuff"
+//   }
+// }
+
+// $('body').on('ajax:success', function(e,data) {
+//   console.log('submit clicked');
+//   console.log(e)
+//   console.log(data)
+
+
+//   if ($(e.target).hasClass("edit_offer")) {
+//     console.log('cool this works');
+//     // $('')
+//     window.awesome = $(e.target).next();
+//     console.log(awesome);
+//   }
+
+
+
+// });
+$(document).ready(function(){
+  
+  $('.org-edit .button').on('click', function(e) {
+    $('.org-edit .edit_organization').slideToggle();
+    $('.org-edit .button').hide();
+    e.preventDefault();
+  })
+
+})
+;
+(function() {
+
+
+}).call(this);
 (function() {
 
 
@@ -29834,7 +29892,12 @@ $.widget( "ui.tooltip", {
 
 
 
+
 $(function(){ $(document).foundation(); });
 $('#query').autocomplete({
   source: "/search_suggestions"
+});
+$('a[data-remote],input[data-remote]').on('click', function(e) {
+  // $(this).callRemote();
+  e.preventDefault();
 });

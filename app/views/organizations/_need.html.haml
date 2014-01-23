@@ -15,7 +15,9 @@
       No category listed
 
   %td
-    = link_to 'Edit', need_path(need.id), method: :edit
+    = need.created_at.strftime("%d %b. %Y") 
+  %td
+    = link_to 'Edit', need_path(need.id), method: :get, remote: true
   %td
     = link_to 'Delete', need, confirm: 'Are you sure?', method: :delete, remote: true
   
