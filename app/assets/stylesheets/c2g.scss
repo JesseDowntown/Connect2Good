@@ -131,6 +131,7 @@ span.middle{
 	&:hover{
 		color: #222;
 		h5{color: darken(#88a4b3, 30%);}
+		cursor: pointer;
 	}
 	
 	@media (max-width: 800px) {

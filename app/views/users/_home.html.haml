@@ -4,33 +4,31 @@
       .large-5.columns
         %h3= "Welcome, #{@user.name}"
         %p= "email: #{@user.email}"
-        %a{"data-reveal-id" => "myModal", href: "#"} 
+        %a.modalView 
           %h5 Edit Your Information
         / %p= @org.organization.id
         - if @org
           - @org.each do |org|
             %h6= link_to "View your #{org.name} Dashboard", organization_path(org.id) 
-            
-
-        #myModal.reveal-modal.medium{"data-reveal" => ""}
-          .row
-            %h4= "Edit Your Information, #{@user.name}"
-            = simple_form_for(current_user, :as => 'user', :url => registration_path(current_user), :html => { :method => :put }) do |f|
-              = f.error_notification
-              .form-inputs
-                = f.input :name, :required => false
-                = f.input :email, :required => true, :autofocus => true
-                / - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-                /   %p
-                /     Currently waiting confirmation for: #{resource.unconfirmed_email}
-                = f.input :password, :autocomplete => "off", :placeholder => "Leave blank if not changing password", :required => false
-                = f.input :password_confirmation, :required => false
-                = f.input :current_password, :placeholder => "Enter current password to confirm changes", :required => true
-              .form-actions
-                = f.button :submit, "Update"
-            %h6
-              Unhappy? #{link_to "Cancel my account", registration_path(current_user), :data => { :confirm => "Are you sure?" }, :method => :delete}
-            %a.close-reveal-modal ×
+          .myModal.reveal-modal.medium{"data-reveal" => ""}
+            .row
+              %h4= "Edit Your Information, #{@user.name}"
+              = simple_form_for(current_user, :as => 'user', :url => registration_path(current_user), :html => { :method => :put }) do |f|
+                = f.error_notification
+                .form-inputs
+                  = f.input :name, :required => false
+                  = f.input :email, :required => true, :autofocus => true
+                  / - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+                  /   %p
+                  /     Currently waiting confirmation for: #{resource.unconfirmed_email}
+                  = f.input :password, :autocomplete => "off", :placeholder => "Leave blank if not changing password", :required => false
+                  = f.input :password_confirmation, :required => false
+                  = f.input :current_password, :placeholder => "Enter current password to confirm changes", :required => true
+                .form-actions
+                  = f.button :submit, "Update"
+              %h6
+                Unhappy? #{link_to "Cancel my account", registration_path(current_user), :data => { :confirm => "Are you sure?" }, :method => :delete}
+              %a.close-reveal-modal ×
       .large-7.columns
         %h3 All offers
         %table
