@@ -79,7 +79,7 @@
                           Inactive #{f.check_box :status, class: 'checkable', remote: true}
                     %td
                       = link_to 'Edit', organization_path(organization.id), method: :edit
-    = javascript_include_tag "application"
+    = javascript_include_tag params[:controller]
     :javascript
       var doughnutData = [{value: #{@accepted}, color:"#F7464A"},{ value: #{@denied}, color:"#000" },{ value: #{@pending}, color:"#F38630" }]
       
