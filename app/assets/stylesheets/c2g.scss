@@ -133,6 +133,7 @@ span.middle{
 	&:hover{
 		color: #222;
 		h5{color: darken(#88a4b3, 30%);}
+		cursor: pointer;
 	}
 	
 	@media (max-width: 800px) {
@@ -261,11 +262,19 @@ span.middle{
 		border-bottom: 3px dotted darken(#88a4b3, 5%);
 		color: #fdd68b;
 	}
+	.cat {
+        border-bottom: 3px dotted darken(#88a4b3, 5%);
+        color: #fdd68b;
+        }
 	.oc-head {
 		padding: 10px;
 		font-weight: bold;
 		border-bottom: 4px solid darken(#88a4b3, 5%);
 	}
+}
+
+.happy{
+	border-bottom: 1px solid #111;
 }
 
 .center{
@@ -371,9 +380,22 @@ span.middle{
 }
 .off-canvas-list li{
 	color: #ffffff;
+
 }
+
+canvas{
+        width: 100% !important;
+        max-width: 800px;
+        height: auto !important;
+        @media (max-width: 1024px) {
+        	width: 100% !important;
+                max-width: 500px;
+                height: auto !important;
+
+        }
+    }
 
 ul.left.admin li a{
 	color: black;
-	font-size: 2em;
+	font-size: 1.5em;
 }

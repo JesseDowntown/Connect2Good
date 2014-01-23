@@ -16,34 +16,37 @@
     .view-page
       %div
         .row.large-12.columns
-          .large-4.columns
+          .large-4.medium-10.columns
             %h3 Administrator Dashboard
             %p This is your command center! From here you can create and edit organizations, as well as mark them as active or inactive. If you would like to create or edit a specific organization's needs, you may do so from the organization's main page.
             .org-create
               = render 'organizations/form'
               .button Create New Organization
-            %span
-              %span#numbers
-                %h6= "total organizations: #{@organizations.count}"
-                %span.large3.columns
-                  %h6 
-                    total organizations active: 
-                    %span.pending-num= @active
-                    %br
-                    total organizations inactive:
-                    %span.pending-num= @organizations.count - @active
-                / %h6 #{ link_to "total offers: #{@organization.offers.length}", organization_offers_path(params[:id]), id: 'offer_index', remote: true }
-                .row
-                  %span.large3.columns
-                    %h6 
-                      total offers pending: 
-                      / %span.pending-num= @pending
-                    %h6 
-                      total offers denied: 
-                      / %span.denied-num= @denied
-                    %h6 
-                      total offers accepted:
-                      / %span.accepted-num= @accepted
+            
+            .row.happy#numbers
+              %h6= "total organizations: #{@organizations.count}"
+              %span.happy.large3.columns
+                %h6 
+                  total organizations active: 
+                  %span.pending-num= @active
+                  %br
+                  total organizations inactive:
+                  %span.pending-num= @organizations.count - @active
+              %h6 #{ link_to "total offers: #{@offers.length}", offers_path, remote: true }
+              .row.happy
+                %canvas#offerTimeChart
+              .large-12.small-12.columns
+                %h6 
+                  total offers pending: 
+                  %span.pending-num= @pending
+                %h6 
+                  total offers denied: 
+                  %span.denied-num= @denied
+                %h6 
+                  total offers accepted:
+                  %span.accepted-num= @accepted
+              .row
+                %canvas#offerStatusChart
             / = form_for [@organization, @need], remote: true do |f|     
             /   %div#need_form
             /     %h4 List a new need:
@@ -78,3 +81,7 @@
                     %td
                       = link_to 'Edit', organization_path(organization.id), method: :edit
     = javascript_include_tag "application"
+    :javascript
+      var doughnutData = [{value: #{@accepted}, color:"#F7464A"},{ value: #{@denied}, color:"#000" },{ value: #{@pending}, color:"#F38630" }]
+      
+      var lineData = {labels: ["-3 week","-2 week","-1 week","this week"], datasets: [{fillColor: "#F7464A", strokeColor: "#000)", pointColor: "#E2EAE9", pointStrokeColor: "#fff", data: [#{@three_weeks_ago},#{@two_weeks_ago},#{@one_week_ago},#{@this_week}]}]}
