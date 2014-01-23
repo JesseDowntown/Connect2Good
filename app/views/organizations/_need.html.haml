@@ -7,12 +7,6 @@
         Active #{f.check_box :status, class: 'checkable', remote: true}
       - else
         Inactive #{f.check_box :status, class: 'checkable', remote: true}
-      
-  %td
-    - if need.category.present?
-      = need.category 
-    - else
-      No category listed
 
   %td
     = need.created_at.strftime("%d %b. %Y") 

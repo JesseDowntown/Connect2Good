@@ -43,15 +43,14 @@
         %table.center
           %thead
             %tr
-              %th Need Description
               %th 
-                = link_to "Status",       sort: "status"
+                = sortable "description", "Need Description"
               %th 
-                = link_to "Category",     sort: "category"
+                = sortable "status"  
               %th 
-                = link_to "Date Created", sort: "created_at"
+                = sortable "created_at","Date Created"
               %th Edit
               %th Delete
           %tbody#needs
-            - @organization.needs.order(params[:sort]).reverse.each do |need|
+            - @org_sorted.each do |need|
               = render partial: 'need', object: need 

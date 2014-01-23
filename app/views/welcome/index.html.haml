@@ -74,7 +74,8 @@
           .home-footer
             %a{href: "#"} 
               about
-            = link_to "Join", new_user_registration_path
+            - if !current_user
+              = link_to "Join", new_user_registration_path
             %a{href: "#"}
               contact
             %div &nbsp;

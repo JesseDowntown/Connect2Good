@@ -1,4 +1,5 @@
 class OrganizationsController < ApplicationController
+  helper_method :sort_column, :sort_direction
 
   def index
     @organizations = Organization.all
@@ -6,6 +7,7 @@ class OrganizationsController < ApplicationController
 
   def show
     @organization = Organization.find(params[:id])
+    @org_sorted = @organization.needs.order(sort_column + " " + sort_direction)
     @needs = @organization.needs.page(params[:page])
     @need = Need.new 
     @pending = 0
@@ -48,5 +50,13 @@ class OrganizationsController < ApplicationController
   private
   def organization_params
     params.require(:organization).permit(:description, :owner_id, :image, :name)
+  end
+
+  def sort_column
+    params[:sort] || "status"
+  end
+
+  def sort_direction
+    params[:direction] || "desc"
   end
 end
