@@ -21,7 +21,7 @@
             %td= offer.email     
             = form_for offer, remote: true do |f|
               %td
-                = f.select :status, options_for_select(["pending","accepted","denied"], offer.status)
+                = f.select :status, options_for_select(["pending","accepted","declined"], offer.status)
               %td
                 = f.submit value: "Update", class: "button submit-offer"
 .large-1.small-1.columns

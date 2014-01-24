@@ -17,7 +17,7 @@ class OrganizationsController < ApplicationController
     end  
     @denied = 0
     @offers.each do |offer|
-      offer.status == "denied" ? @denied += 1 : @denied
+      offer.status == "declined" ? @denied += 1 : @denied
     end  
 
     @accepted = 0
