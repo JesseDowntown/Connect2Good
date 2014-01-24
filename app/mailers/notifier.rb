@@ -17,7 +17,7 @@ class Notifier < ActionMailer::Base
       @text = "who wishes to remain anonymous"
     end
 
-    mail( to: "test@test.com",
+    mail( to: "connect2good.mailer@gmail.com",
           subject: "Connect2Good Offer!")
   end
 

@@ -5,4 +5,7 @@ class Organization < ActiveRecord::Base
 
   has_many :needs
   has_many :offers
+
+  mount_uploader :image, ImageUploader
+
 end

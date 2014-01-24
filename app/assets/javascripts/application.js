@@ -14,9 +14,11 @@
 //= require jquery.ui.all
 //= require jquery_ujs
 //= require foundation
+//= require Chart
 
 //= require_tree .
 
+$(document).foundation();
 
 $(function(){ $(document).foundation(); });
 $('#query').autocomplete({
@@ -25,4 +27,12 @@ $('#query').autocomplete({
 $('a[data-remote],input[data-remote]').on('click', function(e) {
   // $(this).callRemote();
   e.preventDefault();
+});
+
+$(".modalView").click(function(){
+  $(".myModal").foundation('reveal', 'open');
+});
+
+$(".close-reveal-modal").click(function(){
+  $(this).closest(".myModal").foundation('reveal', 'close');
 });
