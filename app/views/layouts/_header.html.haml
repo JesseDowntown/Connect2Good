@@ -1,13 +1,14 @@
 %nav.top-bar{"data-topbar" => ""}
-  %ul.title-area
-    %li.name
-      %h1
-        =link_to "Connect2Good", root_path
-    %li.toggle-topbar
-      %a{href: "#"} Menu
-  %section.top-bar-section
-    / Right Nav Section
-    %ul.right
+  %section.left-small
+    %a.left-off-canvas-toggle.menu-icon
+      %span.left-icon
+  %section.middle.tab-bar-section
+    .title-area
+      .name
+        %h1
+          =link_to "Connect2Good", root_path
+  %section.right
+    %ul
       %li.has-form
         = form_tag needs_path, method: :get do
           .row.collapse
@@ -15,15 +16,37 @@
               = text_field_tag :query, params[:query], placeholder: "Search Needs", class: "header-search"
             .large-4.small-3.columns
               = submit_tag "Search", class: "button expand"
+%aside.left-off-canvas-menu
+  %ul.off-canvas-list
+    %li
+      .oc-head Connect 2 Good
+    %li
+      %label.cat Organizations
+    %li
+      %a{href: "#{organizations_path}"} View All
+    %li
+      %label.cat Needs
+    %li
+      %a{href: "#{needs_path}"} View All
+    %li
+      %a{:href => "/needs?utf8=✓&query=electronics&commit=Search+Needs"} Electronics & Technology
+    %li
+      %a{:href => "/needs?utf8=✓&query=furniture&commit=Search"} Furniture
+    %li
+      %a{:href => "#"} Tools &amp; Construction
+    %li
+      %a{:href => "#"} Volunteer Hours
+    %li
+      %label.cat User Account
       - if current_user
-        %li.user
-          %li= link_to "Account", user_path(current_user)
-          %li= link_to "Sign out", destroy_user_session_path, :method => :delete
+        %li= link_to "Account", user_path(current_user)
+        %li= link_to "Sign out", destroy_user_session_path, :method => :delete
       - else
-        %li.user
-          %li= link_to "Sign in", new_user_session_path
-          %li= link_to "Join", new_user_registration_path
-    / Left Nav Section
+        %li= link_to "Sign in", new_user_session_path
+        %li= link_to "Join", new_user_registration_path
     - if current_user.try(:admin?)
-      %ul.left.admin
-        %li= link_to "ADMINISTRATOR", admin_path
+      %li
+        %label.cat Administration
+      %li  
+        %a{:href => "#{admin_path}"} Admin Profile
+    
