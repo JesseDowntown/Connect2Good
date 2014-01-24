@@ -13,7 +13,7 @@ class NeedsController < ApplicationController
 	end
 
 	def show
-		@need = Need.find(params[:id])
+		@need = Need.find(params[:id]) 
 	end
 
 	def need

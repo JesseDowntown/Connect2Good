@@ -1,8 +1,5 @@
 %td
   = form_for need do |f|
-    = f.select :category, options_for_select(["electronics","furniture","clothing","other"], @need.category)
-    %br/
     %span.left Description: 
     = f.text_area :description
-    %br/
     = f.submit

@@ -14,7 +14,8 @@
                 .upper-panel
                   .center  
                     %h5= need.description.truncate(30)
-                    %h7= need.category
+                    / category's are available but we're choosing not to use them at this point
+                    / %h7= need.category
               #needsModal.reveal-modal.small{"data-reveal" => ""}
               = link_to new_offer_path(need) do
                 .panel

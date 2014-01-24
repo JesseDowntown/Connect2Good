@@ -5,11 +5,8 @@
   %td#activity_status
     = form_for need do |f|
       Active #{f.check_box :status, class: 'checkable', remote: true}
-  
-
   %td
     = need.created_at.strftime("%d %b. %Y") 
   %td
-    = link_to 'Edit', need_path(need.id), method: :edit
   %td
     = link_to 'Delete', need, confirm: 'Are your sure?', method: :delete, remote: true

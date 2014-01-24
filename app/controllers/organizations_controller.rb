@@ -53,7 +53,7 @@ class OrganizationsController < ApplicationController
   end
 
   def sort_column
-    params[:sort] || "status"
+    params[:sort] || "created_at"
   end
 
   def sort_direction
