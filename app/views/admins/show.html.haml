@@ -1,7 +1,7 @@
 .view-page
   %div
     .row.large-12.columns
-      .large-4.medium-10.columns
+      .large-4.columns
         %h3 Administrator Dashboard
         %p This is your command center! From here you can create and edit organizations, as well as mark them as active or inactive. If you would like to create or edit a specific organization's needs, you may do so from the organization's main page.
         .org-create
@@ -20,7 +20,7 @@
           %h6 #{ link_to "total offers: #{@offers.length}", offers_path, remote: true }
           .row.happy
             %canvas#offerTimeChart
-          .large-12.small-12.columns
+          .large-12.columns
             %h6 
               total offers pending: 
               %span.pending-num= @pending

@@ -37,6 +37,9 @@ body {
 	}
 }
 
+.right {
+	padding-right: 7px;
+}
 
 .card {
 	&:hover{
@@ -49,6 +52,7 @@ body {
 	background-color: lighten(#88a4b3, 25%);
 	}
 }
+
 
 .orgneeds{
 	border-left: 1px solid #888;
@@ -229,6 +233,7 @@ span.middle{
 }
 
 .tab-bar-section{
+	border-left: solid 1px lighten(#88a4b3, 10%);
 	background-color: #88a4b3;
 	.title-area{
 		background-color: #88a4b3;
