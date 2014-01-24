@@ -61,5 +61,5 @@
             - @organization.needs.order(params[:sort]).reverse.each do |need|
               = render partial: 'need', object: need 
 %script#js{type: "text/javascript"}
-  var data = [{value: #{@accepted}, color:"#F7464A"},{ value : #{@pending}, color : "#E2EAE9" },{value: #{@denied}, color: "#000"}]
+  var data = [{value: #{@accepted}, color:"#F7464A"},{ value : #{@pending}, color : "#F38630" },{value: #{@denied}, color: "#000"}]
 
