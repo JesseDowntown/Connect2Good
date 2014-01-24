@@ -10,27 +10,16 @@
       %li.toggle-topbar
         %a{href: "#"} Menu
       / Left Nav Section
-      - if current_user.try(:admin?)
-        %ul.left.admin
-          %li= link_to "ADMINISTRATOR", admin_path
       / Right Nav Section
-    %section.right
-      %ul
-        %li.has-form
-          = form_tag needs_path, method: :get do
-            .row.collapse
-              .large-8.small-9.columns
-                = text_field_tag :query, params[:query], placeholder: "Search Needs", class: "header-search"
-              .large-4.small-3.columns
-                = submit_tag "Search", class: "button expand"
-        - if current_user
-          %li.user
-            %li= link_to "Account", user_path(current_user)
-            %li= link_to "Sign out", destroy_user_session_path, :method => :delete
-        - else
-          %li.user
-            %li= link_to "Sign in", new_user_session_path
-            %li= link_to "Join", new_user_registration_path
+  %section.right
+    %ul
+      %li.has-form
+        = form_tag needs_path, method: :get do
+          .row.collapse
+            .large-8.small-9.columns
+              = text_field_tag :query, params[:query], placeholder: "Search Needs", class: "header-search"
+            .large-4.small-3.columns
+              = submit_tag "Search", class: "button expand"
 %aside.left-off-canvas-menu
   %ul.off-canvas-list
     %li
@@ -53,11 +42,15 @@
       %a{:href => "#"} Volunteer Hours
     %li
       %label.cat User Account
-    %li
-      %a{:href => user_path(current_user)} User Profile
-    %li  
-      %label.cat Org Profile
-    %li
-      %a{:href => "#"} Needs
-    %li
-      %a{:href => "#"} Offers
+      - if current_user
+        %li= link_to "Account", user_path(current_user)
+        %li= link_to "Sign out", destroy_user_session_path, :method => :delete
+      - else
+        %li= link_to "Sign in", new_user_session_path
+        %li= link_to "Join", new_user_registration_path
+    - if current_user.try(:admin?)
+      %li
+        %label.cat Administration
+      %li  
+        %a{:href => "#{admin_path}"} Admin Profile
+    
