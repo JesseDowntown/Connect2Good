@@ -48,5 +48,6 @@ Offer.make!(NUMBER_OF_OFFERS).each do |offer|
   offer.organization = Organization.all.sample
   # pick a random need from that org
   offer.need = offer.organization.needs.sample
+  offer.status = "pending"
   offer.save!
 end
