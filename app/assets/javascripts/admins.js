@@ -1,11 +1,16 @@
+//= require jquery
+//= require jquery.ui.all
+//= require jquery_ujs
+//= require foundation
+//= require Chart
+
 $(document).ready(function(){
   
   $('.org-create .button').on('click', function(e) {
     $('.org-create .new_organization').slideToggle();
     $('.org-create .button').hide();
     e.preventDefault();
-  })
-
+  }); 
 
 
   //Get context with jQuery - using jQuery's .get() method.
@@ -16,4 +21,4 @@ $(document).ready(function(){
   var myNewDoughnutChart = new Chart(ctxDoughnut).Doughnut(doughnutData);
   var myNewLineChart = new Chart(ctxLine).Line(lineData);
 
-})
+});

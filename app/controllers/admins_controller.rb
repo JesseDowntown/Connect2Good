@@ -1,4 +1,4 @@
-class AdminsController < ActionController::Base
+class AdminsController < ApplicationController
   before_filter :authenticate 
 
 

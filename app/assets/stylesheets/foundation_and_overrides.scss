@@ -1260,7 +1260,7 @@ $tabbar-bg: $c2gBlue;
 // $tabbar-height: rem-calc(45) !default;
 // $tabbar-line-height: $tabbar-height !default;
 $tabbar-color: #FFF;
-// $tabbar-middle-padding: 0 rem-calc(10) !default;
+$tabbar-middle-padding: 0;
 
 // Off Canvas Divider Styles
 $tabbar-right-section-border: solid 1px scale-color($tabbar-bg, $lightness: 13%) !default;
@@ -1383,8 +1383,8 @@ $topbar-menu-icon-color-toggled: #fff;
 
 // Divider Styles
 
-// $topbar-divider-border-bottom: solid 1px lighten($topbar-bg-color, 10%);
-//  $topbar-divider-border-top: solid 1px darken($topbar-bg-color, 10%);
+$topbar-divider-border-bottom: solid 1px lighten($topbar-bg-color, 10%);
+$topbar-divider-border-top: solid 1px darken($topbar-bg-color, 10%);
 
 // Sticky Class
 

@@ -4,10 +4,10 @@
 %p= "An email has been sent to #{@offer.organization.name}, informing them of your desire to make a donation."
 %p= "You should expect to receive an email response from a representative of #{@offer.organization.name} as soon as possible."
 %p= "#{@offer.organization.name} has been provided these details regarding your desire to donate:"
-%p= "Description - #{@offer.description}"
+%p= "Description: #{@offer.description}"
 =image_tag "#{@offer.image}"
-%p= "Your email address - #{@offer.email}"
-%p= "Your name - #{@offer.name}"
+%p= "Your email address: #{@offer.email}"
+%p= "Your name: #{@offer.name}"
 %br
 %p Thank you again,
 %p The Connect2Good Team

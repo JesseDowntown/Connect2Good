@@ -1,3 +1,9 @@
+//= require jquery
+//= require jquery.ui.all
+//= require jquery_ujs
+//= require foundation
+//= require Chart
+
 $(document).ready(function(){
   
   $('.org-edit .button').on('click', function(e) {

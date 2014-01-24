@@ -1,86 +1,71 @@
-/ admin dashboard
-%html{lang: "en"}
-  / <![endif]
-  %head
-    %meta{charset: "utf-8"}/
-    / Uncomment to make IE8 render like IE7
-    / <meta http-equiv="X-UA-Compatible" content="IE=7" />
-    / Set the viewport width to device width for mobile
-    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
-    %title= content_for?(:title) ? yield(:title) : "Connect2Good"
-    = stylesheet_link_tag    "application"
-    / = javascript_include_tag "vendor/custom.modernizr"
-    = csrf_meta_tags
-  %body
-    = render "layouts/header"
-    .view-page
-      %div
-        .row.large-12.columns
-          .large-4.columns
-            %h3 Administrator Dashboard
-            %p This is your command center! From here you can create and edit organizations, as well as mark them as active or inactive. If you would like to create or edit a specific organization's needs, you may do so from the organization's main page.
-            .org-create
-              = render 'organizations/form'
-              .button Create New Organization
-            %span
-              %span#numbers
-                %h6= "total organizations: #{@organizations.count}"
-                %span.large3.columns
-                  %h6 
-                    total organizations active: 
-                    %span.pending-num= @active
-                    %br
-                    total organizations inactive:
-                    %span.pending-num= @organizations.count - @active
-                %h6 #{ link_to "total offers: #{@offers.length}", organization_offers_path(params[:id]), id: 'offer_index', remote: true }
-                .row.large-12.columns
-                  %h6 
-                    total offers pending: 
-                    %span.pending-num= @pending
-                  %h6 
-                    total offers denied: 
-                    %span.denied-num= @denied
-                  %h6 
-                    total offers accepted:
-                    %span.accepted-num= @accepted
-                %canvas#offerStatusChart{height: "400", width: "400"}
-                %h6= "total offers made: #{@offers.count}"
-                %canvas#offerTimeChart{height: "400", width: "500"}
-            / = form_for [@organization, @need], remote: true do |f|     
-            /   %div#need_form
-            /     %h4 List a new need:
-            /     = f.select :category, options_for_select(["electronics","furniture","clothing","other"], @need.category)
-            /     = f.label :description
-            /     = f.text_area :description
-            /     = f.submit
-            /     %p
-          .large-8.columns#offers 
-          .large-8.columns#needsList 
-            %h3 Organizations
-            %table.center
-              %thead
-                %tr
-                  %th Organization Name
-                  %th Organization Description
-                  %th Status
-                  %th Edit
-              %tbody#organizations
-                - @organizations.each do |organization|
-                  %tr{class: "delete_organization_#{organization.id}"}
-                    %td
-                      = simple_format link_to word_wrap(organization.name ), organization_path(organization)
-                    %td
-                      = simple_format word_wrap(organization.description.truncate(200))  
-                    %td#activity_status
-                      = form_for organization do |f|
-                        - if organization.status == true
-                          Active #{f.check_box :status, class: 'checkable', remote: true}
-                        - else
-                          Inactive #{f.check_box :status, class: 'checkable', remote: true}
-                    %td
-                      = link_to 'Edit', organization_path(organization.id), method: :edit
-    = javascript_include_tag "application"
-    :javascript
-      var doughnutData = [{value: #{@accepted}, color:"#F7464A"},{ value: #{@denied}, color:"#000" },{ value: #{@pending}, color:"#F38630" }]
-      
-      var lineData = {labels: ["-3 week","-2 week","-1 week","this week"], datasets: [{fillColor: "#F7464A", strokeColor: "#000)", pointColor: "#E2EAE9", pointStrokeColor: "#fff", data: [#{@three_weeks_ago},#{@two_weeks_ago},#{@one_week_ago},#{@this_week}]}]}
+.view-page
+  %div
+    .row.large-12.columns
+      .large-4.columns
+        %h3 Administrator Dashboard
+        %p This is your command center! From here you can create and edit organizations, as well as mark them as active or inactive. If you would like to create or edit a specific organization's needs, you may do so from the organization's main page.
+        .org-create
+          = render 'organizations/form'
+          .button Create New Organization
+        
+        .row.happy#numbers
+          %h6= "total organizations: #{@organizations.count}"
+          %span.happy.large3.columns
+            %h6 
+              total organizations active: 
+              %span.pending-num= @active
+              %br
+              total organizations inactive:
+              %span.pending-num= @organizations.count - @active
+          %h6 #{ link_to "total offers: #{@offers.length}", offers_path, remote: true }
+          .row.happy
+            %canvas#offerTimeChart
+          .large-12.columns
+            %h6 
+              total offers pending: 
+              %span.pending-num= @pending
+            %h6 
+              total offers denied: 
+              %span.denied-num= @denied
+            %h6 
+              total offers accepted:
+              %span.accepted-num= @accepted
+          .row
+            %canvas#offerStatusChart
+        / = form_for [@organization, @need], remote: true do |f|     
+        /   %div#need_form
+        /     %h4 List a new need:
+        /     = f.select :category, options_for_select(["electronics","furniture","clothing","other"], @need.category)
+        /     = f.label :description
+        /     = f.text_area :description
+        /     = f.submit
+        /     %p
+      .large-8.columns#offers 
+      .large-8.columns#needsList 
+        %h3 Organizations
+        %table.center
+          %thead
+            %tr
+              %th Organization Name
+              %th Organization Description
+              %th Status
+              %th Edit
+          %tbody#organizations
+            - @organizations.each do |organization|
+              %tr{class: "delete_organization_#{organization.id}"}
+                %td
+                  = simple_format link_to word_wrap(organization.name ), organization_path(organization)
+                %td
+                  = simple_format word_wrap(organization.description.truncate(200))  
+                %td#activity_status
+                  = form_for organization do |f|
+                    - if organization.status == true
+                      Active #{f.check_box :status, class: 'checkable', remote: true}
+                    - else
+                      Inactive #{f.check_box :status, class: 'checkable', remote: true}
+                %td
+                  = link_to 'Edit', organization_path(organization.id), method: :edit
+:javascript
+  var doughnutData = [{value: #{@accepted}, color:"#F7464A"},{ value: #{@denied}, color:"#000" },{ value: #{@pending}, color:"#F38630" }]
+  
+  var lineData = {labels: ["-3 week","-2 week","-1 week","this week"], datasets: [{fillColor: "#F7464A", strokeColor: "#000)", pointColor: "#E2EAE9", pointStrokeColor: "#fff", data: [#{@three_weeks_ago},#{@two_weeks_ago},#{@one_week_ago},#{@this_week}]}]}

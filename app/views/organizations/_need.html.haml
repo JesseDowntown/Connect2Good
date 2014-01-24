@@ -1,6 +1,6 @@
 %tr{class: "delete_need_#{need.id}"}
   %td
-    = simple_format link_to word_wrap(need.description ), need_path(need)  
+    = simple_format word_wrap(need.description ) 
   %td#activity_status
     = form_for need do |f|
       Active #{f.check_box :status, class: 'checkable', remote: true}

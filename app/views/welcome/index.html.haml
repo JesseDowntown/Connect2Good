@@ -6,77 +6,74 @@
     = stylesheet_link_tag    "application"
     = csrf_meta_tags
   %body
-    .off-canvas-wrap
-      .inner-wrap
-        %nav.top-bar{"data-topbar" => ""}
-          %section.left-small
-            %a.left-off-canvas-toggle.menu-icon
-              %span
-          / %ul.title-area
-          /   %li.name
-          /     %h1
-          /       =link_to "Connect2Good", root_path
-          /   %li.toggle-topbar.menu-icon
-          /     %a{href: "#"} Menu
-          %section.top-bar-section
-            / Right Nav Section
-            .right
-              - if current_user
-                %ul.user
-                  %li= link_to "Account", user_path(current_user) 
+    .page
+      .off-canvas-wrap
+        .inner-wrap
+          %nav.top-bar{"data-topbar" => ""}
+            %section.left-small
+              %a.left-off-canvas-toggle.menu-icon
+                %span
+            %section.top-bar-section
+              / Right Nav Section
+              .right
+                - if current_user
+                  %ul.user
+                    %li= link_to "Account", user_path(current_user) 
+                    %li= link_to "Sign out", destroy_user_session_path, :method => :delete
+                - else
+                  %ul.user
+                    %li= link_to "Sign in", new_user_session_path
+                    %li= link_to "Join", new_user_registration_path
+          %aside.left-off-canvas-menu
+            %ul.off-canvas-list
+              %li
+                .oc-head Connect 2 Good
+              %li
+                %label.cat Organizations
+              %li
+                %a{href: "#{organizations_path}"} View All
+              %li
+                %label.cat Needs
+              %li
+                %a{href: "#{needs_path}"} View All
+              %li
+                %a{:href => "/needs?utf8=✓&query=electronics&commit=Search+Needs"} Electronics & Technology
+              %li
+                %a{:href => "/needs?utf8=✓&query=furniture&commit=Search"} Furniture
+              %li
+                %a{:href => "#"} Tools &amp; Construction
+              %li
+                %a{:href => "#"} Volunteer Hours
+              %li
+                %label.cat User Account
+                - if current_user
+                  %li= link_to "Account", user_path(current_user)
                   %li= link_to "Sign out", destroy_user_session_path, :method => :delete
-              - else
-                %ul.user
+                - else
                   %li= link_to "Sign in", new_user_session_path
                   %li= link_to "Join", new_user_registration_path
-        %aside.left-off-canvas-menu
-          %ul.off-canvas-list
-            %li
-              .oc-head Connect 2 Good
-            %li
-              %label.cat Organizations
-            %li
-              %a{href: "#{organizations_path}"} View All
-            %li
-              %label.cat Needs
-            %li
-              %a{href: "#{needs_path}"} View All
-            %li
-              %a{:href => "/needs?utf8=✓&query=electronics&commit=Search+Needs"} Electronics & Technology
-            %li
-              %a{:href => "/needs?utf8=✓&query=furniture&commit=Search"} Furniture
-            %li
-              %a{:href => "#"} Tools &amp; Construction
-            %li
-              %a{:href => "#"} Volunteer Hours
-            %li
-              %label.cat User Account
-            %li
-              %a{:href => user_path(current_user)} User Profile
-            %li  
-              %label.cat Org Profile
-            %li
-              %a{:href => "#"} Needs
-            %li
-              %a{:href => "#"} Offers
-        %section.full-width-row
-          .center
-            %h3 Connect 2 Good 
-          .small-10.medium-6.large-4.small-centered.columns
-            = form_tag needs_path, method: :get do
-              .center
-                = text_field_tag :query, params[:query], placeholder: "What would you like to donate?", class: "search"
-              .center    
-                = submit_tag "Search Needs", class: "button"
-            = javascript_include_tag "application"
-          .home-footer
-            %a{href: "#"} 
-              about
-            - if !current_user
+              - if current_user.try(:admin?)
+                %li
+                  %label.cat Administration
+                %li  
+                  %a{:href => "#{admin_path}"} Admin Profile
+          %section.full-width-row
+            .center
+              %h3 Connect 2 Good 
+            .small-10.medium-6.large-4.small-centered.columns
+              = form_tag needs_path, method: :get do
+                .center
+                  = text_field_tag :query, params[:query], placeholder: "What would you like to donate?", class: "search"
+                .center    
+                  = submit_tag "Search Needs", class: "button"
+              = javascript_include_tag "application"
+            .home-footer
+              %a{href: "#"} 
+                about
               = link_to "Join", new_user_registration_path
-            %a{href: "#"}
-              contact
-            %div &nbsp;
-            %a{href: "#"}
-              privacy policy
-        %a.exit-off-canvas
+              %a{href: "#"}
+                contact
+              %div &nbsp;
+              %a{href: "#"}
+                privacy policy
+          %a.exit-off-canvas
