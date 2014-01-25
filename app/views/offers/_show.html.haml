@@ -8,6 +8,7 @@
           %th Item
           %th Offer
           %th Donor
+          %th Date Offered
           %th Status
           %th Update
       %tbody
@@ -18,7 +19,8 @@
             - else
               %td This need has been deleted 
             %td= link_to offer.description.truncate(50), offer_path(offer)
-            %td= offer.email     
+            %td= offer.email
+            %td= offer.created_at.strftime("%d %b. %Y")     
             = form_for offer, remote: true do |f|
               %td
                 = f.select :status, options_for_select(["pending","accepted","declined"], offer.status)

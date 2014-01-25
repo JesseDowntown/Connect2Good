@@ -33,7 +33,6 @@ class AdminsController < ApplicationController
     @two_weeks_ago = Offer.where("created_at between ? and ?", 21.days.ago, 14.days.ago).count
     @one_week_ago = Offer.where("created_at between ? and ?", 14.days.ago, 7.days.ago).count
     @this_week = Offer.where("created_at between ? and ?", 7.days.ago, DateTime.now).count
-
   end
 
 

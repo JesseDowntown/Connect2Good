@@ -57,12 +57,9 @@
                   = simple_format link_to word_wrap(organization.name ), organization_path(organization)
                 %td
                   = simple_format word_wrap(organization.description.truncate(200))  
-                %td#activity_status
+                %td
                   = form_for organization do |f|
-                    - if organization.status == true
-                      Active #{f.check_box :status, class: 'checkable', remote: true}
-                    - else
-                      Inactive #{f.check_box :status, class: 'checkable', remote: true}
+                    Active #{f.check_box :status, class: 'checkable', remote: true}
                 %td
                   = link_to 'Edit', organization_path(organization.id), method: :edit
 :javascript

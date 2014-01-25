@@ -2,7 +2,7 @@ class OrganizationsController < ApplicationController
   helper_method :sort_column, :sort_direction
 
   def index
-    @organizations = Organization.all
+    @organizations = Organization.where(status: true)
   end
 
   def show
@@ -40,6 +40,10 @@ class OrganizationsController < ApplicationController
   def update
     @organization = Organization.find(params[:id])
     @organization.update(organization_params)
+    respond_to do |format|
+        format.js { render :layout => false }
+        format.html { redirect_to :back }
+    end
   end
 
   def create
@@ -49,7 +53,7 @@ class OrganizationsController < ApplicationController
 
   private
   def organization_params
-    params.require(:organization).permit(:description, :owner_id, :image, :name, :email)
+    params.require(:organization).permit(:description, :owner_id, :image, :name, :email, :status)
   end
 
   def sort_column
