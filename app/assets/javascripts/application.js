@@ -16,7 +16,6 @@
 //= require foundation
 //= require Chart
 
-
 $(document).foundation();
 
 $('#query').autocomplete({

@@ -38,10 +38,10 @@ puts
 
 # create offers
 puts "Creating #{NUMBER_OF_OFFERS} offers"
-Offer.make!(NUMBER_OF_OFFERS).each do |offer|
+Offer.make(NUMBER_OF_OFFERS).each do |offer|
   # pick a random user to be the donor
-  @donor = User.all.sample
-  offer.donor = @donor
+  donor = User.all.sample
+  offer.donor_id = donor.id
   # get the random donor's email
   offer.email = "connect2good.mailer@gmail.com"
   # make offer to a random org
@@ -49,5 +49,5 @@ Offer.make!(NUMBER_OF_OFFERS).each do |offer|
   # pick a random need from that org
   offer.need = offer.organization.needs.sample
   offer.status = "pending"
-  offer.save!
+  offer.save(validate: false)
 end
