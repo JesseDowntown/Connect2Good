@@ -13,7 +13,8 @@
               .upper-panel
                 .center  
                   %h5= need.description.truncate(30)
-                  %h7= need.category
+                  / This is available in the db but we are not using it for now
+                  / %h7= need.category
                 .needsModal.reveal-modal.small{"data-reveal" => ""}
                   .row
                     %h3= "#{need.organization.name} needs"

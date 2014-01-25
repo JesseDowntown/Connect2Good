@@ -2,4 +2,5 @@
   %h3= "#{@need.organization.name} needs"
   %p= @need.description
   %h5= link_to "Make offer", new_offer_path(need_id: params[:id])
+  %h5= link_to "Back", :back
   %a.close-reveal-modal ×

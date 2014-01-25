@@ -2,6 +2,7 @@ class Need < ActiveRecord::Base
   
   belongs_to :organization
   has_many :offers
+  
 
   include PgSearch
   pg_search_scope :search, against: [:description, :category], 
