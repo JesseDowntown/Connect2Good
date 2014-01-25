@@ -68,6 +68,10 @@ body {
 	&:hover {
 		background-color: lighten(#fdd68b, 5%);
 	}
+	@media (max-width: 640px) {
+		height: 45px;
+		padding: 10px 5px;
+	}
 } 
 .org-panel {
 	border-color: #888888;
@@ -88,6 +92,11 @@ body {
 	@media (max-width: 800px) {
 		height: 80px;
 		padding: 10px 5px;
+	}
+
+	@media (max-width: 640px) {
+		height: 45px;
+		padding: 5px 5px;
 	}
 }
 
@@ -142,6 +151,11 @@ span.middle{
 	
 	@media (max-width: 800px) {
 		height: 180px;
+	}
+
+	@media (max-width: 640px){
+		height: 60px;
+		padding: 5px 5px;
 	}
 }
 
