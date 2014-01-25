@@ -12,8 +12,7 @@
                     %h6= need.organization.name
               .upper-panel
                 .center  
-                  %h5= need.description.truncate(30)
-                  %h7= need.category
+                  %h5= need.description.truncate(45)
                 .needsModal.reveal-modal.small{"data-reveal" => ""}
                   .row
                     %h3= "#{need.organization.name} needs"

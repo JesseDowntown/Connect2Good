@@ -1,5 +1,13 @@
-.row
-  %h3= "#{@need.organization.name} needs"
-  %p= @need.description
-  %h5= link_to "Make offer", new_offer_path(need_id: params[:id])
-  %a.close-reveal-modal ×
+.view-page
+  .large-3.small-1.columns
+    %p
+      \
+  .large-6.columns
+    .row
+      %h3= "#{@need.organization.name} needs"
+      %p= @need.description
+      %p= link_to "Make offer", new_offer_path(need_id: params[:id])
+      %p= link_to "Back to all Needs", needs_path
+  .large-3.small-1.columns
+    %p 
+      \
