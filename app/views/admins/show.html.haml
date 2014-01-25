@@ -46,10 +46,10 @@
         %table.center
           %thead
             %tr
-              %th sortable Representative
-              %th sortable Organization Name
-              %th sortable Organization Description
-              %th sortable Status
+              %th Representative
+              %th Organization Name
+              %th Organization Description
+              %th Status
           %tbody#organizations
             - @organizations.each do |organization|
               %tr{class: "delete_organization_#{organization.id}"}

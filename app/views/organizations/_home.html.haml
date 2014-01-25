@@ -6,7 +6,7 @@
         - if @organization.image.present?
           = image_tag @organization.image
         - else
-          %img.img-responsive{alt: "User Profile", src: "http://dummyimage.com/250x300&text=Add a profile picture!"}/
+          %img#image{alt: "User Profile", src: "http://dummyimage.com/250x300&text=Add a profile picture!"}/
         %p#description= @organization.description
         %p#email= @organization.email
         .org-edit
