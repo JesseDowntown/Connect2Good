@@ -36,6 +36,8 @@ class OffersController < ApplicationController
 
     if user_signed_in?
       @offer.donor = current_user
+      @offer.email = current_user.email
+      @offer.name = current_user.name
     else
       @offer.donor_id = nil
     end
