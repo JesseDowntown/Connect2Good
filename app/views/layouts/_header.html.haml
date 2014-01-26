@@ -2,13 +2,16 @@
   %section.left-small
     %a.left-off-canvas-toggle.menu-icon
       %span.left-icon
-  %section.middle.tab-bar-section
-    .title-area
-      .name
-        %h1
-          =link_to "Connect2Good", root_path
-  %section.right
-    %ul
+  / %section.middle.tab-bar-section
+  %ul.title-area
+    %li.name
+      %h1
+        =link_to "Connect2Good", root_path
+    %li.toggle-topbar
+      %a{href: "#"} Search
+  %section.top-bar-section
+    / Right Nav Section
+    %ul.right
       %li.has-form
         = form_tag needs_path, method: :get do
           .row.collapse
