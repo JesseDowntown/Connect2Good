@@ -1,5 +1,4 @@
 C2g::Application.routes.draw do
-  get "welcome/index"
   resources :search_suggestions
 
   # devise_scope :user do
@@ -14,8 +13,13 @@ C2g::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#index'
 
+  #admin dashboard
   get 'admin', to: 'admins#show'
 
+  #static pages
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
+  get 'faq', to: 'pages#faq'
   get 'offers/:offer_id/success', to: 'offers#success', as: 'success'
 
   get 'needs/:need_id/offers', to: 'offers#new', as: 'new_offer'
@@ -23,7 +27,6 @@ C2g::Application.routes.draw do
 
   resources :needs
   resources :offers, except: [:create]
-
   resources :organizations do
     resources :offers, except: [:show, :create]
     resources :needs, except: [:show]
