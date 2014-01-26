@@ -16,6 +16,8 @@ C2g::Application.routes.draw do
 
   get 'admin', to: 'admins#show'
 
+  get 'offers/:offer_id/success', to: 'offers#success', as: 'success'
+
   get 'needs/:need_id/offers', to: 'offers#new', as: 'new_offer'
   post 'needs/:need_id/offers', to: 'offers#create', as: 'create_offer'
 

@@ -4,7 +4,7 @@
     .row
       .large-12.columns
         - @needs.each do |need|
-          .large-3.medium-4.small-6.columns.left
+          .large-3.medium-4.small-12.columns.left
             .card
               = link_to organization_path(need.organization.id) do
                 .org-panel
@@ -12,9 +12,7 @@
                     %h6= need.organization.name
               .upper-panel
                 .center  
-                  %h5= need.description.truncate(30)
-                  / This is available in the db but we are not using it for now
-                  / %h7= need.category
+                  %h5= need.description.truncate(45)
                 .needsModal.reveal-modal.small{"data-reveal" => ""}
                   .row
                     %h3= "#{need.organization.name} needs"

@@ -18,13 +18,15 @@
     - donor_id = ""
     = f.label :name
     = f.text_field :name, :placeholder => "leave blank if you prefer to remain anonymous"
-    = f.label :email
+    = f.label "Email*"
     = f.text_field :email, :placeholder => "#{@need.organization.name} will use this email to contact you"
     = f.label :description
     = f.text_field :description, :placeholder => "what it is, how old it is, what condition it is in..."
     = f.label :image
     = f.file_field :image
     = f.submit "Submit"
+    %br
+    %h8*required
     %p
     %h8
       have an account? #{link_to "sign in", user_session_path}

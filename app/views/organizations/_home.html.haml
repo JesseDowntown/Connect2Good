@@ -3,7 +3,10 @@
     .row.large-12.columns
       .large-4.columns
         %h3= @organization.name
-        %img{src: "http://placekitten.com/300/150"}/
+        - if @organization.image.present?
+          = image_tag @organization.image
+        - else
+          %img#image{alt: "User Profile", src: "http://dummyimage.com/250x300&text=Add a profile picture!"}/
         %p#description= @organization.description
         %p#email= @organization.email
         .org-edit

@@ -32,18 +32,14 @@
                 %label.cat Organizations
               %li
                 %a{href: "#{organizations_path}"} View All
+              - if current_user  
+                - orgs.each do |org|
+                  - if current_user.id == org.owner_id
+                    %li= link_to " View #{org.name}'s dash", organization_path(org.id) 
               %li
                 %label.cat Needs
               %li
                 %a{href: "#{needs_path}"} View All
-              %li
-                %a{:href => "/needs?utf8=✓&query=electronics&commit=Search+Needs"} Electronics & Technology
-              %li
-                %a{:href => "/needs?utf8=✓&query=furniture&commit=Search"} Furniture
-              %li
-                %a{:href => "#"} Tools &amp; Construction
-              %li
-                %a{:href => "#"} Volunteer Hours
               %li
                 %label.cat User Account
                 - if current_user
@@ -52,6 +48,14 @@
                 - else
                   %li= link_to "Sign in", new_user_session_path
                   %li= link_to "Join", new_user_registration_path
+              %li
+                %label.cat Connect 2 Info
+              %li
+                %a{href: "#"} About C2G
+              %li
+                %a{href: "#"} FAQs
+              %li
+                %a{href: "#"} Contact C2G
               - if current_user.try(:admin?)
                 %li
                   %label.cat Administration

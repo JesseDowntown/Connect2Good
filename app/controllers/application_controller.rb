@@ -4,8 +4,15 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :configure_devise_permitted_parameters, if: :devise_controller?
-  after_filter :store_location
-  
+  after_filter :store_location    
+
+
+  helper_method :orgs
+
+  def orgs
+    Organization.all
+  end
+
   def store_location
     # store last url as long as it isn't a /users path
     session[:previous_url] = request.fullpath unless request.fullpath =~ /\/users/ || request.fullpath =~ /\/search_suggestions/ # 
