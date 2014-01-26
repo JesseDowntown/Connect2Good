@@ -16,11 +16,16 @@ body {
 }
 
 .reveal-modal{
-	a{
+	a.button{
+		color: #111;
+		&:hover{
+			background-color: #fdd68b;
+			color: #fff;
+		}
+	}
+	a.close-reveal-modal{
 		&:hover{
 			background-color: #fff;
-			color: #88a4b3;
-			font-weight: bold;
 		}
 	}
 }
@@ -243,6 +248,9 @@ span.middle{
 			background-color: darken(#88a4b3, 5%);
 			color: #fff;
 		}
+	}
+	.title-area {
+		margin-left: 46px;
 	}
 }
 

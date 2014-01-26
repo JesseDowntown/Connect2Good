@@ -14,11 +14,14 @@
                 .center  
                   %h5= need.description.truncate(45)
                 .needsModal.reveal-modal.small{"data-reveal" => ""}
-                  .row
-                    %h3= "#{need.organization.name} needs"
-                    %p= need.description
-                    %p= link_to "Make offer", new_offer_path(need)
+                  .row.center
                     %a.close-reveal-modal ×
+                    %br
+                    %h3= "#{need.organization.name} needs"
+                    %h5= need.description
+                    %br
+                    %br
+                    %a.button{href: "#{new_offer_path(need)}"} Make offer
               = link_to new_offer_path(need) do
                 .panel
                   .center
