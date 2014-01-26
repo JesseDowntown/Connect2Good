@@ -1,0 +1,24 @@
+.view-page
+  .large-3.small-1.columns
+    %p
+      \
+  .large-6.small-10.columns
+    %div
+      .row
+        %h3 Thank you!
+        %br
+        %p 
+          #{@offer.organization.name} has received an email with your donation offer details, and will be contacting you via email as soon as possible.
+        %p 
+          Thanks again on behalf of the entire Connect 2 Good team!
+        = link_to "FAQ"
+        \|
+        = link_to "About"
+        %br
+        %br
+        %p= link_to "Back", :back
+
+  .large-3.small-1.columns
+    %p
+      \
+

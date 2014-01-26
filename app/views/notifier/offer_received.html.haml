@@ -1,15 +1,16 @@
 
 %p= "Hello representative for #{@offer.organization.name},"
-%p=  "A Connect2Good donor, #{@text}, would like to fill one of your organization's needs!"
+%br
+%p=  "A Connect 2 Good donor, #{@text}, would like to fill one of your organization's needs!"
 %p The donor has provided these details regarding the offered item:
 %p= "#{@offer.description}"
 =image_tag "#{@offer.image}"
 %p= "The donor looks forward to hearing from you via email. Their email address is: #{@offer.email}"
 %br
+%p Thank you,
+%p The Connect 2 Good Team
+%br
 %p For more information:
 = link_to "FAQ", root_url
 \| 
 = link_to "Your Organization's Needs", organization_url(@offer.organization)
-%br
-%p Thank you,
-%p The Connect2Good Team
