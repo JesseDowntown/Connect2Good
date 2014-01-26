@@ -75,9 +75,11 @@
               %a{href: "#"} 
                 about
               - if !signed_in?
-                = link_to "Join", new_user_registration_path
+                = link_to "join", new_user_registration_path
               %a{href: "#"}
                 contact
+              %a{href: "#"}
+                faq
               %div &nbsp;
               %a{href: "#"}
                 privacy policy
