@@ -26,16 +26,19 @@
           .medium-6.columns
             %h6 #{ link_to "total offers: #{@organization.offers.length}", organization_offers_path(params[:id]), id: 'offer_index', remote: true }
             %span.large3.columns
-              %h7 
-                total offers pending: 
+              %h7
+                total offers 
+                %span.pending-color pending: 
                 %span.pending-num= @pending
                 %br/
-              %h7 
-                total offers declined: 
+              %h7
+                total offers 
+                %span.denied-color declined: 
                 %span.denied-num= @denied
                 %br/
-              %h7 
-                total offers accepted:
+              %h7
+                total offers 
+                %span.accepted-color accepted:
                 %span.accepted-num= @accepted
           .medium-6.columns.left
             %canvas#myChart{height: "200", width: "200"}
@@ -65,5 +68,5 @@
             - @org_sorted.each do |need|
               = render partial: 'need', object: need 
 %script#js{type: "text/javascript"}
-  var data = [{value: #{@accepted}, color:"#F7464A"},{ value : #{@pending}, color : "#F38630" },{value: #{@denied}, color: "#000"}]
+  var data = [{value: #{@accepted}, color:"green"},{ value : #{@pending}, color : "yellow" },{value: #{@denied}, color: "red"}]
 

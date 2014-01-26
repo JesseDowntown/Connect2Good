@@ -37,7 +37,7 @@
             %tr
               %th Offer
               %th Organization
-              %th
+              %th Date Offered
           %tbody
             - @offers.each do |offer|
               %tr
@@ -46,4 +46,4 @@
                 %td
                   = link_to offer.organization.name, organization_path(offer.organization.id)
                 %td
-                  = link_to 'Hide from view'
+                  = offer.created_at.strftime("%d %b. %Y") 
