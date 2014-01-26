@@ -22,13 +22,16 @@
             %canvas#offerTimeChart
           .large-12.columns
             %h6 
-              total offers pending: 
+              total offers 
+              %span.pending-color pending: 
               %span.pending-num= @pending
             %h6 
-              total offers denied: 
+              total offers 
+              %span.denied-color denied: 
               %span.denied-num= @denied
             %h6 
-              total offers accepted:
+              total offers 
+              %span.accepted-color accepted:
               %span.accepted-num= @accepted
           .row
             %canvas#offerStatusChart
@@ -67,6 +70,6 @@
                     Active #{f.check_box :status, class: 'checkable', remote: true}
                 %td
 :javascript
-  var doughnutData = [{value: #{@accepted}, color:"#F7464A"},{ value: #{@denied}, color:"#000" },{ value: #{@pending}, color:"#F38630" }]
+  var doughnutData = [{value: #{@accepted}, color:"#88A4B3"},{ value : #{@pending}, color : "#B3AC88" },{value: #{@denied}, color: "#B3888E"}]
   
-  var lineData = {labels: ["-3 week","-2 week","-1 week","this week"], datasets: [{fillColor: "#F7464A", strokeColor: "#000)", pointColor: "#E2EAE9", pointStrokeColor: "#fff", data: [#{@three_weeks_ago},#{@two_weeks_ago},#{@one_week_ago},#{@this_week}]}]}
+  var lineData = {labels: ["-3 week","-2 week","-1 week","this week"], datasets: [{fillColor: "#88b3ac", strokeColor: "#000)", pointColor: "#E2EAE9", pointStrokeColor: "#fff", data: [#{@three_weeks_ago},#{@two_weeks_ago},#{@one_week_ago},#{@this_week}]}]}
