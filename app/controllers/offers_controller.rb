@@ -20,6 +20,10 @@ class OffersController < ApplicationController
 	def show
 	end
 
+  def success
+    @offer = Offer.find(params[:offer_id])
+  end
+
 	def new
     @offer = Offer.new
     @need = Need.find(params[:need_id])
@@ -36,6 +40,8 @@ class OffersController < ApplicationController
 
     if user_signed_in?
       @offer.donor = current_user
+      @offer.email = current_user.email
+      @offer.name = current_user.name
     else
       @offer.donor_id = nil
     end
@@ -43,7 +49,7 @@ class OffersController < ApplicationController
     if @offer.save
       Notifier.offer_sent(@offer).deliver
       Notifier.offer_received(@offer).deliver
-      redirect_to @offer, notice: 'Offer was successfully created.'
+      redirect_to success_path(@offer)
     else
       render action: 'new'
     end
@@ -52,7 +58,6 @@ class OffersController < ApplicationController
   def update
     if @offer.update(offer_params)
       redirect_to :back
-      
     else
       render action: 'edit'
     end

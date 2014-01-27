@@ -13,10 +13,9 @@
 //= require jquery
 //= require jquery.ui.all
 //= require jquery_ujs
+//= require jquery.remotipart
 //= require foundation
 //= require Chart
-
-//= require_tree .
 
 $(document).foundation();
 
@@ -35,3 +34,18 @@ $(".modalView").click(function(){
 $(".close-reveal-modal").click(function(){
   $(this).closest(".myModal").foundation('reveal', 'close');
 });
+
+
+$('.checkable').on('change', 
+function() {
+    $(this).parents('form:first').submit();
+});
+
+$(".card .upper-panel").click(function(){
+	$(this).find(".needsModal").foundation('reveal', 'open');
+});
+
+$(".close-reveal-modal").click(function(){
+	$(this).closest(".needsModal").foundation('reveal', 'close');
+});
+

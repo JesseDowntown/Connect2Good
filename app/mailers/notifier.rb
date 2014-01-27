@@ -17,7 +17,7 @@ class Notifier < ActionMailer::Base
       @text = "who wishes to remain anonymous"
     end
 
-    mail( to: "connect2good.mailer@gmail.com",
+    mail( to: "#{@offer.organization.email}",
           subject: "Connect2Good Donation Offer")
   end
 
@@ -25,7 +25,7 @@ class Notifier < ActionMailer::Base
 
     @offer = offer
 
-    mail( to: "connect2good.mailer@gmail.com",
+    mail( to: "#{@offer.email}",
           subject: "Connect2Good Offer!")
   end
 end

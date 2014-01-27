@@ -1,7 +1,10 @@
 (function() {  
-  $('.org-edit .edit_organization').slideToggle();
-  $('.org-edit .button').show();
 
-  $("#description").text("<%= @organization.description %>");
-  $("#email").text("<%= @organization.email %>");
+    $('.org-edit .edit_organization').slideToggle();
+    $('.org-edit .button').show();
+
+    $("#description").text("<%= @organization.description %>");
+    $("#email").text("<%= @organization.email %>");
+    $("#image").text("<%= @organization.image %>");
+    
 })();

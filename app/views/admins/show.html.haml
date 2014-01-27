@@ -46,13 +46,18 @@
         %table.center
           %thead
             %tr
+              %th Representative
               %th Organization Name
               %th Organization Description
               %th Status
-              %th Edit
           %tbody#organizations
             - @organizations.each do |organization|
               %tr{class: "delete_organization_#{organization.id}"}
+                %td 
+                  -if organization.owner_id
+                    = User.find_by_id(organization.owner_id).name
+                  - else
+                    unclaimed organization
                 %td
                   = simple_format link_to word_wrap(organization.name ), organization_path(organization)
                 %td
@@ -61,7 +66,6 @@
                   = form_for organization do |f|
                     Active #{f.check_box :status, class: 'checkable', remote: true}
                 %td
-                  = link_to 'Edit', organization_path(organization.id), method: :edit
 :javascript
   var doughnutData = [{value: #{@accepted}, color:"#F7464A"},{ value: #{@denied}, color:"#000" },{ value: #{@pending}, color:"#F38630" }]
   
