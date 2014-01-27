@@ -72,15 +72,12 @@
                   = submit_tag "Search Needs", class: "button"
               = javascript_include_tag "application"
             .home-footer
-              %a{href: "#"} 
-                about
+              = link_to "About", about_path
               - if !signed_in?
-                = link_to "join", new_user_registration_path
-              %a{href: "#"}
-                contact
-              %a{href: "#"}
-                faq
+                = link_to "Join", new_user_registration_path
+              = link_to "Contact", contact_path
+              = link_to "FAQ", faq_path
               %div &nbsp;
-              %a{href: "#"}
-                privacy policy
+              / %a{href: "#"}
+              /   privacy policy
           %a.exit-off-canvas
