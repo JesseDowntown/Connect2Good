@@ -35,9 +35,9 @@
         %table
           %thead
             %tr
-              %th Offer
-              %th Organization
-              %th
+              %th= sortable "description", "Offer"
+              %th= sortable "organization_id", "Organization"
+              %th= sortable "created_at", "Date Offered"
           %tbody
             - @offers.each do |offer|
               %tr
@@ -46,4 +46,4 @@
                 %td
                   = link_to offer.organization.name, organization_path(offer.organization.id)
                 %td
-                  = link_to 'Hide from view'
+                  = offer.created_at.strftime("%d %b. %Y") 

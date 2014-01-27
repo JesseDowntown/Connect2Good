@@ -5,3 +5,19 @@
 .org-create .new_organization {
   display: none;
 }
+
+
+.pending-color {
+  font-weight: bold;
+  color: #B3AC88;
+}
+
+.denied-color {
+  font-weight: bold;
+  color: #B3888E;
+}
+
+.accepted-color {
+  font-weight: bold;
+  color: #88A4B3;
+}
