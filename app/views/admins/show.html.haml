@@ -17,7 +17,7 @@
               %br
               total organizations inactive:
               %span.pending-num= @organizations.count - @active
-          %h6 #{ link_to "total offers: #{@offers.length}", offers_path, remote: true }
+          %h6 total offers: #{@offers.length}
           .row.happy
             %canvas#offerTimeChart
           .large-12.columns
