@@ -6,7 +6,10 @@
   %ul.title-area
     %li.name
       %h1
-        =link_to "Connect 2 Good", root_path
+        %a{href: root_path}
+          Connect
+          = image_tag('isolated-glyph-white-on-transparent-sm.png')
+          Good
     %li.toggle-topbar
       %a{href: "#"} Search
   %section.top-bar-section
@@ -22,7 +25,10 @@
 %aside.left-off-canvas-menu
   %ul.off-canvas-list
     %li
-      .oc-head Connect 2 Good
+      .oc-head 
+        Connect
+        = image_tag('isolated-glyph-white-on-transparent-sm.png')
+        Good
     %li
       %label.cat Organizations
     %li

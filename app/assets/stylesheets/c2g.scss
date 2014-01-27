@@ -2,6 +2,17 @@ body {
 	min-height: 640px;
 }
 
+@font-face {
+  font-family: 'Alegreya Sans Medium';
+  src:url('AlegreyaSansMedium.otf');
+  src:url('AlegreyaSansMedium.otf?#iefix') format('embedded-opentype'),
+    url('AlegreyaSansMedium.svg#icomoon') format('svg'),
+    url('AlegreyaSansMedium.woff') format('woff'),
+    url('AlegreyaSansMedium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .page{
     height:100%;   
 }
@@ -221,18 +232,18 @@ span.middle{
 	h3 {
 		color: #3a5868;
 		font-size: 2.5em;
-		font-family: Helvetica, sans-serif;
+		// font-family: Helvetica, sans-serif;
 	}
 
 	h4 {
 		color: #3a5868;
 		font-size: 2em;
-		font-family: Helvetica, sans-serif;
+		// font-family: Helvetica, sans-serif;
 	}
 
 	h5 {
 		color: #3a5868;
-		font-family: Helvetica, sans-serif;
+		// font-family: Helvetica, sans-serif;
 		&:hover{
 			font-weight: bold;
 		}	
@@ -297,7 +308,7 @@ span.middle{
 	    color: white;
 	    padding: 12px 0 12px 0;
 	    padding-left: 15px;
-	    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	    // font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	    font-size: 0.8125em;
 	    font-weight: bold;
 	    background: #88a4b3; }
@@ -385,15 +396,24 @@ span.middle{
 	min-height: 680px; 
 	// background-size: cover; 
 	padding: 10em 0em; 
-
+	
+	.center {
+		h1 {
+		font-color: #3a5868;
+		font-size: 3.5em;
+		font-weight: bold;
+	}	
+	}
 	h1 {
 		font-color: #3a5868;
+		font-size: 3.5em;
+		font-weight: bold;
 	}
 	
 	h3 {
 		color: #3a5868;
 		font-size: 2.5em;
-		font-family: Helvetica, sans-serif;
+		// font-family: Helvetica, sans-serif;
 	}
 
 	h4 {
