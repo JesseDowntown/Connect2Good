@@ -35,13 +35,16 @@
                   .center  
                     %h5= need.description.truncate(45)
                   .needsModal.reveal-modal.small{"data-reveal" => ""}
-                    .row
-                      %h3= "#{need.organization.name} needs"
-                      %p= need.description
-                      %p= link_to "Make offer", new_offer_path(need)
+                    .row.center
                       %a.close-reveal-modal ×
+                      %br
+                      %h3= "#{need.organization.name} needs"
+                      %h5= need.description
+                      %br
+                      %br
+                      %a.button{href: "#{new_offer_path(need)}"} Offer Donation
                 = link_to new_offer_path(need) do
                   .panel
                     .center
-                      %h6 Make Offer
+                      %h6 Offer Donation
           = will_paginate @needs, renderer: FoundationPagination::Rails, outer_window: 0, inner_window: 1  
