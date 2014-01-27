@@ -28,17 +28,14 @@
             %h6 #{ link_to "total offers: #{@organization.offers.length}", organization_offers_path(params[:id]), id: 'offer_index', remote: true }
             %span.large3.columns
               %h7
-                total offers 
                 %span.pending-color pending: 
                 %span.pending-num= @pending
                 %br/
               %h7
-                total offers 
                 %span.denied-color declined: 
                 %span.denied-num= @denied
                 %br/
               %h7
-                total offers 
                 %span.accepted-color accepted:
                 %span.accepted-num= @accepted
           .medium-6.columns.left

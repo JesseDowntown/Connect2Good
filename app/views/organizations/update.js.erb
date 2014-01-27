@@ -2,8 +2,7 @@
 
     $('.org-edit .edit_organization').slideToggle();
     $('.org-edit .button').show();
-
-    $("#description").text("<%= @organization.description %>");
+    $("#description").text("<%= j @organization.description %>".replace(/\&#39;/ig,"'"));
     $("#email").text("<%= @organization.email %>");
     $("#image").html("<%= j image_tag @organization.image%>");
     
