@@ -16,11 +16,16 @@ body {
 }
 
 .reveal-modal{
-	a{
+	a.button{
+		color: #111;
+		&:hover{
+			background-color: #fdd68b;
+			color: #fff;
+		}
+	}
+	a.close-reveal-modal{
 		&:hover{
 			background-color: #fff;
-			color: #88a4b3;
-			font-weight: bold;
 		}
 	}
 }
@@ -56,6 +61,9 @@ body {
 
 .orgneeds{
 	border-left: 1px solid #888;
+	@media (max-width: 640px){
+		border: 0px;
+	}
 }
 
 .panel {
@@ -133,6 +141,11 @@ span.middle{
 	@media (max-width: 800px) {
 		height: 140px;
 		padding: 10px 5px;
+	}
+
+	@media (max-width: 640px){
+		height: 100%;
+		padding: 5px 5px;
 	}
 } 
 
@@ -243,6 +256,9 @@ span.middle{
 			background-color: darken(#88a4b3, 5%);
 			color: #fff;
 		}
+	}
+	.title-area {
+		margin-left: 46px;
 	}
 }
 

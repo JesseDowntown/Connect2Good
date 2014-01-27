@@ -2,7 +2,8 @@
 %html{lang: "en"}
   %head
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
-    %title= content_for?(:title) ? yield(:title) : "Connect 2 Good"
+    %title= content_for?(:title) ? yield(:title) : "Connect2Good"
+    = favicon_link_tag '/favicon.ico'
     = stylesheet_link_tag    "application"
     = csrf_meta_tags
   %body
@@ -60,7 +61,8 @@
                   %a{:href => "#{admin_path}"} Admin Profile
           %section.full-width-row
             .center
-              %h3 Connect 2 Good 
+              / %h3 Connect 2 Good
+              = image_tag 'c2g-homepage.png' 
             .small-10.medium-6.large-4.small-centered.columns
               = form_tag needs_path, method: :get do
                 .center
