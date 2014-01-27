@@ -5425,6 +5425,10 @@ body {
   padding: 15px 15px; }
   .panel:hover {
     background-color: #fddfa4; }
+  @media (max-width: 640px) {
+    .panel {
+      height: 45px;
+      padding: 10px 5px; } }
 
 .org-panel {
   border-color: #888888;
@@ -5441,6 +5445,10 @@ body {
     .org-panel {
       height: 80px;
       padding: 10px 5px; } }
+  @media (max-width: 640px) {
+    .org-panel {
+      height: 45px;
+      padding: 5px 5px; } }
 
 .org-def-panel {
   border-color: #888888;
@@ -5483,6 +5491,10 @@ span.middle {
   @media (max-width: 800px) {
     .upper-panel {
       height: 180px; } }
+  @media (max-width: 640px) {
+    .upper-panel {
+      height: 60px;
+      padding: 5px 5px; } }
 
 .snippet {
   height: 80px; }
@@ -5681,6 +5693,9 @@ canvas {
 ul.left.admin li a {
   color: black;
   font-size: 1.5em; }
+
+#offer_status {
+  width: 100px; }
 .org-edit .edit_organization {
   display: none; }
 
