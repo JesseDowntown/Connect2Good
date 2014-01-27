@@ -42,12 +42,9 @@
         %li= link_to "Join", new_user_registration_path
     %li
       %label.cat Connect 2 Info
-    %li
-      %a{href: "#"} About C2G
-    %li
-      %a{href: "#"} FAQs
-    %li
-      %a{href: "#"} Contact C2G
+    %li= link_to "About", about_path
+    %li= link_to "FAQ", faq_path
+    %li= link_to "Contact", contact_path
     - if current_user.try(:admin?)
       %li
         %label.cat Administration
