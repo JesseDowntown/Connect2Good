@@ -50,9 +50,10 @@
           %thead
             %tr
               %th Representative
-              %th Organization Name
-              %th Organization Description
-              %th Status
+              %th= sortable "name", "Organization Name"
+              %th= sortable "description", "Organization Description"
+              %th= sortable "status"
+              %th= sortable "created_at", "Dated Added"
           %tbody#organizations
             - @organizations.each do |organization|
               %tr{class: "delete_organization_#{organization.id}"}
@@ -69,6 +70,7 @@
                   = form_for organization do |f|
                     Active #{f.check_box :status, class: 'checkable', remote: true}
                 %td
+                  = organization.created_at.strftime("%d %b. %Y") 
 :javascript
   var doughnutData = [{value: #{@accepted}, color:"#88A4B3"},{ value : #{@pending}, color : "#B3AC88" },{value: #{@denied}, color: "#B3888E"}]
   
