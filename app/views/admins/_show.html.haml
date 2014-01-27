@@ -1,0 +1,27 @@
+.row.happy#numbers
+  %h6= "total organizations: #{@organizations.count}"
+  %span.happy.large3.columns
+    %h6 
+      total organizations active: 
+      %span.pending-num= @active
+      %br
+      total organizations inactive:
+      %span.pending-num= @organizations.count - @active
+  %h6 #{ link_to "total offers: #{@offers.length}", offers_path, remote: true }
+  .row.happy
+    %canvas#offerTimeChart
+  .large-12.columns
+    %h6 
+      total offers 
+      %span.pending-color pending: 
+      %span.pending-num= @pending
+    %h6 
+      total offers 
+      %span.denied-color denied: 
+      %span.denied-num= @denied
+    %h6 
+      total offers 
+      %span.accepted-color accepted:
+      %span.accepted-num= @accepted
+  .row
+    %canvas#offerStatusChart
