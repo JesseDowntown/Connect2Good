@@ -35,9 +35,9 @@
         %table
           %thead
             %tr
-              %th Offer
-              %th Organization
-              %th Date Offered
+              %th= sortable "description", "Offer"
+              %th= sortable "organization_id", "Organization"
+              %th= sortable "created_at", "Date Offered"
           %tbody
             - @offers.each do |offer|
               %tr

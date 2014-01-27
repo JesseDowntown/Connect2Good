@@ -5,6 +5,6 @@
 
     $("#description").text("<%= @organization.description %>");
     $("#email").text("<%= @organization.email %>");
-    $("#image").text("<%= @organization.image %>");
+    $("#image").html("<%= j image_tag @organization.image%>");
     
 })();

@@ -7,7 +7,10 @@
         .large-4.columns.orgfix
           .center
             %h3= @organization.name
-            %img{src: "http://placekitten.com/300/300"}/
+            - if @organization.image.present?
+              = image_tag @organization.image
+            - else
+              %img{alt: "User Profile", src: "http://dummyimage.com/250x300&text=Add a profile picture!"}/
             %p= @organization.description
             %p= @organization.email
             / need to add additional routes for this link
@@ -16,7 +19,7 @@
             .center
               %h3 Needs
             - @organization.needs.each do |need|
-              .large-4.small-6.columns.left
+              .large-4.medium-3.small-12.columns.left
                 .card
                   = link_to need_path(need),"data-reveal-id" => "needsModal" do
                     .upper-panel

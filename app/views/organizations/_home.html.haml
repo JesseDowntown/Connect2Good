@@ -3,10 +3,11 @@
     .row.large-12.columns
       .large-4.columns
         %h3= @organization.name
-        - if @organization.image.present?
-          = image_tag @organization.image
-        - else
-          %img#image{alt: "User Profile", src: "http://dummyimage.com/250x300&text=Add a profile picture!"}/
+        %h3#image
+          - if @organization.image.present?
+            = image_tag @organization.image
+          - else
+            %img{alt: "User Profile", src: "http://dummyimage.com/250x300&text=Add a profile picture!"}/
         %p#description= @organization.description
         %p#email= @organization.email
         .org-edit
@@ -68,5 +69,5 @@
             - @org_sorted.each do |need|
               = render partial: 'need', object: need 
 %script#js{type: "text/javascript"}
-  var data = [{value: #{@accepted}, color:"green"},{ value : #{@pending}, color : "yellow" },{value: #{@denied}, color: "red"}]
+  var data = [{value: #{@accepted}, color:"#88A4B3"},{ value : #{@pending}, color : "#B3AC88" },{value: #{@denied}, color: "#B3888E"}]
 
