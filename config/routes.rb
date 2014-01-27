@@ -1,4 +1,6 @@
 C2g::Application.routes.draw do
+  get "contact_form/new"
+  get "contact_form/create"
   resources :search_suggestions
 
   # devise_scope :user do
@@ -18,12 +20,14 @@ C2g::Application.routes.draw do
 
   #static pages
   get 'about', to: 'pages#about'
-  get 'contact', to: 'pages#contact'
   get 'faq', to: 'pages#faq'
   get 'offers/:offer_id/success', to: 'offers#success', as: 'success'
 
   get 'needs/:need_id/offers', to: 'offers#new', as: 'new_offer'
   post 'needs/:need_id/offers', to: 'offers#create', as: 'create_offer'
+
+  get 'contact_forms/new', to: 'contact_form#new', as: 'contact'
+  post 'contact_forms', to: 'contact_form#create'
 
   resources :needs
   resources :offers, except: [:create]
