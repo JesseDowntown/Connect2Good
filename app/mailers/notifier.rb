@@ -18,7 +18,7 @@ class Notifier < ActionMailer::Base
     end
 
     mail( to: "#{@offer.organization.email}",
-          subject: "Connect2Good Donation Offer")
+          subject: "Connect 2 Good Donation Offer")
   end
 
   def offer_sent(offer)
@@ -26,6 +26,6 @@ class Notifier < ActionMailer::Base
     @offer = offer
 
     mail( to: "#{@offer.email}",
-          subject: "Connect2Good Offer!")
+          subject: "Connect 2 Good Offer!")
   end
 end

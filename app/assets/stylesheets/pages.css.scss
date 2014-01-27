@@ -1,0 +1,23 @@
+#pageWrapper {
+  margin: 20px auto; 
+  max-width: 62.5em; 
+  width: 100%; 
+  box-shadow: 0px 0px 15px;
+  border-radius: .5em;
+
+  p, strong {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-weight: bold;
+    a {
+      font-size: 20px;
+      color: #f0ad2f;
+    }
+  }
+
+  textarea {
+    height: 200px;
+  }
+}
