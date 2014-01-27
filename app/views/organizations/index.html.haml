@@ -5,7 +5,7 @@
       .row
         .center
           - @organizations.each do |organization|
-            .large-3.medium-4.small-6.columns.left
+            .large-3.medium-4.small-12.columns.left
               .card
                 = link_to organization_path(organization.id) do
                   .org-main-panel
@@ -13,4 +13,4 @@
                       %h4.middle= organization.name
                   .org-def-panel
                     .center
-                      %h5= organization.description.truncate(30)
+                      %h5= organization.description.truncate(45)
