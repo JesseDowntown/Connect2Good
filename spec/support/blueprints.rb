@@ -11,7 +11,7 @@ Offer.blueprint do
   description { %w[books computers chairs].sample }
   image do
     Rack::Test::UploadedFile.new(
-      Rails.root.join('spec', 'support', 'turkish-van-cat-07.jpg'),
+      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
       'image/jpg'
     )
   end
@@ -22,7 +22,12 @@ end
 
 Organization.blueprint do
   description { Faker::Company::catch_phrase }
-  image       { 'org_image.png' }
+  image do
+    Rack::Test::UploadedFile.new(
+      Rails.root.join('spec', 'support', 'austin-skyline-small.jpg'),
+      'image/jpg'
+    )
+  end
   name        { Faker::Company::name }
 end
 

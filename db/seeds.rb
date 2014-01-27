@@ -1,53 +1,28 @@
 require Rails.root.join('spec', 'support', 'blueprints')
+require 'awesome_print'
 require 'faker'
+require 'yaml'
 
-if ENV['RAILS_ENV'] == 'test'
-  NUMBER_OF_OFFERS        = 1
-  NUMBER_OF_ORGS          = 1
-  NUMBER_OF_NEEDS_PER_ORG = 1
-  NUMBER_OF_USERS         = 1
-else
-  NUMBER_OF_OFFERS        = 30
-  NUMBER_OF_ORGS          = 10
-  NUMBER_OF_NEEDS_PER_ORG = 20
-  NUMBER_OF_USERS         = 100
-end
+organizations = YAML.load_file(
+  Rails.root.join('spec', 'support', 'launch-seeds.yml')
+)
 
+organizations.each do |o|
+  organization = Organization.make
+  organization.name =        o['name']
+  organization.description = o['about']
+  organization.email =       o['email']
+  organization.image = Rack::Test::UploadedFile.new(
+    Rails.root.join(
+      'spec', 'support', 'austin-skyline-small.jpg'),
+      'image/jpg'
+    )
+  organization.save!(validate: false)
 
-# create users
-puts "Creating #{NUMBER_OF_USERS} users"
-User.make!(NUMBER_OF_USERS)
-puts
-
-# create orgs and needs
-puts "Creating #{NUMBER_OF_ORGS} organizations,"
-puts "each with #{NUMBER_OF_NEEDS_PER_ORG} needs"
-Organization.make!(NUMBER_OF_ORGS).each do |organization|
-  Need.make(NUMBER_OF_NEEDS_PER_ORG).each do |need|
+  o['needs'].each do |n|
+    need = Need.make
+    need.description = n
     need.organization = organization
-    need.category = "furniture"
-    need.save!
+    need.save!(validate: false)
   end
-  # pick a random user to be the owner
-  
-  organization.owner = User.all.sample
-  organization.email = "connect2good.mailer@gmail.com"
-  organization.save!
-end
-puts
-
-# create offers
-puts "Creating #{NUMBER_OF_OFFERS} offers"
-Offer.make(NUMBER_OF_OFFERS).each do |offer|
-  # pick a random user to be the donor
-  donor = User.all.sample
-  offer.donor_id = donor.id
-  # get the random donor's email
-  offer.email = "connect2good.mailer@gmail.com"
-  # make offer to a random org
-  offer.organization = Organization.all.sample
-  # pick a random need from that org
-  offer.need = offer.organization.needs.sample
-  offer.status = "pending"
-  offer.save(validate: false)
 end

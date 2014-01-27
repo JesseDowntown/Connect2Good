@@ -27,6 +27,7 @@ gem 'simple_form', '~> 3.0.0.rc'
 gem 'will_paginate-foundation', '~> 5.3.3'
 gem 'mandrill-api'
 gem 'unf'
+gem 'awesome_print'
 
 group :production, :staging do
   gem 'rails_12factor'
