@@ -22,7 +22,7 @@
     = f.text_field :email, :placeholder => "#{@need.organization.name} will use this email to contact you"
     = f.label :description
     = f.text_field :description, :placeholder => "what it is, how old it is, what condition it is in..."
-    = f.label :image
+    = f.label "Image*"
     = f.file_field :image
     = f.submit "Submit"
     %br

@@ -2,7 +2,7 @@
 %html{lang: "en"}
   %head
     %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
-    %title= content_for?(:title) ? yield(:title) : "Connect2Good"
+    %title= content_for?(:title) ? yield(:title) : "Connect 2 Good"
     = stylesheet_link_tag    "application"
     = csrf_meta_tags
   %body
@@ -50,12 +50,9 @@
                   %li= link_to "Join", new_user_registration_path
               %li
                 %label.cat Connect 2 Info
-              %li
-                %a{href: "#"} About C2G
-              %li
-                %a{href: "#"} FAQs
-              %li
-                %a{href: "#"} Contact C2G
+              %li= link_to "About", about_path
+              %li= link_to "FAQ", faq_path
+              %li= link_to "Contact", contact_path
               - if current_user.try(:admin?)
                 %li
                   %label.cat Administration
@@ -72,13 +69,12 @@
                   = submit_tag "Search Needs", class: "button"
               = javascript_include_tag "application"
             .home-footer
-              %a{href: "#"} 
-                about
+              = link_to "About", about_path
               - if !signed_in?
                 = link_to "Join", new_user_registration_path
-              %a{href: "#"}
-                contact
+              = link_to "Contact", contact_path
+              = link_to "FAQ", faq_path
               %div &nbsp;
-              %a{href: "#"}
-                privacy policy
+              / %a{href: "#"}
+              /   privacy policy
           %a.exit-off-canvas
