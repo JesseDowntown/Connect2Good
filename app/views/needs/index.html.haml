@@ -17,7 +17,11 @@
           2. 
         You can search organization names as well as need descriptions.
     - else
-      %h3 Needs by Organization
+      .left.leftside
+        - if params[:query].present?
+          %h3 Results for: #{params[:query]}
+        - else
+          %h3 All Needs
       .row
         .large-12.columns
           - @needs.each do |need|
