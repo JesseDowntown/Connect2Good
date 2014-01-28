@@ -1,0 +1,1417 @@
+---
+- name: !!str Animal Trustees of Austin
+  email: !!str jill@animaltrustees.org
+  about: !!str Animal Trustees of Austin serves the animals of our community by providing affordable, humane treatment, with compassion and respect for all. We are committed to ending overpopulation by making spay/neuter surgery for dogs and cats affordable and accessible to the general public, and wellness care an option for all pet owners regardless of income.
+  website: !!str www.animaltrustees.org
+  needs: !!str
+  - !!str towels (bath-sized)
+  - !!str trash bags (13 gallon kitchen-sized)
+  - !!str trash bags (55 gallon)
+  - !!str Bleach
+  - !!str Coin envelopes
+  - !!str Dog collar
+  - !!str leash
+  - !!str Breakaway cat collars
+  - !!str cat crate
+  - !!str dog crate
+  - !!str Hydrogen Peroxide
+  - !!str Isopropyl Alcohol (70%)
+  - !!str Kong Toy
+  - !!str Liquid Laundry Detergent
+  - !!str Paper Towels
+  - !!str Postage Stamp
+  - !!str Powdered puppy formula
+  - !!str Powdered kitten formula
+  - !!str Printer paper
+  - !!str Scoopable kitty litter
+  - !!str Toilet paper
+  - !!str Ziploc style sandwich bags
+- name: !!str Austin Dog Alliance
+  email: !!str debi@austindogalliance.org
+  about: !!str Austin Dog Alliance improves the health and well being of individuals and families through programs incorporating the powerful connection between dogs and humans. To achieve our mission we * Promote the valuable role of pet therapy in our community * Implement animal assisted programs in nursing homes, hospitals and rehabilitation centers * Enhance student reading skills by utilizing Bow Wow Reading Dog pet therapy teams at schools and libraries * Provide a variety of fun and educational programs designed to build self-esteem and teach children to love and respect dogs * Provide programs for children and their families who are affected by Autism Spectrum Disorder and other special learning needs * Provide professional and positive dog training classes * Carefully place rescued dogs into forever homes
+  website: !!str www.AustinDogAlliance.org
+  needs: !!str
+  - !!str roofing materials
+  - !!str fence materials
+  - !!str 42″ computer monitor
+  - !!str touch screen laptop
+  - !!str large area rug
+  - !!str Microscopes
+  - !!str Tables (sized for preschoolers)
+  - !!str chairs (sized for preschoolers)
+  - !!str Grooming table
+  - !!str Grooming Dryer
+  - !!str Grooming tub
+  - !!str Patio furniture
+  - !!str Picnic tables
+  - !!str 52″ riding mower
+  - !!str Leaf blower
+  - !!str Weed wacker
+  - !!str Bolt cutter
+  - !!str 100 foot indoor/outdoor extension cord
+  - !!str Electric edger
+  - !!str Port a potty
+  - !!str HP 564 Ink Cartridge in Retail Packagings- Combo Pack
+- name: !!str Austin Humane Society
+  email: !!str development@austinhumanesociety.org
+  about: !!str The Austin Humane Society (AHS) offers comprehensive, humane, life-saving animal services, transforming the lives of animals and those who love them. Because we believe homeless animals deserve a chance to thrive in a loving environment, we offer innovative, nationally recognized programs that save the lives of thousands of dogs and cats each year. AHS’ approach to addressing animal homelessness encompasses both finding animals homes through adoption as well as preventing future homelessness through spay/neuter programs.
+  website: !!str www.austinhumanesociety.org
+  needs: !!str
+  - !!str Bark n' Purr Giftcard
+  - !!str Tomlinson's Giftcard
+  - !!str PetsMart Giftcard
+  - !!str PetCo Giftcard
+  - !!str Target Giftcard
+  - !!str Home Depot Giftcard
+  - !!str Sam's Club Giftcard
+  - !!str Paper Towels
+  - !!str Kitten Milk Replacement
+  - !!str Puppy Milk Replacement
+  - !!str Peanut Butter (creamy, sealed non-organic and unexpired)
+  - !!str Cans of Easy Cheese
+  - !!str Kitten Bottle Sets
+  - !!str Stainless Steel Bowls (non-spill)
+  - !!str Non-Clumping Cat Litter
+  - !!str Bedding
+  - !!str towels
+  - !!str blankets without stuffing
+  - !!str Karunda beds and supplies
+  - !!str carriers (all sizes)
+  - !!str Crates (all sizes)
+  - !!str Small Electric Heating Pads without timers
+  - !!str Premier collars
+  - !!str EZ Walks
+  - !!str Dog Treats
+  - !!str Cat treats
+  - !!str Greenies Pill Pockets
+  - !!str Hard Rubber Activity Dog Toys
+  - !!str Cat Toys
+  - !!str Rawhide flips
+  - !!str Rawhide chips
+  - !!str Can openers
+  - !!str cat nail trimmers (scissor type)
+  - !!str dog nail trimmers (scissor type)
+  - !!str digital thermometers
+  - !!str Neosporin triple antibiotic ointment tubes
+  - !!str rubbing alcohol
+  - !!str hydrogen peroxide
+  - !!str unopened distilled water
+  - !!str closable plastic sandwich bags
+  - !!str brooms
+  - !!str dust pans
+  - !!str hand sanitizer
+  - !!str rubber gloves
+  - !!str sponges
+  - !!str smart phones
+  - !!str tablets
+  - !!str iPads
+- name: !!str Austin Siamese Rescue
+  email: !!str loveasiamese@yahoo.com
+  about: !!str Founded on the belief that all life should be valued and treated with dignity and respect, Austin Siamese Rescue, Inc. has a long-term commitment to responsible rescue, rehabilitation and the re-homing of Siamese cats and their non-Siamese companions in the Central Texas area. All of the cats fostered in Austin are cared for in private homes by individuals who dedicate their spare time to this effort. Our cats come from a variety of backgrounds. Some faced death at the shelter, while others came from abusive and neglectful households. Still others were treasured companions of guardians who could no longer care for them. What they all have in common is a need for a forever home, where they can live their lives as the happy, pampered cats they all deserve to be. We're looking for the perfect inside home for them
+  website: !!str www.austinsiameserescue.org
+  needs: !!str
+  - !!str Cat trees
+  - !!str scratching posts
+  - !!str Iams Hairball
+  - !!str Costco cat food
+  - !!str Purina One Sensitive Stomach
+  - !!str Wellness Indoor Health and Wellness CORE
+  - !!str Taste of the Wild
+  - !!str show kennels
+  - !!str Circle Beds
+  - !!str towels
+  - !!str Advantage
+  - !!str Frontline
+  - !!str Revolution
+  - !!str Gas cards
+  - !!str pine pelletts
+  - !!str Tidy Cat Multi Cat Scoopable
+  - !!str Sweat Scoop
+  - !!str Petsmart Gift Cards
+  - !!str Litter Locker 6-Pack Genie Refill Cartridge
+  - !!str Litter Genie Cat Litter Disposal Odor Free Pail System
+  - !!str Bayer Contour Blood Glucose 100 Test Strips
+  - !!str Drontal for Cats 50ct tabs
+  - !!str Tradewinds Feline Tapeworm Tabs 3-23mg Tabs
+  - !!str Little Citty Dogs CHICKEN FLAVORED Praziquantel Tapeworm Wormer Capsules for Cats
+  - !!str Royal Canine Canned Cat Food Babycat Formula
+  - !!str Nylabone Cozytime Pet Home and Carrier
+- name: !!str Emancipet
+  email: !!str jill.lally@emancipet.org
+  about: !!str Emancipet is on a mission to make spay/neuter and preventive veterinary care affordable and accessible to all pet guardians. We envision a future where all pets are happy, healthy, and living with families whose lives they enrich through the human-animal bond. We provide free and low-cost spay/neuter surgeries and preventive veterinary wellness through our stationary clinic on Levander Loop and via our two mobile spay/neuter clinics. Our mobile clinics bring low-cost sterilization services to Bastrop, Caldwell, Hays, Travis and Williamson Counties Monday – Wednesday, and offer free, first-come first-served surgeries in targeted Austin neighborhoods Thursday – Saturday. Emancipet sterilizes over 18,500 pets annually, and provides preventive veterinary wellness services to over 18,000.
+  website: !!str www.emancipet.org
+  needs: !!str
+  - !!str Car
+- name: !!str PAWS OF AUSTIN
+  email: !!str dogs@pawsofaustin.org
+  about: !!str PAWS' mission is to prevent cruelty to all animals by promoting humane standards through education and example, to provide care and shelter for homeless animals, aid in the reduction of domestic animal overpopulation, and aid in the enforcement of laws, including the investigation of animal cruelty and abuse.
+  website: !!str www.pawsofaustin.org
+  needs: !!str
+  - !!str pet food
+  - !!str cars
+  - !!str trucks
+  - !!str boats
+  - !!str trailer
+  - !!str pet supplies
+  - !!str pet toys
+  - !!str bedding
+  - !!str towels
+  - !!str crates
+  - !!str blankets
+  - !!str kennels
+- name: !!str PREVENT A LITTER (PALS) OF CENTRAL TEXAS
+  email: !!str PAL@PreventALitter.com
+  about: !!str The mission of PALS is to end pet euthanasia and pet homelessness in Central Texas through our programs of spay/neuter, humane education, TrapNeuterReturn of feral cats, and Pet Food Pantry. PALS is an all volunteer organization. We have our own Cat Spay/Neuter clinic held once or twice monthly. Our TNR rescues kittens and tame cats from feral colonies, fosters them and adopts them to loving homes. Our services are for the underprivileged in our community. Our mission will be complete when the shelters are empty and every pet has a loving forever home.
+  website: !!str www.preventalitter.com
+  needs: !!str
+  - !!str cars
+  - !!str trucks
+  - !!str RVs
+  - !!str PowerPoint Projector
+  - !!str Bark n' Purr Giftcard
+  - !!str Tomlinson's Giftcard
+  - !!str PetsMart Giftcard
+  - !!str PetCo Giftcard
+  - !!str Target Giftcard
+  - !!str Walmart Giftcard
+  - !!str copy paper
+  - !!str stamps
+  - !!str regular envelopes
+  - !!str business envelopes
+  - !!str Paper towels
+  - !!str Laundry detergent
+  - !!str dry cat food
+  - !!str canned cat food
+  - !!str Kitty litter
+  - !!str Dog food
+  - !!str Pet carriers (cat size)
+  - !!str beverage coolers
+  - !!str Medical supplies (for our surgical clinic)
+- name: !!str Thundering Paws Animal Sanctuary
+  email: !!str 
+  about: !!str The mission of Thundering Paws Animal Sanctuary is to offer a safe haven for animals of all kinds, with an emphasis on domestic animals,who are homeless, neglected, injured or abused. Our goal is to respect animals as individual beings with spirits who deserve the right to live a happy and healthy life, regardless of their attitude toward humans and human contact. Services include trap/spay/neuter/recovery/return of feral cats, with medical care if needed; advising public via phone and e-mail on problems with animals; hospice care for aging or infirm animals; temporary boarding; spay/neuter, vaccinations, microchip, adoption of dogs, cats, and rabbits; offering volunteering opportunities to adults and children; informing the public; participating in Hays Co. animal forum.
+  website: !!str www.thunderingpaws.org
+  needs: !!str
+  - !!str Petco Giftcard
+  - !!str Tomlinson's Giftcard
+  - !!str Petsmart Giftcard
+  - !!str Healthy Pet Giftcard
+  - !!str Costco Giftcard
+  - !!str Sam's Giftcard
+  - !!str HEB Giftcard
+  - !!str Target Giftcard
+  - !!str Lowe's Giftcard
+  - !!str Home Depot Giftcard
+  - !!str Tractor Supply Giftcard
+  - !!str Land in Dripping Springs, Henly, and Wimberley
+- name: !!str Hound Rescue
+  email: !!str info@houndrescue.com
+  about: !!str Hound Rescue started in Austin, Texas in 1998. We are a small group of individuals who foster dogs in our homes. Hound Rescue also provides placement assistance to both shelters and others who need to find homes for hounds who for whatever reason have become stray.
+  website: !!str www.houndrescue.com
+  needs: !!str
+  - !!str dog food
+  - !!str dog collars
+  - !!str dog beds
+  - !!str crates
+  - !!str heart worm preventative
+  - !!str flea preventative
+- name: !!str Lifelong Friends Pet Adoption
+  email: !!str info@lifelongfriends.org
+  about: !!str Lifelong Friends Pet Adoptions (formerly Lago Vista PAWS) is an independent, nonprofit 501(c)(3) organization dedicated to protecting and promoting the lifelong partnership between people and pets. We are a true no-kill shelter in Lago Vista, Texas, which focuses on saving the lives of stray and abandoned dogs and cats.
+  website: !!str lifelongfriends.org
+  needs: !!str
+  - !!str Dogs and Puppies canned dog and puppy food
+  - !!str dog biscuits (no dyes or addictives)
+  - !!str flea and tick preventative (any size)
+  - !!str heartworm preventative (any size)
+  - !!str any leftover meds for dogs
+  - !!str Kong toys
+  - !!str NylaBones
+  - !!str collars (mediums and large)
+  - !!str leashes (6 feet or longer)
+  - !!str plastic crates (large)
+  - !!str stainless steel food/ water bowls (medium and large)
+  - !!str water pails (medium size - hold 6 quarts of water)
+  - !!str pooper scoopers
+  - !!str veterinary scale for dogs
+  - !!str Kennel Deck; Cats and Kittens canned cat food
+  - !!str Purina Cat Chow
+  - !!str cat litter (scoopable)
+  - !!str cat beds
+  - !!str cat toys (mice
+  - !!str stuffed toys without any strings
+  - !!str plastic balls
+  - !!str fleat and tick preventative (any size)
+  - !!str quick-lock crocks (20 oz bowls)
+  - !!str heartworm preventative (any size)
+  - !!str any leftover meds for cats; other shelter needs commercial front-loader washer and commercial dryer
+  - !!str laundry detergent
+  - !!str dish soap
+  - !!str hand soap
+  - !!str paper towels
+  - !!str bleach
+  - !!str trash bags
+  - !!str latex gloves (medium and large-sized)
+  - !!str peroxide and rubbing alcohol
+  - !!str colored pocketed folders
+  - !!str copier paper
+  - !!str towels
+  - !!str sheets
+  - !!str blankets for bedding (no electric blankets)
+  - !!str project or equipment needs cat/dog wire cages (medium and large)
+  - !!str wooden benches for our dog park
+  - !!str chain link kennels (large)
+  - !!str SUV for animal transport to the vet and off-site adoptions
+  - !!str volunteer as a caregiver
+  - !!str write grants
+  - !!str assists with adoptions
+  - !!str solicit donations
+  - !!str obtain media coverage
+  - !!str encourage community support
+  - !!str be an animal foster parent
+  - !!str help in office (answer phones, file paperwork, make photocopies, etc.)
+- name: !!str Love-A-Bull
+  email: !!str info@love-a-bull.org
+  about: !!str We educate and advocate on behalf of the American Pit Bull Terrier, the American Staffordshire Terrier, the Staffordshire Terrier, and the Bull Terrier (all breeds commonly referred to as "pit bulls") and pit bull mixes.  The group encourages its members to serve as role models of responsible ownership.
+  website: !!str love-a-bull.org
+  needs: !!str
+  - !!str midwest iCrate Double-door folding metal dog crate (42 inches by 28 inches by 30 inches)
+  - !!str midwest iCrate double-door folding metal dog crate (48 inches by 30 inches by 33 inches)
+  - !!str midwest quiet time (35 by 23 inches) swirl deluze pet bed
+  - !!str calming support for medium and large dogs soft chews chicken liver flavored (21 chewables)
+  - !!str adaptil spray
+  - !!str iceland pure unscented pharmaceutical grade salmon oil for dogs and cats (8.75 oz)
+  - !!str kirkland signature omega-3 fish oil (400 softgels)
+  - !!str diamond pet foods tow sierra mountain canine with roasted lamb food for pets (30-pound)
+  - !!str kong tugga wubba dog toy (large)
+  - !!str kong wubba dog toy (large)
+  - !!str tuffy's larry lobster sea creature's dog toy
+  - !!str bully sticks (6 inch - 10 pack)
+  - !!str chasing our tails elk rack snack (large size 7 inches to 10 inches)
+  - !!str pet bull sticks-sticker (large)
+  - !!str filled bone large peanut butter
+  - !!str kong air dog squeakair birthday balls dog toy (medium- 3 balls)
+  - !!str brinkmann orthopedic pet bed (36 inches by 45 inches)
+  - !!str petmate microban pet bed deluxe pillow bed (27 inches by 36 inches)
+  - !!str mendota dog slip lead (1/2 inche by 6 feet)
+  - !!str ethical plush skinneeez fox stuffingless dog toy (24 inches)
+  - !!str petsafe busy buddy squirrel dude dog toy (large)
+  - !!str petsafe busy buddy kibble nibble meal dispensing dog toy (medium/large)
+  - !!str starmark bob-a-lot interactive pet toy (large)
+  - !!str petsafe busy buddy  buddy-berries dog treats 
+- name: !!str Lucky Mutts Rescue Corp.
+  email: !!str info@luckymutts.com
+  about: !!str The Lucky Mutts Rescue Corporation is organized exclusively for charitable aid for the rescue and rehabilitation of unwanted pets and the education of Responsible Pet Ownership for the general public and prospective adopters.
+  website: !!str luckymutts.com
+  needs: !!str
+  - !!str Doggy toys
+  - !!str tennis balls
+  - !!str dog crates
+  - !!str pens
+  - !!str baby gates
+  - !!str food dishes or stainless buckets
+  - !!str leashes
+  - !!str collars
+  - !!str dog treats
+  - !!str dog food
+  - !!str grooming supplies
+  - !!str flea preventative
+  - !!str heartworm preventative
+  - !!str vet services (spay or neuter each year) or vaccinations
+  - !!str bleach
+  - !!str cleaning items
+  - !!str old towels
+  - !!str blankets
+  - !!str the use of a scanner
+  - !!str digital camera
+  - !!str use of a photocopier
+  - !!str loan your cell phone (cover costs for any calls)
+  - !!str coupons for car washes for foster guardians
+  - !!str crate liners
+  - !!str kongs
+- name: !!str CASA (Court Appointed Special Advocates) of Central Texas
+  email: !!str jswierc@casacentex.org
+  about: !!str Our mission is to advocate for abused and neglected children in the court system by recruiting, training and supporting community volunteers. Our vision is to provide every child and youth in State foster care with effective advocacy to achieve permanent homes, free of abuse - 100%. Childhood is a once-in-a-lifetime experience and every child has the right to a safe and stable home. We know that children in foster care fare better and receive more help when they have an independent, trained, and consistent adult advocating for their needs. Advocates experience enrichment and satisfaction as they speak up for the best interests of the children. CASA’s volunteer advocate program provides free and flexible training for ordinary people to become advocates and make an extraordinary difference for children in foster care. CASA of Central Texas serves Hays County as well as Caldwell, Comal and Guadalupe.
+  website: !!str www.casacentex.org
+  needs: !!str
+  - !!str classification folders with three divders
+  - !!str copy paper (8.5 x 11 and 11 x 14)
+  - !!str air filters (20 x 30 x 1)
+  - !!str 3-ring notebooks (2 inches)
+  - !!str toilet paper
+  - !!str paper plates
+  - !!str napkins
+  - !!str cups
+  - !!str plastic wear
+  - !!str flash drivers
+  - !!str toner cartriges
+  - !!str office supplies
+  - !!str pens
+  - !!str gluesticks
+  - !!str highlighters
+- name: !!str CASA of Travis County
+  email: !!str casa@casatravis.org
+  about: !!str CASA (Court Appointed Special Advocates) of Travis County believes every child who’s been abused or neglected deserves to have a dedicated advocate speaking up for their best interest in court, at school and in our community. To accomplish this, CASA educates and empowers diverse community volunteers who ensure each child’s needs remain a priority in an over-burdened child welfare system. When the state steps in to protect a child’s safety because the people responsible for protecting them have not, a judge appoints a trained CASA volunteer to make independent and informed recommendations and help the judge decide what’s best for the child. For children who’ve been abused or neglected, CASA means having a home instead of feeling lost, and being a priority instead of feeling invisible. For volunteers, CASA is a life-changing experience that makes our community a better place.
+  website: !!str www.casatravis.org
+  needs: !!str
+  - !!str Wal-Mart giftcards
+  - !!str Target giftcards
+  - !!str HEB giftcards
+  - !!str Best Buy giftcards
+  - !!str movie theatre giftcards
+  - !!str McDonald's giftcards
+  - !!str pizza restaurant giftcards
+  - !!str Amy's Ice Cream giftcards
+  - !!str child-friendly spots giftcards
+  - !!str starbucks giftcards
+  - !!str office depot giftcards
+  - !!str hobby lobby giftcards
+  - !!str costco giftcards
+  - !!str diapers
+  - !!str baby clothes
+  - !!str baby toys
+  - !!str baby books
+- name: !!str  Center for Child Protection
+  email: !!str krandow@centerforchildprotection.org
+  about: !!str The Center is the only nonprofit in Travis County involved in the investigation of crimes against children. We provide services such as forensic interviews, therapy, and parenting education at no cost to families. Our mission is to reduce the trauma to children during the investigation and prosecution of child abuse cases.
+  website: !!str www.centerforchildprotection.org
+  needs: !!str
+  - !!str bus passes
+  - !!str diapers (sizes 2, 4, and 5)
+  - !!str new car seats
+  - !!str new warm clothes (boys and girls infants to 17 yrs old)
+  - !!str new shoes (boys and girls infants to 17 yrs old)
+  - !!str new undergarments (girls, boys, and teens)
+  - !!str new warm blankets
+  - !!str new socks
+  - !!str new gloves
+  - !!str new scarves
+  - !!str new hoodies (teens)
+  - !!str lice treatment
+  - !!str deodorant
+  - !!str soap
+  - !!str shampoo
+  - !!str conditioner
+  - !!str toys (ages 0-2)
+  - !!str grocery gift cards
+  - !!str discount store gift cards
+  - !!str pull-ups diapers
+  - !!str wipes
+  - !!str sketch/art notebooks
+  - !!str markers (regular and fine tip)
+  - !!str bracelet whistles
+  - !!str clay
+  - !!str colored pencils
+  - !!str crayons
+  - !!str masking tape
+  - !!str washable paint
+  - !!str watercolor sets
+  - !!str gently used or new barbie dolls
+  - !!str gently used or new groovy girl dolls
+  - !!str baby dolls
+  - !!str plastic beads for bracelet making
+  - !!str stuffed animals (small or medium sized)
+  - !!str stuffed dogs
+  - !!str children's books in english and spanish
+  - !!str new shorts
+  - !!str new t-shirts
+  - !!str new sweatpants
+  - !!str new jeans
+  - !!str new tennis shoes
+  - !!str toilet paper
+  - !!str towels
+  - !!str new sheets (twin, full, and queen)
+  - !!str safety hardware
+  - !!str outlet covers
+  - !!str drawer locks
+  - !!str cabinet locks
+  - !!str individually packaged nutritious snacks for children
+  - !!str juicebozes
+  - !!str animal crackers
+  - !!str prepared meals
+  - !!str prepared snacks
+  - !!str folding easels
+  - !!str portable DVD player
+  - !!str blue ribbon
+  - !!str document frames (8" x 11")
+  - !!str document frames (11" x 13")
+  - !!str blank sealed DVDs
+  - !!str new plastic storage containers
+  - !!str seasonal bedding plants and flowers
+  - !!str footballs
+  - !!str soccer balls
+  - !!str baseballs
+  - !!str sports balls
+  - !!str water bottles
+- name: !!str Center Texas Children's Home
+  email: !!str tom@ctch.org
+  about: !!str Central Texas Children’s Home is a non-profit organization providing family services with a Christian influence to those in need. Founded in 1969 to provide residential child care for dependent children, the services have been expanded in an attempt to assist children and families disrupted by problems. All children are given equal consideration regardless of race, religion, sex or national origin.
+  website: !!str www.ctch.org
+  needs: !!str
+  - !!str tarp for playground equipment
+  - !!str pantry items
+  - !!str pharmaceutical items
+  - !!str cartridges for Kids program
+  - !!str campbell soup labels
+- name: !!str  Children At Heart Ministries
+  email: !!str info@cahgift.org
+  about: !!str Children At Heart Ministries is a family of Christian ministries that exists to honor God and build a better world by serving children and strengthening families. Under God's leadership, we will break the generational cycle of child abuse and family crisis.
+  website: !!str www.childrenatheartministries.org
+  needs: !!str
+  - !!str new vehicles
+  - !!str used vehicles
+  - !!str autos
+  - !!str trucks
+  - !!str vans
+  - !!str tractors
+  - !!str medical professional services
+  - !!str dental professional services
+  - !!str orthodontic professional services
+  - !!str legal professional services
+  - !!str hair cut professional services
+  - !!str hair styling professional services
+  - !!str commercial equipment
+  - !!str household equipment
+  - !!str appliances
+  - !!str furniture
+  - !!str used clothing
+- name: !!str Kids in a New Groove
+  email: !!str Laura@kidsinanewgroove.org
+  about: !!str Kids in a New Groove provides private one-on-one music instruction to kids in the Texas foster care system. Our vision is to build a solid foundation for foster youth so that they can age out of care with tools for success. We serve foster youth all over Texas, including Austin, Dallas, Fort Worth, and Houston. We provide youth with a consistent weekly mentor, and also present them with a brand new musical instrument which they earn from practicing and meeting program goals. Through Kids in a New Groove, lessons become a lifeline to a better future.
+  website: !!str www.kidsinanewgroove.org
+  needs: !!str
+  - !!str new instruments
+  - !!str used instruments
+  - !!str music stands
+  - !!str tuners
+  - !!str metronomes
+  - !!str guitar cases
+- name: !!str LifeWorks
+  email: !!str info@lifeworksaustin.org
+  about: !!str LifeWorks transitions youth and families from crisis to safety and success. Providing a comprehensive safety net of services in Austin, Lifeworks serves 10,000+ individuals annually through thirteen programs. Services include outreach & housing for homeless youth, Youth/Adult Counseling, Youth Development, GED, Youth Resource Center, and programs addressing the needs of foster care youth.
+  website: !!str www.lifeworksaustin.org
+  needs: !!str
+  - !!str HEB giftcards
+  - !!str Target giftcards
+  - !!str Wal-Mart giftcards
+  - !!str backpacks
+  - !!str maternity clothes
+  - !!str disposable diapers
+  - !!str disposable wipes
+  - !!str infant educational toys
+  - !!str toddler educational toys
+  - !!str bottles with disposable liners
+  - !!str standard bottles
+  - !!str nipples
+  - !!str pacifiers
+  - !!str nursery care kits
+  - !!str nursing pads
+  - !!str first-aid kits
+  - !!str bibs
+  - !!str food containers
+  - !!str onesies
+  - !!str socks
+  - !!str receiving blankets
+  - !!str diaper bags
+  - !!str crib sheets
+  - !!str mobiles
+  - !!str bath-related items
+  - !!str umbrella strollers
+  - !!str set of dishes and bowls (for 4 people)
+  - !!str set of drinking glasses (for 4 people)
+  - !!str saucepans with lids (small, medium, and large)
+  - !!str skillet
+  - !!str set of flatware (for 4 people)
+  - !!str microwave
+  - !!str sandwich grill
+  - !!str kitchen utensils
+  - !!str mixing spoons
+  - !!str pot holders
+  - !!str cutting boards
+  - !!str paring knives
+  - !!str beginner cookbooks
+  - !!str broom
+  - !!str mops
+  - !!str sponges
+  - !!str cleaning buckets
+  - !!str storage buckets
+  - !!str cleaners
+  - !!str light bulbs
+  - !!str bath towels
+  - !!str washcloths
+  - !!str hand towels
+  - !!str bath mats
+  - !!str shower curtains
+  - !!str Old Navy giftcards
+- name: !!str Little Helping Hands
+  email: !!str info@littlehelpinghands.org
+  about: !!str Our mission is to be a resource for parents/caregivers, educators, and businesses looking for meaningful volunteer opportunities suitable for young children in the Austin community.  Through creating and organizing hands-on volunteer activities/programs, Little Helping Hands provides ongoing opportunities to instill the value of community service in early childhood.
+  website: !!str littlehelpinghands.org
+  needs: !!str
+  - !!str individually wrapped snacks
+  - !!str pretzels snacks
+  - !!str fruit snacks
+  - !!str granola bars
+  - !!str juice boxes
+  - !!str fruit drinks
+  - !!str bottled water (pint size)
+  - !!str gatorage (12 ounce bottles)
+  - !!str construction paper
+  - !!str tissue paper
+  - !!str cardstock
+  - !!str markers
+  - !!str crayons
+  - !!str colored pencils
+  - !!str glue sticks
+  - !!str glue dots
+  - !!str scotch tape
+  - !!str liquid glue
+  - !!str adult sized scissors
+  - !!str kid-sized scissors
+  - !!str stickers (seasonal or general)
+  - !!str paper plates (small or large)
+  - !!str paper bags (lunch size)
+  - !!str sequins
+  - !!str wiggle googly eyes
+  - !!str Costco giftcards
+  - !!str HEB giftcards
+  - !!str Hobby Lobby giftcards
+  - !!str Home depot giftcards
+  - !!str Lowe's giftcards
+  - !!str Michaels giftcards
+  - !!str Office Depot giftcards
+  - !!str Petco giftcards
+  - !!str Petsmart giftcards
+  - !!str Randalls giftcards
+  - !!str kid-sized aprons
+  - !!str ziploc bags (sandwich and quart-size)
+  - !!str kids gardening gloves (small, medium, or large)
+  - !!str bags of dog food (20-40 lb.)
+  - !!str rice (50 lb.)
+  - !!str adult athletic socks (white crew)
+  - !!str fleece fabric (solid or printed)
+  - !!str standard white copy paper (8.5" by 11.5")
+  - !!str tape (packing or regular)
+  - !!str name tags (peel off)
+  - !!str ink pads
+  - !!str automatic digital camera
+- name: !!str Mainspring Schools
+  email: !!str anthony@mainspringschools.org
+  about: !!str Mainspring Schools provides the highest quality early education and care to Austin’s most economically disadvantaged children, along with comprehensive services for the children and families so each child will succeed in school and life regardless of socioeconomic status. Mainspring’s high quality education services are accredited by the National Association for the Education of Young Children (NAEYC), the most rigorous accrediting body in the country. Disadvantaged children at Mainspring defy the statistical odds and start school on grade level and ready to learn The Parenting Program at Mainspring Schools acknowledges that parents are a child’s most influential teacher and seeks to give parents the skills to raise school-successful children. One parent said, “I feel as if my boys and I are all very important to the staff at Mainspring. They make me feel like they actually care for my boys and truly want to bring out the best in them, and even in me. The Parent Support Group has encouraged me to try different parenting techniques that have proven to be effective.”
+  website: !!str www.mainspringschools.org
+  needs: !!str
+  - !!str pastel colors
+  - !!str curtains
+  - !!str vinyl baseboards
+  - !!str throw pillows
+  - !!str floor mats
+  - !!str children books
+- name: !!str Minis and Friends
+  email: !!str sherry@minisandfriends.org
+  about: !!str Minis and Friends is dedicated to bringing our mobile herd of trained miniature horses/donkeys ambassadors to visit and interact with people of all ages who may be suffering mentally, physically or emotionally using our technique of Equine Guided Interactions (EGI). Our unique programs tailor activities for children through adults with disabilities, at-risk youth, individuals in transition and elder adults to improve their motor skills, ability to connect, tactile response, use of senses and spirits through interaction with miniature horses. As many as 23 minis may work at any one time on weekends and some holidays in the greater Austin Metro area. Our programs are designed to work with the many facilities for people with special needs. They are Minis Out, In the Community (partner agencies); Minis Out, Moving On (children and youth in transition); Minis Out, Project Blanket (children with special needs); Minis Out, Silver Saints (adults and seniors).
+  website: !!str www.minisandfriends.org
+  needs: !!str
+  - !!str winter blankets
+  - !!str fly masks
+  - !!str fly sheets
+  - !!str hay
+  - !!str feed (triple crown lite)
+  - !!str miniature horse and pony feed by farnum
+  - !!str gas/fuel giftcards
+  - !!str pasture grass seeds
+  - !!str hydroseeding
+- name: !!str Out Youth
+  email: !!str info@outyouth.org
+  about: !!str Out Youth works to promote the well being of LGBT (lesbian, gay, bisexual, and transgender) youth and their straight allies. We have a community center, satellite youth groups, social events, activism and youth leadership programs, and counseling. We also house the Texas GSA Network, supporting student lead GSAs across Texas.
+  website: !!str outyouth.org
+  needs: !!str
+  - !!str healthy snacks
+  - !!str paper products
+  - !!str paper towels
+  - !!str paper plates
+  - !!str napkins
+  - !!str toilet tissue
+  - !!str tissue
+  - !!str barbecue supplies
+  - !!str giftcards
+  - !!str netbook computers
+  - !!str apple laptops
+  - !!str iMacs
+  - !!str digital camcorders
+  - !!str flat-screen TV (32 inches or larger)
+  - !!str portable digital projectors
+  - !!str a stage
+  - !!str portable public address system
+  - !!str lighting equipment
+  - !!str kitchen makeover
+  - !!str hardwood floor refinishing
+  - !!str rainbow picnic table strip
+  - !!str repainting
+  - !!str paints
+  - !!str paint brushes
+- name: !!str STARRY
+  email: !!str info@starryonline.org
+  about: !!str STARRY supports children, youth and families in crisis through services that protect, educate and promote strong families. STARRY programs include free Counseling for children, youth and families; Foster Care & Adoption; an Emergency Shelter for abused and neglected children; and SAFE, a program for homeless and runaway youth.
+  website: !!str www.starryonline.org
+  needs: !!str
+  - !!str draw string bags (no business logos)
+  - !!str paper products
+  - !!str paper towels
+  - !!str Kleenex
+  - !!str napkins
+  - !!str paper plates
+  - !!str paper cups
+  - !!str plastic utensils
+  - !!str new twin sheet sets
+  - !!str new bath towels sets
+  - !!str diapers
+  - !!str silverware
+  - !!str pots
+  - !!str pans
+  - !!str durable tupperware
+  - !!str heavy duty vacuum
+  - !!str small clear plastic hangers with swivel tops
+  - !!str Sea World event tickets
+  - !!str Fiesta Texas event tickets
+  - !!str Cinemark event tickets
+  - !!str Gattiland event tickets
+  - !!str Round Rock Express event tickets
+  - !!str Austin Steam event tickets
+  - !!str Austin Stream Train event tickets
+  - !!str Target gift certificates
+  - !!str Wal-Mart gift certificates
+  - !!str iTunes gift certificates
+  - !!str Round Rock Outlet Mall certificates
+  - !!str Cinemark gift certificates
+  - !!str gift certificates
+- name: !!str Street Youth Ministry
+  email: !!str terry@StreetYouthMinistry.org
+  about: !!str Our mission is to know, love and serve street-dependent young people so that some may come to know Christ. We do not turn away individuals but focus primarily on ages 17-30, half under 24. We deliver weekly Bible studies, prayer times, fellowship, encourage improved self-care, and general rising expectations of life. Our counseling services with clients are firmly based in strengths-based brief therapy in a variety of casual settings. We expose clients to “church” environments (at partner churches) and provide opportunities to go deeper in discipleship and worship with other Christians. We provide textbooks to clients choosing to attend college. We educate our community’s church leadership, adults, youth and children to be more compassionate toward homeless through speaking, service projects and volunteerism.
+  website: !!str www.streetyouthministry.org
+  needs: !!str
+  - !!str new bingo prizes
+  - !!str used bingo prizes
+  - !!str new game prizes
+  - !!str used game prizes
+  - !!str bibles
+  - !!str mysteries books
+  - !!str sci-fi books
+  - !!str fantasy books
+  - !!str thrillers
+  - !!str activity books
+  - !!str trivia books
+  - !!str coloring books
+  - !!str puzzle books
+  - !!str crossword books
+  - !!str books
+  - !!str art supplies
+  - !!str drawing pads
+  - !!str markers
+  - !!str clay
+  - !!str mechanical pencils
+  - !!str oil/chalk pastels
+  - !!str music supplies
+  - !!str guitars
+  - !!str cases
+  - !!str music strings
+  - !!str drum picks
+  - !!str individual drums
+  - !!str tambourines
+  - !!str playing cards
+  - !!str UNO cards
+  - !!str play games
+  - !!str shoes
+  - !!str practical adult shoes
+  - !!str work shoes
+  - !!str military boots
+  - !!str outdoor equipment
+  - !!str backpacks
+  - !!str tents
+  - !!str hygiene products
+  - !!str deodorant
+  - !!str bug spray
+  - !!str clothes
+  - !!str overalls
+  - !!str atheltic pants
+  - !!str sweat pants
+  - !!str adult jeans
+  - !!str men underwear
+  - !!str women underwear
+  - !!str women bras
+  - !!str batteries
+  - !!str AA batteries
+  - !!str AAA batteries
+  - !!str dog food (3/4 filled gallon ziplock bags)
+  - !!str cat food (dry or wet)
+  - !!str leashes
+  - !!str harnesses
+  - !!str collars (all sizes)
+  - !!str dog bowls (metal, plastic, or collapsing)
+  - !!str water bottles
+  - !!str bottled water
+  - !!str sport drinks
+  - !!str bug-spray
+  - !!str suncreen
+  - !!str shorts
+  - !!str shirts/tops
+  - !!str flip-flops
+  - !!str hats
+  - !!str low-cut socks
+  - !!str sleeping bags
+  - !!str blankets
+  - !!str long johns
+  - !!str thermals
+  - !!str hats
+  - !!str gloves
+  - !!str scarves
+  - !!str coats
+  - !!str jackets
+  - !!str long pants
+  - !!str long sleeves
+  - !!str sweaters
+  - !!str toiletries
+  - !!str lotion
+  - !!str shampoo
+  - !!str conditioner
+  - !!str deodorant
+  - !!str razors
+  - !!str Q-tips
+  - !!str first aid supplies
+  - !!str band-aids
+  - !!str tape
+  - !!str gauze
+  - !!str individual OTC pain killers
+  - !!str braces (knee, hand, foot, or back)
+  - !!str vitamins
+  - !!str emergen-C
+- name: !!str Strong Start
+  email: !!str lindsay@austinchildrenshelter.org
+  about: !!str STRONG START prevents child abuse and neglect. Our mission is to prevent child abuse and neglect by strengthening families and keeping children safe with effective early intervention programs designed to teach young children social and emotional development, problem solving, expression of feelings, communication, and behavior management. This therapeutic classroom is coupled with educational home visits with the entire family to discuss parenting skills, child development, and appropriate discipline. We offer parenting classes, mental health referrals, and ancillary support. All services are free and confidential for the families of STRONG START.
+  website: !!str www.strongstartfamilies.org
+  needs: !!str
+  - !!str climber playground structure
+  - !!str playhouse
+  - !!str shaving cream
+  - !!str chunky crayons
+  - !!str washable paint
+  - !!str baby wipes
+  - !!str laminating supplies
+  - !!str soft furniture
+  - !!str bean bag chairs
+  - !!str big pillows
+  - !!str sand toys
+  - !!str doll bed
+  - !!str doll rocking chair
+  - !!str children's music cds
+  - !!str plastic bibs
+  - !!str bottle warmer
+  - !!str Teacher Heaven gift cards
+  - !!str Lakeshore Learning gift cards
+  - !!str Home Depot gift cards
+  - !!str HEB gift cards
+  - !!str new luggage
+  - !!str cooler
+  - !!str new food processor
+  - !!str Robot Coupe food processor
+  - !!str Cuisinart food processor
+  - !!str water bottles
+  - !!str individual portions of non-perishable food items
+  - !!str cereals
+  - !!str granola bars
+  - !!str baked snackes
+  - !!str juices
+  - !!str fruit cups
+  - !!str pudding cups
+  - !!str peanut butter/cheese crackers
+  - !!str peanut butter
+  - !!str indivudal soups
+  - !!str oatmeal
+  - !!str popcorn
+  - !!str baby food
+  - !!str formula
+  - !!str baby wipes (unscented)
+  - !!str diapers
+  - !!str disposable plates
+  - !!str disposable cups
+  - !!str disposable forks
+  - !!str disposable spoons
+  - !!str napkins
+  - !!str baby bottles
+  - !!str sippy cups
+  - !!str umbrella strollers
+  - !!str new white bath towels
+  - !!str new white wash cloths
+  - !!str combs
+  - !!str brushes
+  - !!str picks
+  - !!str nail clippers
+  - !!str nail files
+  - !!str toothbrushes
+  - !!str toothpastes
+  - !!str deodorant (non-aerosol)
+  - !!str shampoo
+  - !!str conditioner
+  - !!str bar soap
+  - !!str body wash
+  - !!str african american hair care products (olive oil brand preferred)
+  - !!str tylenol (child and adult)
+  - !!str motrin (child and adult)
+  - !!str bandages
+  - !!str antibacterial ointment
+  - !!str pepto bismiol
+  - !!str rubbing alcohol
+  - !!str sport drinks
+  - !!str heating pads
+  - !!str ice packs
+  - !!str small humidifiers
+  - !!str feminine hygiene products
+  - !!str twin bed
+  - !!str new mattress covers
+  - !!str new sheets
+  - !!str new comforters
+  - !!str new pillows
+  - !!str new pillow cases
+  - !!str clock radios
+  - !!str toilet paper
+  - !!str boxes of tissues
+  - !!str cotton swabs
+  - !!str cotton balls
+  - !!str 13 gallon tall drawstring trash bags
+  - !!str copy paper (8.5" x 11")
+  - !!str black gel pens
+  - !!str blue gel pens
+  - !!str dry erase markers
+  - !!str batteries
+  - !!str AA batteries
+  - !!str AAA batteries
+  - !!str birthday wrapping paper
+  - !!str birthday cards
+  - !!str seasonal decorations
+  - !!str gain liquid HE unscented
+  - !!str laundry detergent
+  - !!str new men's boxers (S-XXL)
+  - !!str new women's underwear (S-XXL)
+  - !!str new adult sized ankle socks
+  - !!str new adult-sized sports bras (S-XXL)
+  - !!str new adult-sized white or solid colored T-shirts (S-XXL)
+  - !!str new newborn-5T clothing
+  - !!str new newborn-5T shoes
+  - !!str new teen appropirate plus sized clothing
+  - !!str Wal-Mart giftcards
+  - !!str Target giftcards
+  - !!str HEB giftcards
+  - !!str Home Depot giftcards
+  - !!str Academy giftcards
+  - !!str Old Navy giftcards
+  - !!str Best Buy giftcards
+  - !!str Half Price Books giftcards
+  - !!str Bowling giftcards
+  - !!str roller and ice skating giftcards
+  - !!str movie theatres giftcards
+  - !!str main event giftcards
+  - !!str cafe monet giftcards
+  - !!str ice cream stores giftcards
+  - !!str zilker train giftcards
+  - !!str build-a-bear giftcards
+  - !!str fast food restaurants giftcards
+  - !!str redbox codes giftcards
+  - !!str netflix streaming giftcards
+  - !!str indoor jumpy gyms giftcards
+- name: !!str Tejas Family Guidance Center
+  email: !!str TejasCenterInfo@gmail.com
+  about: !!str Tejas Family Guidance Center is a nonprofit mental health agency solely dedicated to providing quality mental health services to youth and their families. Through early intervention, diagnosis, and treatment we help children, adolescents, young adults, individuals, and families develop the emotional skills needed for meeting life’s challenges. Tejas also trains new clinicians with the goal of preparing skilled child and family therapists to meet growing regional demands. Our fees are based on a sliding scale to ensure everyone receives professional mental health services regardless of income. Our team works closely together to provide individual, family, couples, and group therapy; psychological evaluations and assessments, neuropsychological evaluations; parent education; and training to current and future mental health professionals. We address a wide variety of issues including anxiety, depression, behavioral management, parent support & guidance, ADHD/attention problems, developmental disorders, grief, relationship issues, communication issues, learning disorders and problems in school.
+  website: !!str TejasFamilyGuidanceCenter.org
+  needs: !!str
+  - !!str Office Depot gift cards
+  - !!str Target gift cards
+  - !!str Amazon gift cards
+  - !!str Michael's gift cards
+  - !!str HEB gift cards
+  - !!str white letter size copy paper
+  - !!str black pens
+  - !!str yellow letter size paper pads
+  - !!str manilla letter size filing folders
+  - !!str manila letter size large mailing envelopes
+  - !!str paper clips
+  - !!str binder clips
+  - !!str highlighters
+  - !!str crayons
+  - !!str markers
+  - !!str children's games
+  - !!str Life board game
+  - !!str Jenga
+  - !!str Trouble board game
+  - !!str playing cards
+  - !!str scissors
+  - !!str glue sticks
+  - !!str stickers
+  - !!str tape
+  - !!str construction paper
+  - !!str furniture
+- name: !!str Texas Baptist Children's Home
+  email: !!str info@tbch.org
+  about: !!str TBCH provides supportive services based on Christian values for children, youth, and families through three programs Campus Life, a residential program for children between the ages of 5 and 18; Family Care, a residential program for single mothers and their children; and HOPE, an apartment ministry to under-served families in the Round Rock community.
+  website: !!str www.tbch.org
+  needs: !!str
+  - !!str new twin comforters
+  - !!str new twin sheets
+  - !!str new bathroom sets (sets in solid colors)
+  - !!str 8 bath towels
+  - !!str 8 hand towels
+  - !!str 8 wash cloths
+  - !!str 1 large washable mat/rug
+  - !!str regular size shampoo
+  - !!str regular size conditioner
+  - !!str body wash for children
+  - !!str body wash for women
+  - !!str body wash for teen boys
+  - !!str laundry soap
+  - !!str fabric softner (liquid)
+  - !!str fabric softner (dryer sheets)
+  - !!str paper goods
+  - !!str toiler paper
+  - !!str paper towels
+  - !!str napkins
+  - !!str zip-lock bags
+  - !!str foil
+  - !!str plastic wrap
+  - !!str 2" faux wood white blinds
+- name: !!str Anthropos Arts
+  email: !!str dylan@anthropos.org
+  about: !!str Anthropos Arts promotes equal opportunity in music education by bringing top professional musicians into low-income, Title I schools to offer free music lessons, workshops, and performance opportunities to at risk middle and high school students.
+  website: !!str www.anthropos.org
+  needs: !!str
+  - !!str music stands
+  - !!str mics
+  - !!str mic stands
+  - !!str cables
+  - !!str instruments
+  - !!str guitar cables
+  - !!str furnitures
+  - !!str sofas
+  - !!str chairs
+  - !!str filing cabinets
+  - !!str soundproofing
+  - !!str blank CD's
+  - !!str paper
+  - !!str 3-ring binders (1/2" or 1")
+  - !!str 9-V batteries
+- name: !!str  Austin PlayHouse
+  email: !!str info@austinplayhouse.com
+  about: !!str Austin Playhouse is dedicated to providing opportunities for Austin artists and audiences to celebrate the human experience through professional productions of classic, contemporary and musical plays. Austin Playhouse supports other nonprofits through a benefit performance program and fosters the next generation of artists and arts patrons through internships, collaborations with local universities, and half-price student tickets.
+  website: !!str www.austinplayhouse.com
+  needs: !!str
+  - !!str 2 computers
+  - !!str 2 inkjet printers
+  - !!str photocopier
+  - !!str office supplies
+  - !!str paper
+  - !!str envelopes
+  - !!str file folders
+  - !!str volunteered IT services
+  - !!str Lowes gift cards
+  - !!str Home Depot gift cards
+  - !!str portable refrigerator
+- name: !!str PAWS Shelter and Humane Society
+  email: !!str info@pawsshelter.org
+  about: !!str PAWS' mission is to care for, protect and find quality homes for abandoned and neglected animals and to provide community education for the mutual benefit of animals and people.
+  website: !!str pawsshelter.org
+  needs: !!str
+  - !!str tablecloths
+  - !!str hand sanitizer
+  - !!str windex
+  - !!str disinfectant
+  - !!str napkin rolls
+  - !!str toilet paper
+  - !!str bleach
+  - !!str ink
+  - !!str copy paper
+  - !!str dry erase boards
+  - !!str dry erase markers
+  - !!str laundry detergent
+- name: !!str Pet Prevent a Litter (PALS) of Central Texas
+  email: !!str PAL@PreventALitter.com
+  about: !!str The mission of PALS is to end pet euthanasia and pet homelessness in Central Texas through our programs of spay/neuter, humane education, TrapNeuterReturn of feral cats, and Pet Food Pantry. PALS is an all volunteer organization. We have our own Cat Spay/Neuter clinic held once or twice monthly. Our TNR rescues kittens and tame cats from feral colonies, fosters them and adopts them to loving homes. Our services are for the underprivileged in our community. Our mission will be complete when the shelters are empty and every pet has a loving forever home.
+  website: !!str www.preventalitter.com
+  needs: !!str
+  - !!str powerpoint projector
+  - !!str gift cards to supply stores (PetCo, PetsMart, Target, or Walmart)
+  - !!str office/computer supplies
+  - !!str paper towels
+  - !!str laundry detergent
+  - !!str canned/dry cat food
+  - !!str kitty litter
+  - !!str dog food
+  - !!str pet carriers
+  - !!str carts/beverage coolers
+  - !!str medical supplies
+- name: !!str  Westie Rescue/Austin
+  email: !!str austinwestierescue@gmail.com
+  about: !!str Westie Rescue work to rescue, foster, rehabilitate and re-home westies, cairns, mini schnauzers and small shaggy terriers of mixed heritage.
+  website: !!str www.westierescueaustin.com
+  needs: !!str
+  - !!str towels
+  - !!str crate pads for bedding
+  - !!str durable chewing toys
+  - !!str puppy soft toys
+  - !!str flea/heartworm preventatives
+  - !!str pee pads for housetraining puppies
+  - !!str cleaning solutions in sprayers (Mr Clean/Lysol)
+  - !!str paper towels
+- name: !!str AVANCE - AUSTIN
+  email: !!str avance-austin@avance.org
+  about: !!str AVANCE serves low-income predominately Spanish speaking families with enhancing parenting skills, promoting children’s long-term educational success, and breaking the family’s trans-generational cycle of poverty. Our intensive 9-month Parent-Child Education Program offers weekly classes, 4 hrs a day, to adults on parenting, educational toy-making, ESL and accessing community resources. Their children, birth-3, are provided age-appropriate learning with a focus on play, pre-literacy, and school readiness. Food, transportation, and home visits are also key. This holistic approach works In recent years, AVANCE’s program has gained national recognition for its success and innovation. Success is due largely to our bilingual, culturally competent staff whose dedication to the community are cornerstones of AVANCE. After almost 15 years of service, AVANCE- Austin’s services are more important than ever, as we serve a growing population of families who are largely disconnected from the web of resources and support programs offered locally.
+  website: !!str www.avance-austin.org
+  needs: !!str
+  - !!str gifts
+  - !!str holiday presents
+  - !!str books
+  - !!str computers
+  - !!str software
+- name: !!str C5 Youth Foundation of Texas
+  email: !!str fulorik@c5yf.org
+  about: !!str The mission of the C5 Program of Texas is to inspire high-potential youth from risk-filled environments to pursue personal success, to prepare them for leadership roles in college, work and community, and to motivate them to become role models for others. We do this by engaging middle and high school students from under resourced communities in five years of intensive leadership experiences including year-round leadership development programs, signature summer activities, community action, and preparation for continuing education and career development. We support C5 youth in becoming… Character-driven Community-focused Challenge-ready College-bound, and Committed to a better future.
+  website: !!str 
+  needs: !!str
+  - !!str laptop computers
+  - !!str printers
+  - !!str middle and high school age books
+  - !!str backpacks
+  - !!str backpacking tents
+  - !!str backpacking stove
+  - !!str mountain bikes
+  - !!str bows for archery program
+  - !!str targets for archery program
+  - !!str canoes
+  - !!str kayaks
+  - !!str hiking boots
+  - !!str cold weather gear and clothing in youth/adult sizes
+- name: !!str Hand to Hold
+  email: !!str angela@handtohold.org
+  about: !!str Hand to Hold’s mission is to provide comprehensive resources and support programs to parents of preemies, babies born with special health care needs and those who have experienced a loss due to these or other complications.
+  website: !!str handtohold.org
+  needs: !!str
+  - !!str office furniture
+  - !!str laptop computers
+  - !!str printers
+  - !!str AV euipment
+- name: !!str Helping Hand Home for Children
+  email: !!str psanantonio@helpinghandhome.org
+  about: !!str For 120 years, Helping Hand Home for Children has provided a safe haven for children healing from physical, emotional and sexual abuse, neglect or abandonment. Today, HHH provides a continuum of services that includes therapeutic residential treatment, education at an on-site charter school, placement in highly trained foster homes, and adoption services. With private and community support, Helping Hand Home gives children the best in care through a highly educated staff, low child to staff ratio and a comprehensive approach to healing.
+  website: !!str www.helpinghandhome.org
+  needs: !!str
+  - !!str Target gift cards
+  - !!str Walmart gift cards
+  - !!str Kohl's gift cards
+  - !!str JCPenney gift cards
+  - !!str New Pack n Plays
+  - !!str stroller
+  - !!str high chair
+  - !!str double baby stroller
+  - !!str mp3 players
+  - !!str portable cd players
+  - !!str headphones
+  - !!str playstation games
+  - !!str wii games
+  - !!str nintendo ds games
+  - !!str 3ds games
+  - !!str cd radio boom boxes
+  - !!str leapfrog
+  - !!str leappad
+  - !!str shower radies
+  - !!str AA and AAA batteries
+  - !!str digital cameras
+  - !!str nintendo devices
+  - !!str portable dvd players
+  - !!str pillow pet dream
+  - !!str password journals
+  - !!str beyblades
+  - !!str spy gear
+  - !!str science experiment kits
+  - !!str ripstiks
+  - !!str fashion design kits
+  - !!str jewelry perfume accessories for teen girls
+  - !!str dress-up clothing
+  - !!str salon gift certificates for manicures and pedicures
+  - !!str bike hlmets
+  - !!str roller skates
+  - !!str roller blades
+  - !!str knee and elbow padding
+  - !!str movie theater tickets or gift cards
+  - !!str chuck e cheese gift cards
+  - !!str gattiland gift cards
+  - !!str UT athletic event tickets
+  - !!str softball items
+  - !!str bats
+  - !!str softballs
+  - !!str mitts
+  - !!str cather's gear
+  - !!str body wash
+  - !!str bar soap
+  - !!str toothpaste
+  - !!str bandages
+  - !!str bandaids
+- name: !!str The First Tee of Greater Austin
+  email: !!str marketing@firstteeaustin.org
+  about: !!str The First Tee of Greater Austin is a chapter of The First Tee and is a nonprofit youth mentoring program. Started in 1999, it is committed to enriching the lives of young people in the greater Austin area through the game of golf. The program offers youth from all backgrounds a safe place to go during after-school hours where they can participate in structured activities to help them grow and learn. The First Tee Life Skills Experience curriculum teaches interpersonal skills, self-management, goal setting, and resistance skills and of course, the 9 core values of The First Tee Confidence Courtesy Honesty Integrity Judgment Perseverance Respect Responsibility Sportsmanship The First Tee of Greater Austin is considered one of the finest chapters in the world. Its programs serve a diverse population of youth. This year 4,000 area kids were served with 98% of them receiving 100% subsidy to participate in the program'
+  website: !!str www.thefirstteeaustin.org
+  needs: !!str
+  - !!str golf clubs
+- name: !!str The Settlement Home for Children
+  email: !!str development@settlementhome.org
+  about: !!str The Settlement Home is a therapeutic residential treatment facility and foster family and adoption program for severely abused and neglected children who have been temporarily or permanently removed from their homes. Our mission is to promote healing and growth to children, young adults and families by providing a continuum of care, support and resources. Our programs include a Residential Treatment Center, Group Home Program, Transitional Living Program and Foster & Adoption Program. We have a UT charter school on our campus.
+  website: !!str www.settlementhome.org
+  needs: !!str
+  - !!str pillows
+  - !!str twin sheets and comforters
+  - !!str towels and washcloths
+  - !!str diapers
+  - !!str wipes
+  - !!str and baby supplies
+  - !!str car seats
+  - !!str strollers
+  - !!str and infant bedding
+  - !!str flashlights
+  - !!str nightlights
+  - !!str alarm clock radios
+  - !!str batteries (all sizes)
+  - !!str school suplies
+  - !!str storage containers
+  - !!str gift cards for clothing
+  - !!str groceries
+  - !!str gas
+  - !!str restaurants
+  - !!str journals
+  - !!str planners
+  - !!str life books
+  - !!str scrapbook supplies
+  - !!str stuffed animals
+  - !!str headphones
+  - !!str portable cd player
+  - !!str mp3 player
+  - !!str play dough
+  - !!str stress balls
+  - !!str foot spa
+  - !!str aromatherapy lotions and sprays
+  - !!str stuffe animals
+  - !!str blankets
+  - !!str disposable cameras
+  - !!str art supplies
+  - !!str sticker kits
+  - !!str markers
+  - !!str crayons
+  - !!str coloring books
+  - !!str beads and jewelry making kits
+  - !!str friendship bracelet kits
+  - !!str gel pens
+  - !!str journals
+  - !!str scrapbook kits
+  - !!str cookbooks for children
+  - !!str cards
+  - !!str dice
+  - !!str board games
+  - !!str exercise dvds
+  - !!str bike helmets
+  - !!str knee pads
+  - !!str rollerblades
+  - !!str roller skates
+  - !!str bikes
+  - !!str frisbees
+  - !!str soccer balls
+  - !!str basketballs
+  - !!str volleyballs
+  - !!str footballs
+  - !!str badminton set
+  - !!str bean bag toss game
+  - !!str hacky sacks
+  - !!str movies
+  - !!str movie tickets
+  - !!str dolls/barbies
+  - !!str doll accessories
+  - !!str toy cars
+  - !!str toy trucks
+  - !!str action figures
+  - !!str hair accessories
+  - !!str flat irons/straighteners
+  - !!str curling irons
+  - !!str hair dryers
+  - !!str body sprays
+  - !!str products for african american hair
+  - !!str nail polish and remover
+  - !!str nail sets
+  - !!str manicure/pedicure sets
+  - !!str make up
+  - !!str toothbrushes and toothpaste
+  - !!str shampoo and conditioner
+  - !!str body washes and soap
+  - !!str bubble bath
+  - !!str mineral soaks
+  - !!str gift certificates for hygiene
+- name: !!str Trinity Child Development Center
+  email: !!str trinitycdc@gmail.com
+  about: !!str The mission of TCDC is to provide quality, affordable early care and education to children within our economically and racially diverse community. We strive to provide stability and support to the children in our care and to their families, so that together we can truly impact future generations
+  website: !!str 
+  needs: !!str
+  - !!str children's underwear/shorts sizes 2 to 6
+  - !!str school supplies
+  - !!str stickers
+  - !!str tape
+  - !!str glue
+  - !!str markers
+  - !!str paper
+  - !!str pens
+  - !!str pencils
+  - !!str school equipment
+  - !!str balls
+  - !!str frisbees
+  - !!str children's books and tapes
+- name: !!str Wonders and Worries
+  email: !!str kim@wondersandworries.org
+  about: !!str Wonders & Worries helps children and their families cope when a parent or caregiver has a chronic or life-threatening illness. Our professional services are always provided free of charge, and are available in English and Spanish
+  website: !!str www.wondersandworries.org
+  needs: !!str
+  - !!str stocks
+  - !!str bonds
+  - !!str art gifts
+  - !!str antiques
+  - !!str jewelry
+  - !!str cars
+- name: !!str Austin SPD Alliance
+  email: !!str spd@austinspd.net
+  about: !!str Austin SPD Alliance, a parent led 501(c)3 nonprofit, is the only Texas organization meeting the needs of local families living with SPD (sensory processing disorder) and sensory issues by providing free services, programs and resources
+  website: !!str www.austinspd.org
+  needs: !!str
+  - !!str grocery gift cards
+  - !!str office supplies
+  - !!str refreshments
+- name: !!str Council on At-Risk Youth
+  email: !!str info@cary4kids.org
+  about: !!str Mission is "helping youth promote safe schools and safe communities". CARY’s Youth Violence Prevention Program is targeted to disciplinary students with assault, aggression and abuse incidents. Program consists of 12 month case management with our PeaceRox Program with Aggression Replacement Training. CARY also provides the Olweus Bully Prevention Program to teachers and students at three middle schools and the new Behavior Coaching Mentor Program for 100 youth transitioning from 8th grade to 9th grade at LBJ & Reagan High Schools.
+  website: !!str cary4kids.org
+  needs: !!str
+  - !!str restaurant gift cards
+  - !!str printer ink cartridges
+  - !!str copy paper
+  - !!str other office supplies
+  - !!str portable velcro display board
+- name: !!str Sammy's House
+  email: !!str info@sammyshouse.org
+  about: !!str Sammy's House provides services for children who are medically fragile and/or developmentally delayed in a nurturing, inclusive environment. Our mission is to give children the opportunities they need to reach their highest potential through therapy support, curriculum-based instruction, and child care. We support families by providing parent education, offering evening and weekend respite care, lending therapeutic equipment, and making referrals to community services. We serve 250 infants, toddlers, and young children per year with a wide variety of special needs, including cognitive and physical disabilities, developmental delays, and complex medical needs. Over a third of the children we serve come from low-income families, and many are at risk for child abuse. Our impact includes helping children with special needs gain greater independence, minimizing the cognitive decline associated with certain conditions, increasing school readiness through adaptive curricula, and improving the quality of life of caregivers raising children with special needs
+  website: !!str www.sammyshouse.org
+  needs: !!str
+  - !!str special services equipment
+- name: !!str Southwest Key Programs
+  email: !!str info@swkev.org
+  about: !!str Southwest Key Programs is a 20-year-old, Austin-based nonprofit organization which runs programs for youth involved in the juvenile justice system, and shelters for unaccompanied immigrant minors. With over 45 programs in seven states across the nation, Southwest Key’s 900 employees positively impact the lives of thousands of individuals each day
+  website: !!str www.swkey.org
+  needs: !!str
+  - !!str gas grill for cookouts
+  - !!str refrigerator with water dispenser
+  - !!str books and videos for children and young adults in Spanish
+  - !!str books for JJAEP School Libraries
+  - !!str bookcases
+  - !!str reading chairs and bean bag chairs
+  - !!str vouchers for movies and entertainment
+  - !!str Sam's gift card
+  - !!str Home Depot gift card
+  - !!str HEB gift card
+  - !!str Target gift card
+  - !!str walmart gift card
+  - !!str children's clothing store gift card
+  - !!str desktop computers
+  - !!str used laptops or tablet pcs
+  - !!str scanners
+  - !!str digital video flip camera
+  - !!str projector for dvd players
+  - !!str ipods
+  - !!str mp3 players
+  - !!str vans
+  - !!str portable building
+  - !!str outdoor benches
+  - !!str sports equipment
+  - !!str soccer balls
+  - !!str basketbals
+  - !!str flag football sets
+  - !!str footballs
+- name: !!str William's Community School
+  email: !!str info@williamscommunityschoo.org
+  about: !!str William’s Community School is built on the strong philosophical belief that, given the right supports, every child can thrive. We are committed to ensuring a challenging and accepting educational environment with a strong emphasis on building lasting relationships. We strive to provide a sense of safety, community and family to students and parents by fostering and developing a successful partnership. At William’s Community School, we encourage students to develop caring attitudes and respect towards themselves, other children, adults, their school and their environment.
+  website: !!str www.williamscommunityschool.org
+  needs: !!str
+  - !!str cork
+  - !!str tools
+  - !!str fabrics
+  - !!str gently used paints and brushes
+  - !!str scissors
+  - !!str staplers
+  - !!str hole punches
+  - !!str laundry detergent and cleaners
+  - !!str toilet paper
+  - !!str towels
+  - !!str tissues
+  - !!str office supplies
+  - !!str ziploc bags
+  - !!str hefty bags
+  - !!str nestle products
+  - !!str green giant products
+  - !!str juicy juice
+  - !!str pillsbury foods
+  - !!str general mills products
+  - !!str betty crocker products
+  - !!str labels for education
+  - !!str bic pens
+  - !!str products
+  - !!str pepperidge farms products
+  - !!str post cereals
+  - !!str campbell's soups and juices
+  - !!str franco-american poducts
+  - !!str swanson v8
+  - !!str dannon products
+- name: !!str Paramount and State Theatres
+  email: !!str info@austintheatre.org
+  about: !!str The mission of the Austin Theatre Alliance, parent organization of the Paramount & Stateside Theatres, is to nourish the mind and spirit and to enhance the quality of life for area residents through presentation of the widest selection of the finest quality theatre and performing arts productions possible. We offer music, film, dance, drama, and comedy in a city and state landmark that is listed in the National Register of Historic Places
+  website: !!str www.austintheatre.org
+  needs: !!str
+  - !!str in-kind donations
+  - !!str raffle items
+  - !!str auction items
+  - !!str stuffers
+- name: !!str Texas Archive of the Moving Image
+  email: !!str info@texasarchive.org
+  about: !!str Ninety percent of films made before 1930 no longer exist. Since the invention of film in the late 1890s, countless films have been lost due to deterioration and neglect and more remain inaccessible due to lack of resources. The Texas Archive of the Moving Image (TAMI) works to discover, preserve, provide access to, and educate the community about Texas' film heritage. By partnering with individuals and institutions across the state, TAMI digitizes and provides access to Texas-related moving images at www.texasarchive.org. This easily-accessible and ever-growing collection includes thousands of videos providing insight into the history and culture of the state, including materials like local television, advertisements, home movies, and more. TAMI works to encourage the viewing and use of these films through public programs and educator resources. We need your assistance to continue providing free services to educators, libraries, archives, and the general public
+  website: !!str www.texasarchive.org
+  needs: !!str
+  - !!str Texas-related films
+- name: !!str Zachary Scott Theatre Center (ZACH)
+  email: !!str 
+  about: !!str ZACH aims to create a unique theatre experience that ignites the imagination, lifts the spirit, and creates meaningful dialogue that engages our community. ZACH's season of professional theatre productions celebrates diversity and offers a wide array of cross-cultural educational and participatory activities including professional theatre classes and interactive plays for children
+  website: !!str 
+  needs: !!str
+  - !!str top-loading washing machine
+  - !!str rental cars
+  - !!str diital cameras
+  - !!str portable CD stereo boom box
+  - !!str ipod docking stations
+  - !!str itunes gift cards
+  - !!str amazon gift cards
+  - !!str walkie-talkies
+  - !!str paper folding machine bar-height chairs
+  - !!str set of 50 black stackable chairs
+  - !!str new lcd projector and screen
+  - !!str lcd or plasma screen television (36" or larger)
+  - !!str newer model desktop PC's and laptops
+  - !!str mac g5 desktop computers
+  - !!str macbooks or powerbooks
+  - !!str new imacs
+  - !!str flat screen monitors for pcs or macs
+  - !!str external hard drives
+  - !!str managed switchers
+  - !!str server
+  - !!str wireless microphones
+  - !!str most recent version of Fina Cut Pro
+  - !!str plotter
+  - !!str mackie t4 digital sound console
+  - !!str super duty pick-up truck
+  - !!str new etc brand "source 4" lighting instruments
+  - !!str 9-volt batteries for wireless microphone system
+  - !!str sewing machine and serger

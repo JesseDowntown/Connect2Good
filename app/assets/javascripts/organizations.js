@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
   
   $('.org-edit .button').on('click', function(e) {

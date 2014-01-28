@@ -9,6 +9,9 @@ class Notifier < ActionMailer::Base
 
   def offer_received(offer)
 
+    data = File.read("#{Rails.root}/app/assets/images/c2g-homepage.png")
+    attachments.inline['logo.png'] = data
+
     @offer = offer
 
     if offer.name != "anonymous"
@@ -22,6 +25,9 @@ class Notifier < ActionMailer::Base
   end
 
   def offer_sent(offer)
+
+    data = File.read("#{Rails.root}/app/assets/images/c2g-homepage.png")
+    attachments.inline['logo.png'] = data
 
     @offer = offer
 

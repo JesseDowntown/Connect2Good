@@ -1,24 +1,25 @@
-.view-page
-  .large-3.small-1.columns
+.view-page#pageWrapper
+  .large-1.small-1.columns
     %p
       \
-  .large-6.small-10.columns
+  .large-10.small-10.columns
     %div
       .row
         %h3 Thank you!
         %br
         %p 
           #{@offer.organization.name} has received an email with your donation offer details, and will be contacting you via email as soon as possible.
+        %br
         %p 
           Thanks again on behalf of the entire Connect 2 Good team!
+        %br
+        %br
+        %br
         = link_to "FAQ", faq_path
         \|
         = link_to "About", about_path
-        %br
-        %br
-        %p= link_to "Back", :back
 
-  .large-3.small-1.columns
+  .large-1.small-1.columns
     %p
       \
 
