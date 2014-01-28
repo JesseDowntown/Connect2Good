@@ -22,13 +22,13 @@
             %canvas#offerTimeChart
           .large-12.columns
             %h6 
-              pending: 
+              %span.pending-color pending: 
               %span.pending-num= @pending
             %h6 
-              denied: 
+              %span.denied-color declined: 
               %span.denied-num= @denied
             %h6 
-              accepted:
+              %span.accepted-color accepted:
               %span.accepted-num= @accepted
           .row
             %canvas#offerStatusChart
@@ -47,9 +47,10 @@
           %thead
             %tr
               %th Representative
-              %th Organization Name
-              %th Organization Description
-              %th Status
+              %th= sortable "name", "Organization Name"
+              %th= sortable "description", "Organization Description"
+              %th= sortable "status"
+              %th= sortable "created_at", "Dated Added"
           %tbody#organizations
             - @organizations.each do |organization|
               %tr{class: "delete_organization_#{organization.id}"}
@@ -66,7 +67,8 @@
                   = form_for organization do |f|
                     Active #{f.check_box :status, class: 'checkable', remote: true}
                 %td
+                  = organization.created_at.strftime("%d %b. %Y") 
 :javascript
-  var doughnutData = [{value: #{@accepted}, color:"#F7464A"},{ value: #{@denied}, color:"#000" },{ value: #{@pending}, color:"#F38630" }]
+  var doughnutData = [{value: #{@accepted}, color:"#88A4B3"},{ value : #{@pending}, color : "#B3AC88" },{value: #{@denied}, color: "#B3888E"}]
   
-  var lineData = {labels: ["-3 week","-2 week","-1 week","this week"], datasets: [{fillColor: "#F7464A", strokeColor: "#000)", pointColor: "#E2EAE9", pointStrokeColor: "#fff", data: [#{@three_weeks_ago},#{@two_weeks_ago},#{@one_week_ago},#{@this_week}]}]}
+  var lineData = {labels: ["-3 week","-2 week","-1 week","this week"], datasets: [{fillColor: "#88b3ac", strokeColor: "#000)", pointColor: "#E2EAE9", pointStrokeColor: "#fff", data: [#{@three_weeks_ago},#{@two_weeks_ago},#{@one_week_ago},#{@this_week}]}]}
