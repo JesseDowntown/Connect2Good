@@ -9,8 +9,11 @@
               .card
                 = link_to organization_path(organization.id) do
                   .org-main-panel
-                    %span
-                      %h4.middle= organization.name
+                    %span.orgname
+                      - if organization.name.length < 27
+                        %h4.middle= organization.name
+                      -else
+                        %h5.middle= organization.name
                   .org-def-panel
                     .center
                       %h5= organization.description.truncate(45)
