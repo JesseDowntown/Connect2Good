@@ -9,7 +9,9 @@
           - else
             %img{alt: "User Profile", src: "http://dummyimage.com/250x300&text=Add a profile picture!"}/
         %p#description= @organization.description
-        %p#email= @organization.email
+        %p#email
+          %strong
+            = @organization.email
         .org-edit
           = render 'form'
           .button Edit Info

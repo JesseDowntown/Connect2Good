@@ -14,7 +14,8 @@
           .row
             .orgdesc
               %p= @organization.description
-              = mail_to @organization.email, @organization.email
+              %strong
+                = mail_to @organization.email, @organization.email
               / need to add additional routes for this link
         .large-8.columns
           .row.orgneeds
