@@ -7,8 +7,8 @@ class NeedsController < ApplicationController
 			@needs = Need.where(status: true).page(params[:page]).per_page(12)
 		end
 		respond_to do |format|
-		    format.js { redirect_to :back}
-				format.html
+		    format.html
+        format.js { redirect_to :back}
 		end	
 	end
 
@@ -26,6 +26,7 @@ class NeedsController < ApplicationController
     @organization = @need.organization
 		respond_to do |format|
       # if need.save
+        format.html
         format.js { render :layout => false }
       # else
         # format.js 
@@ -49,8 +50,8 @@ class NeedsController < ApplicationController
 		@need = Need.find(params[:id])
 		@need.update(needs_params)
 		respond_to do |format|
-        format.js { render :layout => false }
         format.html { redirect_to :back }
+        format.js { render :layout => false }
 		end
 
 	end
@@ -60,8 +61,8 @@ class NeedsController < ApplicationController
 		@organization = @need.organization
 		@need.destroy
 		respond_to do |format|
-		    format.js { render layout: false} 
-				format.html { redirect_to :back }
+		    format.html { redirect_to :back }
+        format.js { render layout: false} 
 		end	
 	end
 
