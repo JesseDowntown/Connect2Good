@@ -11,6 +11,8 @@
 %p The Connect 2 Good Team
 %br
 %p For more information:
-= link_to "FAQ", faq_url
+= link_to "About C2G", "www.connect2good.com/about"
+\|
+= link_to "FAQ", "www.connect2good.com/faq"
 \| 
-= link_to "Your Organization's Needs", organization_url(@offer.organization)
+= link_to "Your Organization's Needs", "www.connect2good.com/organizations/#{@offer.organization.id}"
