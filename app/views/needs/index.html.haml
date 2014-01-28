@@ -3,19 +3,20 @@
     - if @needs.length == 0
       %h3 Your search has not returned any results. 
       %h3 Please try a different search.
-      %br
       %h4 Tips and Suggestions:
-      %br
       %p 
         %strong
-          1. 
-        Make your search as simple as possible. 
+          1. Make your search as simple as possible. 
       %p For example: instead of searching "brown chair", try just "chair".
-      %br
       %p 
         %strong
-          2. 
-        You can search organization names as well as need descriptions.
+          2. You can search organization names as well as need descriptions.
+      .small-10.medium-6.large-4.small-centered.columns
+        = form_tag needs_path, method: :get do
+          .center
+            = text_field_tag :query, params[:query], placeholder: "What would you like to donate?", class: "search", autofocus: true
+          .center    
+            = submit_tag "Search Needs", class: "button"
     - else
       .left.leftside
         - if params[:query].present?

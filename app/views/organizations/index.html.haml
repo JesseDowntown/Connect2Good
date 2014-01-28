@@ -13,7 +13,7 @@
                       - if organization.name.length < 27
                         %h4.middle= organization.name
                       -else
-                        %h5.middle= organization.name
+                        %h5.middle= organization.name.truncate(60)
                   .org-def-panel
                     .center
                       %h5= organization.description.truncate(45)
