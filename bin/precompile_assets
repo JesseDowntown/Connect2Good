@@ -12,3 +12,4 @@ json2yml.rb
 
 git add .
 git commit -m 'asset precompile'
+

@@ -27,7 +27,6 @@ gem 'simple_form', '~> 3.0.0.rc'
 gem 'will_paginate-foundation', '~> 5.3.3'
 gem 'mandrill-api'
 gem 'mail_form'
-
 gem 'unf'
 gem 'awesome_print'
 
