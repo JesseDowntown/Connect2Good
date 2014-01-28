@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_devise_permitted_parameters, if: :devise_controller?
   after_filter :store_location    
+  after_filter :clear_cache    
 
 
   helper_method :orgs
@@ -38,6 +39,13 @@ class ApplicationController < ActionController::Base
     user_path(resource)
   end
 
+  def clear_cache
+    if request.xhr?
+        response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
+        response.headers["Pragma"] = "no-cache"
+        response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
+    end
+  end 
   
   protected
 

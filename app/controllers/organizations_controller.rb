@@ -41,8 +41,9 @@ class OrganizationsController < ApplicationController
     @organization = Organization.find(params[:id])
     @organization.update(organization_params)
     respond_to do |format|
-        format.js { render :layout => false }
         format.html { redirect_to :back }
+        format.js { render :layout => false }
+        
     end
   end
 
