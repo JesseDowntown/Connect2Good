@@ -1,16 +1,17 @@
-
-%p= "Hello representative for #{@offer.organization.name},"
+%h2= "Hello representative for #{@offer.organization.name},"
 %br
-%p=  "A Connect 2 Good donor, #{@text}, would like to fill one of your organization's needs!"
-%p The donor has provided these details regarding the offered item:
-%p= "#{@offer.description}"
+%h3=  "A Connect 2 Good donor, #{@text}, would like to fill one of your organization's needs!"
+%h3 The donor has provided these details regarding the offered item:
+%h3= "#{@offer.description}"
 =image_tag "#{@offer.image}"
-%p= "The donor looks forward to hearing from you via email. Their email address is: #{@offer.email}"
+%h3= "The donor looks forward to hearing from you via email. Their email address is: #{@offer.email}"
 %br
-%p Thank you,
-%p The Connect 2 Good Team
+%h3 Thank you,
+%h3 The Connect 2 Good Team
 %br
-%p For more information:
+= image_tag attachments['logo.png'].url
+%br
+%h4 For more information:
 = link_to "About C2G", "www.connect2good.com/about"
 \|
 = link_to "FAQ", "www.connect2good.com/faq"
