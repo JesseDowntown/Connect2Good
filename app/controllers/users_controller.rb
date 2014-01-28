@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
-
+  helper_method :sort_column, :sort_direction
+  
 	def show
   	@user = User.find(params[:id])
-  	@offers = Offer.where(donor_id: @user)
+  	@offers = Offer.where(donor_id: @user).order(sort_column + " " + sort_direction)
     @org = Organization.where(owner_id: current_user.id)
 	end
 
@@ -28,5 +29,14 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:name)
+  end
+  private
+  
+  def sort_column
+    params[:sort] || "created_at"
+  end
+
+  def sort_direction
+    params[:direction] || "asc"
   end
 end

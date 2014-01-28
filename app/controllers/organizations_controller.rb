@@ -8,7 +8,7 @@ class OrganizationsController < ApplicationController
   def show
     @organization = Organization.find(params[:id])
     @org_sorted = @organization.needs.order(sort_column + " " + sort_direction)
-    @needs = @organization.needs.page(params[:page])
+    @needs = @organization.needs.page(params[:page]).per_page(12)
     @need = Need.new 
     @pending = 0
     @offers = @organization.offers

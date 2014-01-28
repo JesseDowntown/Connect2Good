@@ -1,15 +1,75 @@
 ---
 files:
+  AlegreyaSansMedium-9ab024dc8a134151347e532039adcfd9.otf:
+    logical_path: AlegreyaSansMedium.otf
+    mtime: '2014-01-27T19:49:31-06:00'
+    size: 107556
+    digest: 9ab024dc8a134151347e532039adcfd9
+  c2g-banner-af09239548756fcea164b0200ab0e116.gif:
+    logical_path: c2g-banner.gif
+    mtime: '2014-01-27T19:49:31-06:00'
+    size: 6064
+    digest: af09239548756fcea164b0200ab0e116
+  c2g-homepage-c5f5aafb4dc903732314248d67e5a112.png:
+    logical_path: c2g-homepage.png
+    mtime: '2014-01-27T19:49:31-06:00'
+    size: 22566
+    digest: c5f5aafb4dc903732314248d67e5a112
+  c2g-logo-74d397851ba8024d5bf16bb77b47f11d.gif:
+    logical_path: c2g-logo.gif
+    mtime: '2014-01-27T19:49:31-06:00'
+    size: 2161
+    digest: 74d397851ba8024d5bf16bb77b47f11d
+  glyph-home-307f33b5d26ea731e95425c5e6020fcc.png:
+    logical_path: glyph-home.png
+    mtime: '2014-01-27T19:49:31-06:00'
+    size: 7092
+    digest: 307f33b5d26ea731e95425c5e6020fcc
+  horizontal-color-on-transparent-1ee2d794771317028b1689cc367fd09f.png:
+    logical_path: horizontal-color-on-transparent.png
+    mtime: '2014-01-27T19:49:31-06:00'
+    size: 25438
+    digest: 1ee2d794771317028b1689cc367fd09f
+  isolated-glyph-color-on-transparent-2af1e617b082343fbfa33fda976f0c98.png:
+    logical_path: isolated-glyph-color-on-transparent.png
+    mtime: '2014-01-27T19:49:31-06:00'
+    size: 7092
+    digest: 2af1e617b082343fbfa33fda976f0c98
+  isolated-glyph-white-on-color-708e72d254675989ae060ccdd16ba5f9.png:
+    logical_path: isolated-glyph-white-on-color.png
+    mtime: '2014-01-27T19:49:31-06:00'
+    size: 24112
+    digest: 708e72d254675989ae060ccdd16ba5f9
+  isolated-glyph-white-on-transparent-sm-0fe5704d018f80505122108fe9a88a0f.png:
+    logical_path: isolated-glyph-white-on-transparent-sm.png
+    mtime: '2014-01-27T19:49:31-06:00'
+    size: 1866
+    digest: 0fe5704d018f80505122108fe9a88a0f
+  isolated-glyph-white-on-transparent-ad909e8ae9c9738c60b3908fccb08a04.png:
+    logical_path: isolated-glyph-white-on-transparent.png
+    mtime: '2014-01-27T19:49:31-06:00'
+    size: 23052
+    digest: ad909e8ae9c9738c60b3908fccb08a04
+  logo-block-color-on-transparent-42b66a8c9da26841ce3c09195db6dd32.png:
+    logical_path: logo-block-color-on-transparent.png
+    mtime: '2014-01-27T19:49:31-06:00'
+    size: 32079
+    digest: 42b66a8c9da26841ce3c09195db6dd32
+  logo-block-white-on-color-ab0d2ea687ac510ec6d28bdcb4b842b5.png:
+    logical_path: logo-block-white-on-color.png
+    mtime: '2014-01-27T19:49:31-06:00'
+    size: 39121
+    digest: ab0d2ea687ac510ec6d28bdcb4b842b5
   application-6d89129de108d4174095f20dd9306f26.js:
     logical_path: application.js
     mtime: '2014-01-27T15:38:27-06:00'
     size: 926614
     digest: 6d89129de108d4174095f20dd9306f26
-  application-8e1ad998b4a3e0603e36e8da6c99030b.css:
+  application-79b713c725b2ea1baaeb27595b015d60.css:
     logical_path: application.css
-    mtime: '2014-01-27T15:38:27-06:00'
-    size: 150351
-    digest: 8e1ad998b4a3e0603e36e8da6c99030b
+    mtime: '2014-01-27T19:49:31-06:00'
+    size: 151652
+    digest: 79b713c725b2ea1baaeb27595b015d60
   html5shiv-printshiv-cc35128bbf3446d3141b12c81183eef9.js:
     logical_path: html5shiv-printshiv.js
     mtime: '2013-11-19T20:28:57-06:00'
@@ -361,8 +421,20 @@ files:
     size: 12799
     digest: 59a9312abee351a8315f6f95b1799b7f
 assets:
+  AlegreyaSansMedium.otf: AlegreyaSansMedium-9ab024dc8a134151347e532039adcfd9.otf
+  c2g-banner.gif: c2g-banner-af09239548756fcea164b0200ab0e116.gif
+  c2g-homepage.png: c2g-homepage-c5f5aafb4dc903732314248d67e5a112.png
+  c2g-logo.gif: c2g-logo-74d397851ba8024d5bf16bb77b47f11d.gif
+  glyph-home.png: glyph-home-307f33b5d26ea731e95425c5e6020fcc.png
+  horizontal-color-on-transparent.png: horizontal-color-on-transparent-1ee2d794771317028b1689cc367fd09f.png
+  isolated-glyph-color-on-transparent.png: isolated-glyph-color-on-transparent-2af1e617b082343fbfa33fda976f0c98.png
+  isolated-glyph-white-on-color.png: isolated-glyph-white-on-color-708e72d254675989ae060ccdd16ba5f9.png
+  isolated-glyph-white-on-transparent-sm.png: isolated-glyph-white-on-transparent-sm-0fe5704d018f80505122108fe9a88a0f.png
+  isolated-glyph-white-on-transparent.png: isolated-glyph-white-on-transparent-ad909e8ae9c9738c60b3908fccb08a04.png
+  logo-block-color-on-transparent.png: logo-block-color-on-transparent-42b66a8c9da26841ce3c09195db6dd32.png
+  logo-block-white-on-color.png: logo-block-white-on-color-ab0d2ea687ac510ec6d28bdcb4b842b5.png
   application.js: application-6d89129de108d4174095f20dd9306f26.js
-  application.css: application-8e1ad998b4a3e0603e36e8da6c99030b.css
+  application.css: application-79b713c725b2ea1baaeb27595b015d60.css
   html5shiv-printshiv.js: html5shiv-printshiv-cc35128bbf3446d3141b12c81183eef9.js
   html5shiv.js: html5shiv-e18672b94fab6abd2257fe6f6911e8a8.js
   rails_admin/aristo/images/bg_fallback.png: rails_admin/aristo/images/bg_fallback-97e13c0196bfb2c0a3319ba03aec8860.png

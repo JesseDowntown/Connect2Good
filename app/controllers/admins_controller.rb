@@ -1,9 +1,9 @@
 class AdminsController < ApplicationController
   before_filter :authenticate 
-
+  helper_method :sort_column, :sort_direction
 
   def show
-    @organizations = Organization.all
+    @organizations = Organization.order(sort_column + " " + sort_direction)
     @organization = Organization.new
     @offers = Offer.all
 
@@ -42,5 +42,13 @@ private
       unless current_user.try(:admin?)
            redirect_to root_path
       end
+    end
+
+    def sort_column
+      params[:sort] || "created_at"
+    end
+
+    def sort_direction
+      params[:direction] || "desc"
     end
 end

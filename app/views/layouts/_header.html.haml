@@ -2,13 +2,19 @@
   %section.left-small
     %a.left-off-canvas-toggle.menu-icon
       %span.left-icon
-  %section.middle.tab-bar-section
-    .title-area
-      .name
-        %h1
-          =link_to "Connect2Good", root_path
-  %section.right
-    %ul
+  / %section.middle.tab-bar-section
+  %ul.title-area
+    %li.name
+      %h1
+        %a{href: root_path}
+          Connect
+          = image_tag('isolated-glyph-white-on-transparent-sm.png')
+          Good
+    %li.toggle-topbar
+      %a{href: "#"} Search
+  %section.top-bar-section
+    / Right Nav Section
+    %ul.right
       %li.has-form
         = form_tag needs_path, method: :get do
           .row.collapse
@@ -19,7 +25,10 @@
 %aside.left-off-canvas-menu
   %ul.off-canvas-list
     %li
-      .oc-head Connect 2 Good
+      .oc-head 
+        Connect
+        = image_tag('isolated-glyph-white-on-transparent-sm.png')
+        Good
     %li
       %label.cat Organizations
     %li
@@ -42,12 +51,9 @@
         %li= link_to "Join", new_user_registration_path
     %li
       %label.cat Connect 2 Info
-    %li
-      %a{href: "#"} About C2G
-    %li
-      %a{href: "#"} FAQs
-    %li
-      %a{href: "#"} Contact C2G
+    %li= link_to "About", about_path
+    %li= link_to "FAQ", faq_path
+    %li= link_to "Contact", contact_path
     - if current_user.try(:admin?)
       %li
         %label.cat Administration

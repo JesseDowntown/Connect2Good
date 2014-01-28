@@ -3,7 +3,11 @@
     .row.large-12.columns
       .large-4.columns
         %h3= @organization.name
-        = image_tag @organization.image
+        %h3#image
+          - if @organization.image.present?
+            = image_tag @organization.image
+          - else
+            %img{alt: "User Profile", src: "http://dummyimage.com/250x300&text=Add a profile picture!"}/
         %p#description= @organization.description
         %p#email= @organization.email
         .org-edit
@@ -23,16 +27,16 @@
           .medium-6.columns
             %h6 #{ link_to "total offers: #{@organization.offers.length}", organization_offers_path(params[:id]), id: 'offer_index', remote: true }
             %span.large3.columns
-              %h7 
-                total offers pending: 
+              %h7
+                %span.pending-color pending: 
                 %span.pending-num= @pending
                 %br/
-              %h7 
-                total offers declined: 
+              %h7
+                %span.denied-color declined: 
                 %span.denied-num= @denied
                 %br/
-              %h7 
-                total offers accepted:
+              %h7
+                %span.accepted-color accepted:
                 %span.accepted-num= @accepted
           .medium-6.columns.left
             %canvas#myChart{height: "200", width: "200"}
@@ -62,5 +66,5 @@
             - @org_sorted.each do |need|
               = render partial: 'need', object: need 
 %script#js{type: "text/javascript"}
-  var data = [{value: #{@accepted}, color:"#F7464A"},{ value : #{@pending}, color : "#F38630" },{value: #{@denied}, color: "#000"}]
+  var data = [{value: #{@accepted}, color:"#88A4B3"},{ value : #{@pending}, color : "#B3AC88" },{value: #{@denied}, color: "#B3888E"}]
 

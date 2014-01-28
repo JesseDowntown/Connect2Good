@@ -1,39 +1,42 @@
-- if (current_user == @organization.owner) || (current_user.try(:admin?))
+- if signed_in? && (current_user == @organization.owner) || (current_user.try(:admin?))
   = render "home"
 - else
   .view-page
     %div
       .row
-        .large-4.columns.orgfix
-          .center
-            %h3= @organization.name
+        .large-4.columns.orgfix.center
+          %h3= @organization.name
+          - if @organization.image.present?
             = image_tag @organization.image
-            %p= @organization.description
-            %p= @organization.email
-            / need to add additional routes for this link
+          - else
+            %img{alt: "User Profile", src: "http://dummyimage.com/250x300&text=Add a profile picture!"}/
+          %p
+          .row
+            .orgdesc
+              %p= @organization.description
+              = mail_to @organization.email, @organization.email
+              / need to add additional routes for this link
         .large-8.columns
           .row.orgneeds
             .center
               %h3 Needs
-            - @organization.needs.each do |need|
-              .large-4.small-6.columns.left
+            - @needs.each do |need|
+              .large-4.medium-3.small-12.columns.left
                 .card
-                  = link_to need_path(need),"data-reveal-id" => "needsModal" do
-                    .upper-panel
-                      .center  
-                        %h5= need.description.truncate(30)
-                        / category's are available but we're choosing not to use them at this point
-                        / %h7= need.category
-                  #needsModal.reveal-modal.small{"data-reveal" => ""}
-                    .row
-                      %h4= "#{need.organization.name} needs"
-                      %p= need.description
-                      / category's are available but we're choosing not to use them at this point
-                      / %h7= need.category
-                      %h6= link_to "Make offer", new_offer_path(need)
-                      %a.close-reveal-modal ×
+                  .upper-panel
+                    .center  
+                      %h5= need.description.truncate(45)
+                    .needsModal.reveal-modal.small{"data-reveal" => ""}
+                      .row.center
+                        %a.close-reveal-modal ×
+                        %br
+                        %h3= "#{need.organization.name} needs"
+                        %h5= need.description
+                        %br
+                        %br
+                        %a.button{href: "#{new_offer_path(need)}"} Offer Donationn
                   = link_to new_offer_path(need_id: need.id) do
                     .panel
                       .center
-                        %h6 Make Offer
+                        %h6 Offer Donation
           = will_paginate @needs, renderer: FoundationPagination::Rails, outer_window: 0, inner_window: 1  
