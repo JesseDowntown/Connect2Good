@@ -1,13 +1,13 @@
-.large-8.columns#needsList 
+.large-12.columns#needsList 
   .row
     %h3 Offers 
     %p * This list is for your personal record keeping only. You must contact donors directly through email to accept donations. Marking an offer as "accepted" will NOT inform the donor that you wish to receive their donation.
     %table
       %thead
         %tr
-          %th Item
-          %th Offer
-          %th Donor
+          %th Needed Item
+          %th Donation Description
+          %th Donor Email
           %th Date Offered
           %th Status
           %th Update
@@ -19,13 +19,10 @@
             - else
               %td This need has been deleted 
             %td= link_to offer.description.truncate(50), offer_path(offer)
-            %td= offer.email
-            %td= offer.created_at.strftime("%d %b. %Y")     
+            %td= mail_to offer.email, offer.email.truncate(15)
+            %td= offer.created_at.strftime("%m/%d/%y")     
             = form_for offer, remote: true do |f|
               %td
                 = f.select :status, options_for_select(["pending","accepted","declined"], offer.status)
               %td
                 = f.submit value: "Update", class: "button submit-offer"
-.large-1.small-1.columns
-  %p
-    \

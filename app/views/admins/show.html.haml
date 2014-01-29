@@ -9,28 +9,25 @@
           .button Create New Organization
         
         .row.happy#numbers
-          %h6= "total organizations: #{@organizations.count}"
+          %h6= "Total Organizations: #{@organizations.count}"
           %span.happy.large3.columns
             %h6 
-              total organizations active: 
+              active: 
               %span.pending-num= @active
               %br
-              total organizations inactive:
+              inactive:
               %span.pending-num= @organizations.count - @active
-          %h6 total offers: #{@offers.length}
+          %h6= "Offers For All Organizations: #{@offers.count}"
           .row.happy
             %canvas#offerTimeChart
           .large-12.columns
             %h6 
-              total offers 
               %span.pending-color pending: 
               %span.pending-num= @pending
             %h6 
-              total offers 
               %span.denied-color declined: 
               %span.denied-num= @denied
             %h6 
-              total offers 
               %span.accepted-color accepted:
               %span.accepted-num= @accepted
           .row

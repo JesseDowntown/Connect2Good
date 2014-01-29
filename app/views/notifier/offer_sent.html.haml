@@ -1,17 +1,19 @@
 
 %h1 Thank You!
 
-%p= "An email has been sent to #{@offer.organization.name}, informing them of your desire to make a donation."
-%p= "You should expect to receive an email response from a representative of #{@offer.organization.name} as soon as possible."
-%p= "#{@offer.organization.name} has been provided these details regarding your desire to donate:"
-%p= "Description: #{@offer.description}"
+%h3= "An email has been sent to #{@offer.organization.name}, informing them of your desire to make a donation."
+%h3= "You should expect to receive an email response from a representative of #{@offer.organization.name} as soon as possible."
+%h3= "#{@offer.organization.name} has been provided these details regarding your desire to donate:"
+%h3= "Description: #{@offer.description}"
 =image_tag "#{@offer.image}"
-%p= "Your email address: #{@offer.email}"
-%p= "Your name: #{@offer.name}"
+%h3= "Your email address: #{@offer.email}"
+%h3= "Your name: #{@offer.name}"
 %br
-%p Thank you again,
-%p The Connect 2 Good Team
+%h3 Thank you again,
+%h4 The Connect 2 Good Team
 %br
-= link_to "FAQ", faq_path
+= image_tag attachments['logo.png'].url
+%br
+= link_to "FAQ", "www.connect2good.com/faq"
 \| 
-= link_to "Connect 2 Good", root_url
+= link_to "Connect 2 Good", "www.connect2good.com"

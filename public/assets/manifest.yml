@@ -65,11 +65,11 @@ files:
     mtime: '2014-01-27T15:38:27-06:00'
     size: 926614
     digest: 6d89129de108d4174095f20dd9306f26
-  application-79b713c725b2ea1baaeb27595b015d60.css:
+  application-3a7a1508288c73456f06d0d24e95aa91.css:
     logical_path: application.css
-    mtime: '2014-01-27T19:49:31-06:00'
-    size: 151652
-    digest: 79b713c725b2ea1baaeb27595b015d60
+    mtime: '2014-01-28T16:53:59-06:00'
+    size: 151582
+    digest: 3a7a1508288c73456f06d0d24e95aa91
   html5shiv-printshiv-cc35128bbf3446d3141b12c81183eef9.js:
     logical_path: html5shiv-printshiv.js
     mtime: '2013-11-19T20:28:57-06:00'
@@ -434,7 +434,7 @@ assets:
   logo-block-color-on-transparent.png: logo-block-color-on-transparent-42b66a8c9da26841ce3c09195db6dd32.png
   logo-block-white-on-color.png: logo-block-white-on-color-ab0d2ea687ac510ec6d28bdcb4b842b5.png
   application.js: application-6d89129de108d4174095f20dd9306f26.js
-  application.css: application-79b713c725b2ea1baaeb27595b015d60.css
+  application.css: application-3a7a1508288c73456f06d0d24e95aa91.css
   html5shiv-printshiv.js: html5shiv-printshiv-cc35128bbf3446d3141b12c81183eef9.js
   html5shiv.js: html5shiv-e18672b94fab6abd2257fe6f6911e8a8.js
   rails_admin/aristo/images/bg_fallback.png: rails_admin/aristo/images/bg_fallback-97e13c0196bfb2c0a3319ba03aec8860.png

@@ -9,7 +9,9 @@
           - else
             %img{alt: "User Profile", src: "http://dummyimage.com/250x300&text=Add a profile picture!"}/
         %p#description= @organization.description
-        %p#email= @organization.email
+        %p#email
+          %strong
+            = @organization.email
         .org-edit
           = render 'form'
           .button Edit Info
@@ -24,22 +26,20 @@
               %br
         .row.happy#numbers
           %div &nbsp;
-          .medium-6.columns
+          .large-12.columns
             %h6 #{ link_to "total offers: #{@organization.offers.length}", organization_offers_path(params[:id]), id: 'offer_index', remote: true }
-            %span.large3.columns
-              %h7
+            %span.large-6.columns
+              %h6
                 %span.pending-color pending: 
                 %span.pending-num= @pending
-                %br/
-              %h7
+              %h6
                 %span.denied-color declined: 
                 %span.denied-num= @denied
-                %br/
-              %h7
+              %h6
                 %span.accepted-color accepted:
                 %span.accepted-num= @accepted
-          .medium-6.columns.left
-            %canvas#myChart{height: "200", width: "200"}
+          .row
+            %canvas#myChart
 
         = form_for [@organization, @need], remote: true do |f|     
           %div#need_form

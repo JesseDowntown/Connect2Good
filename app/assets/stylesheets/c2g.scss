@@ -20,12 +20,6 @@ body {
     height:100%;   
 }
 
-@media (min-width: 1024px) and (max-height: 640px) {
-	.orgfix {
-		position:fixed;
-	}
-}
-
 .orgdesc {
 	text-align: left;
 	text: 18px; 
@@ -260,6 +254,10 @@ span.middle{
 
 }
 
+.org-offers-dash{
+
+}
+
 .top-bar, .expanded{
 	background-color: #88a4b3;
 	.title-area{
@@ -397,6 +395,7 @@ span.middle{
 .orgname{
 	h5 {
 		font-weight: bold;
+		font-size: 1.5em;
 	}
 }
 
